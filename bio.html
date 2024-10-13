@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LD3HSV26YY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-LD3HSV26YY');
-    </script>
     <title>USCSwifties - Bio</title>
     <meta charset="UTF-8">
-    <meta name="description" content="USC Swifties Bio">
-    <meta name="keywords" content="Taylor Swift, UofSC, Swifties, Music, The Eras Tour">
     <meta name="author" content="Madeline Lucas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
+    <!--CSS-->
+    <link href="uscswifties.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><h2>USCSwifties</h2></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="albums.html">Albums/Eras</a></li>
-                <li><a href="bio.html">Bio</a></li>
-                <li><a href="poll.html">Poll</a></li>
-            </ul>
+            <span id="logo">
+                <h2>USCSwifties</h2>
+            </span>
+            <span id="navTabs">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="albums.html">Albums/Eras</a></li>
+                    <li><a href="bio.html">Bio</a></li>
+                    <li><a href="poll.html">Poll</a></li>
+                </ul>
+            </span>
         </nav>
 
         <h1>The Life of Taylor Swift</h1>
@@ -175,24 +170,32 @@
     <hr>
 
     <footer>
-        <p><a href="#top">Back-To-Top</a></p>
-
-        <p>Taylor Swift Official Links</p>
+        <p id="toTop"><a href="#top">Back-To-Top</a></p>
 
         <div id="links">
-            <p>
-                <a href="https://www.taylorswift.com/"> Website</a>
-                <br>
-                <a href="https://store.taylorswift.com/">Store</a>
-                <br>
-                <a href="https://x.com/taylorswift13">Twitter</a>
-                <br>
-                <a href="https://www.instagram.com/taylorswift/?hl=en">Instagram</a>
-                <br>
-                <a href="https://www.facebook.com/TaylorSwift/">Facebook</a>
-                <br>
-                <a href="https://www.youtube.com/channel/UCqECaJ8Gagnn7YCbPEzWH6g">YouTube</a>
-            </p>
+            <p id="footerHead">Taylor Swift Official Links</p>
+            
+            <div id="linksText">
+                <p>
+                    <a href="https://www.taylorswift.com/"> Website</a>
+                    <br>
+                    <br>
+                    <a href="https://store.taylorswift.com/">Store</a>
+                    <br>
+                    <br>
+                    <a href="https://x.com/taylorswift13">Twitter</a>
+                    <br>
+                </p>
+                <p>
+                    <a href="https://www.instagram.com/taylorswift/?hl=en">Instagram</a>
+                    <br>
+                    <br>
+                    <a href="https://www.facebook.com/TaylorSwift/">Facebook</a>
+                    <br>
+                    <br>
+                    <a href="https://www.youtube.com/channel/UCqECaJ8Gagnn7YCbPEzWH6g">YouTube</a>
+                </p>
+            </div>
         </div>
     </footer>
 </body>

@@ -1,85 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <!-- Google tag (gtag.js) -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LD3HSV26YY"></script>
-     <script>
-         window.dataLayer = window.dataLayer || [];
-         function gtag(){dataLayer.push(arguments);}
-         gtag('js', new Date());
- 
-         gtag('config', 'G-LD3HSV26YY');
-     </script>
-     
     <title>Fearless</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Fearless">
-    <meta name="keywords" content="Taylor Swift, UofSC, Swifties, Music, The Eras Tour">
     <meta name="author" content="Madeline Lucas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS-->
+    <link href="uscswifties.css" rel="stylesheet">
+    <!--Background color-->
+    <style>
+        html{
+            background-color:var(--fearlessColor);
+        }
+    </style>
 </head>
-<body>
+<body id="fearless">
     <header>
         <hr>
-        <h2>Fearless</h2>
+        <h2 class="albumHead">Fearless</h2>
         <hr>
     </header>
 
     <div id="desc">
-        <p>
-            Fearless by Taylor Swift was released November 11, 2008 as her second studio album
-            under Big Machine Records. Fearless was also the first album to be re-released as "Fearless (Taylors Version)"
-            by the singer/songwriter under new record label Republic Records on April 9, 2021.
-        </p>
-        <p>
-            Fearless originally featured a track list of 18 songs and was 1 hour and 15 minutes in length, but
-            Fearless (Taylors Version) increased the track list to 25 songs and the length to 1 hour and 52 minutes.
-            The album is classified under the country-pop genre.
-        </p>
+        <div id="descText">
+            <p>
+                Fearless by Taylor Swift was released November 11, 2008 as her second studio album
+                under Big Machine Records. Fearless was also the first album to be re-released as "Fearless (Taylors Version)"
+                by the singer/songwriter under new record label Republic Records on April 9, 2021.
+            </p>
+            <p>
+                Fearless originally featured a track list of 18 songs and was 1 hour and 15 minutes in length, but
+                Fearless (Taylors Version) increased the track list to 26 songs and the length to 1 hour and 56 minutes.
+                The album is classified under the country-pop genre.
+            </p>
+        </div>
 
-        <img src="Images/fearless.jpg" alt="fearless">
-
-        <p>
-            Pitchfork: 8.1/10
-        </p>
+        <figure>
+            <img src="Images/fearless.jpg" alt="fearless">
+            <figcaption> 8.1/10 </figcaption>
+        </figure>
     </div>
 
     <hr>
 
-    <div id="tL/mV">
+    <div id="tLmV">
         <div id="trackList">
-            <h2>Track List</h2>
-            <ol>
-                <li>Fearless &nbsp;&nbsp; 4:01</li>
-                <li>Fifteen &nbsp;&nbsp; 4:54</li>
-                <li>Love Story &nbsp;&nbsp; 3:55</li>
-                <li>Hey Stephen &nbsp;&nbsp; 4:14</li>
-                <li>White Horse &nbsp;&nbsp; 3:54</li>
-                <li>You Belong With Me &nbsp;&nbsp; 3:51</li>
-                <li>Breathe (feat. Colbie Caillat) &nbsp;&nbsp; 4:23 </li>
-                <li>Tell Me Why &nbsp;&nbsp; 3:20</li>
-                <li>You're Not Sorry &nbsp;&nbsp; 4:21</li>
-                <li>The Way I Loved You &nbsp;&nbsp; 4:03</li>
-                <li>Forever & Always &nbsp;&nbsp; 3:45</li>
-                <li>The Best Day &nbsp;&nbsp; 4:05</li>
-                <li>Change &nbsp;&nbsp; 4:39</li>
-                <li>Jump Then Fall &nbsp;&nbsp; 3:57</li>
-                <li>Untouchable &nbsp;&nbsp; 5:12</li>
-                <li>Come In With The Rain &nbsp;&nbsp; 3:57</li>
-                <li>Superstar &nbsp;&nbsp; 4:23</li>
-                <li>The Other Side Of The Door &nbsp;&nbsp; 3:58</li>
-                <li>Today Was A Fairytale &nbsp;&nbsp; 4:01</li>
-                <li>You All Over Me (feat. Maren Morris) &nbsp;&nbsp; 3:40</li>
-                <li>Mr. Perfectly Fine &nbsp;&nbsp; 4:37</li>
-                <li>We Were Happy &nbsp;&nbsp; 4:04</li>
-                <li>That's When (feat. Keith Urban) &nbsp;&nbsp; 3:09</li>
-                <li>Don't You &nbsp;&nbsp; 3:28</li>
-                <li>Bye Bye Baby &nbsp;&nbsp; 4:02</li>
-            </ol>
+            <h2 class="albumHead">Track List</h2>
+            <div id="fearlesstrackList">
+                <div class="song">
+                    <span>1.  Fearless </span> <span class="time">4:01</span>
+                </div>
+                <div class="song">
+                    <span>2.  Fifteen </span> <span class="time">4:54</span>
+                </div>
+                <div class="song">
+                    <span>3.  Love Story </span> <span class="time">3:55</span>
+                </div>
+                <div class="song">
+                    <span>4. Hey Stephen </span> <span class="time">4:14</span>
+                </div>
+                <div class="song">
+                    <span>5. White Horse </span> <span class="time">3:54</span>
+                </div>
+                <div class="song">
+                    <span>6. You Belong With Me</span> <span class="time">3:51</span>
+                </div>
+                <div class="song">
+                    <span>7.  Breathe (feat. Colbie Caillat) </span> <span class="time">4:23</span>
+                </div>
+                <div class="song">
+                    <span>8. Tell Me Why </span> <span class="time">3:20</span>
+                </div>
+                <div class="song">
+                    <span>9. You're Not Sorry </span> <span class="time">4:21</span>
+                </div>
+                <div class="song">
+                    <span>10. The Way I Loved You </span> <span class="time">4:03</span>
+                </div>
+                <div class="song">
+                    <span>11. Forever & Always </span> <span class="time">3:45</span>
+                </div>
+                <div class="song">
+                    <span>12. The Best Day </span> <span class="time">4:05</span>
+                </div>
+                <div class="song">
+                    <span>13. Change </span> <span class="time">4:39</span>
+                </div>
+                <div class="song">
+                    <span>14. Jump Then Fall </span> <span class="time">3:57</span>
+                </div>
+                <div class="song">
+                    <span>15. Untouchable </span> <span class="time">5:12</span>
+                </div>
+                <div class="song">
+                    <span>16. Come In With The Rain </span> <span class="time">3:57</span>
+                </div>
+                <div class="song">
+                    <span>17. Superstar </span> <span class="time">4:23</span>
+                </div>
+                <div class="song">
+                    <span>18. The Other Side Of The Door </span> <span class="time">3:58</span>
+                </div>
+                <div class="song">
+                    <span>19. Today was A Fairytale </span> <span class="time">4:01</span>
+                </div>
+                <div class="song">
+                    <span>20. You All Over Me (feat. Maren Morris) </span> <span class="time">3:40</span>
+                </div>
+                <div class="song">
+                    <span>21. Mr. Perfectly Fine </span> <span class="time">4:37</span>
+                </div>
+                <div class="song">
+                    <span>22. We Were Happy </span> <span class="time">4:04</span>
+                </div>
+                <div class="song">
+                    <span>23. That's When (feat. Keith Urban) </span> <span class="time">3:09</span>
+                </div>
+                <div class="song">
+                    <span>24. Don't You</span> <span class="time">3:28</span>
+                </div>
+                <div class="song">
+                    <span>25. Bye Bye Baby </span> <span class="time">4:02</span>
+                </div>
+                <div class="song">
+                    <span>26. If This Was A Movie </span> <span class="time">3:57</span>
+                </div>
+            </div>
         </div>
 
         <div id="musicVideos">
-            <h2>Music Videos</h2>
+            <h2 class="albumHead">Music Videos</h2>
             <div id="videoOne">
                 <h3>Fifteen</h3>
                 <iframe name="15Video" id="15Frame" src="https://www.youtube.com/embed/Pb-K2tXWK4w">
@@ -110,7 +161,7 @@
         <hr>
 
         <div id="outfits">
-            <h2>Tour Outfits</h2>
+            <h2 class="albumHead">Tour Outfits</h2>
             <img src="Images/fearlessOutfits.png" alt="Fearless outfits" height="300" width="300">
         </div>
     </div>

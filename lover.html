@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LD3HSV26YY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-LD3HSV26YY');
-    </script>
-    
     <title>Lover</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Lover">
-    <meta name="keywords" content="Taylor Swift, UofSC, Swifties, Music, The Eras Tour">
     <meta name="author" content="Madeline Lucas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS-->
+    <link href="uscswifties.css" rel="stylesheet">
+    <style>
+        html{
+            background-color:var(--loverColor);
+        }
+    </style>
 </head>
-<body>
+<body id="lover">
     <header>
         <hr>
-        <h2>Lover</h2>
+        <h2 class="albumHead">Lover</h2>
         <hr>
     </header>
 
@@ -47,9 +43,9 @@
 
     <hr>
 
-    <div id="tL/mV">
+    <div id="tLmV">
         <div id="trackList">
-            <h2>Track List</h2>
+            <h2 class="albumHead">Track List</h2>
             <ol>
                 <li>I Forgot That You Existed &nbsp;&nbsp; 2:50</li>
                 <li>Cruel Summer &nbsp;&nbsp; 2:58</li>
@@ -73,7 +69,7 @@
         </div>
 
         <div id="musicVideos"></div>
-            <h2>Music Videos</h2>
+            <h2 class="albumHead">Music Videos</h2>
             <div id="videoOne">
                 <h3>Lover</h3>
                 <iframe name="loverVideo" id="loverFrame" src="https://www.youtube.com/embed/-BjZmE2gtdo">
@@ -98,7 +94,7 @@
         <hr>
 
         <div id="outfits">
-            <h2>Tour Outfits</h2>
+            <h2 class="albumHead">Tour Outfits</h2>
             <img src="Images/loverOutfits.png" alt="Lover outfits" height="500" width="300">
         </div>
     </div>

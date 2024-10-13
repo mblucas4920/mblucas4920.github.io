@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LD3HSV26YY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-LD3HSV26YY');
-    </script>
-
     <title>Red</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Red">
-    <meta name="keywords" content="Taylor Swift, UofSC, Swifties, Music, The Eras Tour">
     <meta name="author" content="Madeline Lucas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
+
+    <!--CSS-->
+    <link href="uscswifties.css" rel="stylesheet">
+    <style>
+        html{
+            background-color:var(--redColor);
+        }
+    </style>
 </head>
-<body>
+<body id="red">
     <header>
         <hr>
-        <h2>Red</h2>
+        <h2 class="albumHead">Red</h2>
         <hr>
     </header>
 
@@ -47,9 +42,9 @@
 
     <hr>
 
-    <div id="tL/mV">
+    <div id="tLmV">
         <div id="trackList">
-            <h2>Track List</h2>
+            <h2 class="albumHead">Track List</h2>
             <ol>
                 <li>State Of Grace &nbsp;&nbsp; 4:55</li>
                 <li>Red &nbsp;&nbsp; 3:43</li>
@@ -84,7 +79,7 @@
         </div>
 
         <div id="musicVideos">
-            <h2>Music Videos</h2>
+            <h2 class="albumHead">Music Videos</h2>
             <div id="videoOne">
                 <h3>I Knew You Were Trouble</h3>
                 <iframe name="troubleVideo" id="troubleFrame" src="https://www.youtube.com/embed/vNoKguSdy4Y">
@@ -125,7 +120,7 @@
         <hr>
 
         <div id="outfits">
-            <h2>Tour Outfits</h2>
+            <h2 class="albumHead">Tour Outfits</h2>
             <img src="Images/redOutfits.png" alt="Red outfits" height="300" width="300">
         </div>
     </div>

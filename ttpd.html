@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LD3HSV26YY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-LD3HSV26YY');
-    </script>
-
     <title>The Tortured Poets Department</title>
     <meta charset="UTF-8">
-    <meta name="description" content="The Tortured Poets Department">
-    <meta name="keywords" content="Taylor Swift, UofSC, Swifties, Music, The Eras Tour">
     <meta name="author" content="Madeline Lucas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--CSS-->
+    <link href="uscswifties.css" rel="stylesheet">
+    <style>
+        html{
+            background-color:var(--ttpdColor);
+        }
+    </style>
 </head>
-<body>
+<body id="ttpd">
     <header>
         <hr>
-        <h2>The Tortured Poets Department</h2>
+        <h2 class="albumHead">The Tortured Poets Department</h2>
         <hr>
     </header>
 
@@ -46,9 +41,9 @@
 
     <hr>
 
-    <div id="tL/mV">
+    <div id="tLmV">
         <div id="trackList">
-            <h2>Track List</h2>
+            <h2 class="albumHead">Track List</h2>
             <ol>
                 <li>Fortnight (feat. Post Malone) &nbsp;&nbsp; 3:48</li>
                 <li>The Tortured Poets Department &nbsp;&nbsp; 5:53</li>
@@ -85,7 +80,7 @@
         </div>
 
         <div id="musicVideos">
-            <h2>Music Videos</h2>
+            <h2 class="albumHead">Music Videos</h2>
             <div id="videoOne">
                 <h3>Fortnight (feat. Post Malone)</h3>
                 <iframe name="fortnightVideo" id="fortnightFrame" src="https://www.youtube.com/embed/q3zqJs7JUCQ">
@@ -101,7 +96,7 @@
         <hr>
 
         <div id="outfits">
-            <h2>Tour Outfits</h2>
+            <h2 class="albumHead">Tour Outfits</h2>
             <img src="Images/ttpdOutfits.png" alt="The Tortured Poets Department outfits" height="300" width="300">
         </div>
     </div>

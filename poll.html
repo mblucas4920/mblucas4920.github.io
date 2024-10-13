@@ -1,126 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LD3HSV26YY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-LD3HSV26YY');
-    </script>
-    
     <title>USCSwifties - Poll</title>
     <meta charset="UTF-8">
-    <meta name="description" content="USC Swifties Poll">
-    <meta name="keywords" content="Taylor Swift, UofSC, Swifties, Music, The Eras Tour">
     <meta name="author" content="Madeline Lucas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
+    <!--CSS-->
+    <link href="uscswifties.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><h2>USCSwifties</h2></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="albums.html">Albums/Eras</a></li>
-                <li><a href="bio.html">Bio</a></li>
-                <li><a href="poll.html">Poll</a></li>
-            </ul>
+            <span id="logo">
+                <h2>USCSwifties</h2>
+            </span>
+            <span id="navTabs">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="albums.html">Albums/Eras</a></li>
+                    <li><a href="bio.html">Bio</a></li>
+                    <li><a href="poll.html">Poll</a></li>
+                </ul>
+            </span>
         </nav>
     </header>
 
+    <br>
+    <br>
+    <br>
+    <br>
     <div id="pollForm">
-        <hr>
-        <h1>Which Is YOUR Favorite Album?</h1>
-        <hr>
+        <div>
+            <hr>
+            <h1>Which Is YOUR Favorite Album?</h1>
+            <hr>
+        </div>
+        <!--Poll Form (Label surrounding <img>'s allows the pictures to be clicked and activate its assigned button')-->
         <form method="GET">
             <div id="albumBtns">
-                <div id="debut">
-                    <img src="Images/debut.jpg" alt="Taylor Swift Debut" width="200" height="200">
-                    <input type="radio" name="favAlbum" id="debutbtn">
-                    <label for="debutbtn">Debut</label>
+                <div id="btnTopRow">
+                    <figure id="debut">
+                        <label for="debutbtn">
+                            <img src="Images/debut.jpg" alt="Taylor Swift Debut">
+                        </label>
+                        <figcaption>
+                            <input type="radio" name="favAlbum" id="debutbtn">
+                            <label for="debutbtn">Debut</label>
+                        </figcaption>
+                    </figure>
+                    <figure id="fearless">
+                        <label for="fearlessbtn">
+                            <img src="Images/fearless.jpg" alt="Taylor Swift Fearless">
+                        </label>
+                        <figcaption>
+                            <input type="radio" name="favAlbum" id="fearlessbtn">
+                            <label for="fearlessbtn">Fearless</label>
+                        </figcaption>
+                    </figure>
+                    <figure id="speakNow">
+                        <label for="speakNowbtn">
+                            <img src="Images/speak_now.jpg" alt="Taylor Swift Speak Now" >
+                        </label>
+                        <figcaption>
+                            <input type="radio" name="favAlbum" id="speakNowbtn">
+                            <label for="speakNowbtn">Speak Now</label>
+                        </figcaption>
+                    </figure>
+                    <figure id="red">
+                        <label for="redbtn">
+                            <img src="Images/red.jpg" alt="Taylor Swift Red">
+                        </label>
+                        <figcaption>
+                            <input type="radio" name="favAlbum" id="redbtn">
+                            <label for="redbtn">Red</label>
+                        </figcaption>
+                    </figure>
                 </div>
-                <div id="fearless">
-                    <img src="Images/fearless.jpg" alt="Taylor Swift Fearless" width="200" height="200">
-                    <input type="radio" name="favAlbum" id="fearlessbtn">
-                    <label for="fearlessbtn">Fearless</label>
+                <div id="btnMidRow">
+                    <figure id="ts1989">
+                        <label for="1989btn">
+                            <img src="Images/1989.jpg" alt="Taylor Swift 1989">
+                        </label>
+                        <figcaption>
+                            <input type="radio" name="favAlbum" id="1989btn">
+                            <label for="1989btn">1989</label>
+                        </figcaption>
+                    </figure>
+                    <figure id="reputation">
+                        <label for="reputationbtn">
+                            <img src="Images/reputation.jpg" alt="Taylor Swift Reputation">
+                        </label>
+                        <figcaption>
+                            <input type="radio" name="favAlbum" id="reputationbtn">
+                            <label for="reputationbtn">reputation</label>
+                        </figcaption>
+                    </figure>
+                    <figure id="lover">
+                        <label for="loverbtn">
+                            <img src="Images/lover.jpg" alt="Taylor Swift Lover">
+                        </label>
+                        <figcaption>
+                            <input type="radio" name="favAlbum" id="loverbtn">
+                            <label for="loverbtn">Lover</label>
+                        </figcaption>
+                    </figure>
+                    <figure id="folklore">
+                        <label for="folklorebtn">
+                            <img src="Images/folklore.jpg" alt="Taylor Swift Folklore">
+                        </label>
+                        <figcaption>
+                            <input type="radio" name="favAlbum" id="folklorebtn">
+                            <label for="folklorebtn">folklore</label>
+                        </figcaption>
+                    </figure>
                 </div>
-                <div id="speakNow">
-                    <img src="Images/speak_now.jpg" alt="Taylor Swift Speak Now" width="200" height="200">
-                    <input type="radio" name="favAlbum" id="speakNowbtn">
-                    <label for="speakNowbtn">Speak Now</label>
+                <div id="btnBotRow">
+                    <figure id="evermore">
+                        <label for="evermorebtn">
+                            <img src="Images/evermore.jpg" alt="Taylor Swift Evermore">
+                        </label>
+                        <figcaption>
+                            <input type="radio" name="favAlbum" id="evermorebtn">
+                            <label for="evermorebtn">evermore</label>
+                        </figcaption>
+                    </figure>
+                    <figure id="midnights">
+                        <label for="midnightsbtn">
+                            <img src="Images/midnights.jpg" alt="Taylor Swift Midnights">
+                        </label>
+                        <figcaption>
+                            <input type="radio" name="favAlbum" id="midnightsbtn">
+                            <label for="midnightsbtn">Midnights</label>
+                        </figcaption>
+                    </figure>
+                    <figure id="ttpd">
+                        <label for="TTPDbtn">
+                            <img src="Images/ttpd.png" alt="Taylor Swift TTPD">
+                        </label>
+                        <figcaption>
+                            <input type="radio" name="favAlbum" id="TTPDbtn">
+                            <label for="TTPDbtn">The Tortured Poets Department</label>
+                        </figcaption>
+                    </figure>
                 </div>
-                <div id="red">
-                    <img src="Images/red.jpg" alt="Taylor Swift Red" width="200" height="200">
-                    <input type="radio" name="favAlbum" id="redbtn">
-                    <label for="redbtn">Red</label>
-                </div>
-                <div id="1989">
-                    <img src="Images/1989.jpg" alt="Taylor Swift 1989" width="200" height="200">
-                    <input type="radio" name="favAlbum" id="1989btn">
-                    <label for="1989btn">1989</label>
-                </div>
-                <div id="reputation">
-                    <img src="Images/reputation.jpg" alt="Taylor Swift Reputation" width="200" height="200">
-                    <input type="radio" name="favAlbum" id="reputationbtn">
-                    <label for="reputationbtn">reputation</label>
-                </div>
-                <div id="lover">
-                    <img src="Images/lover.jpg" alt="Taylor Swift Lover" width="200" height="200">
-                    <input type="radio" name="favAlbum" id="loverbtn">
-                    <label for="loverbtn">Lover</label>
-                </div>
-                <div id="folklore">
-                    <img src="Images/folklore.jpg" alt="Taylor Swift Folklore" width="200" height="200">
-                    <input type="radio" name="favAlbum" id="folklorebtn">
-                    <label for="folklorebtn">folklore</label>
-                </div>
-                <div id="evermore">
-                    <img src="Images/evermore.jpg" alt="Taylor Swift Evermore" width="200" height="200">
-                    <input type="radio" name="favAlbum" id="evermorebtn">
-                    <label for="evermorebtn">evermore</label>
-                </div>
-                <div id="midnights">
-                    <img src="Images/midnights.jpg" alt="Taylor Swift Midnights" width="200" height="200">
-                    <input type="radio" name="favAlbum" id="midnightsbtn">
-                    <label for="midnightsbtn">Midnights</label>
-                </div>
-                <div id="ttpd">
-                    <img src="Images/ttpd.png" alt="Taylor Swift TTPD" width="200" height="200">
-                    <input type="radio" name="favAlbum" id="TTPDbtn">
-                    <label for="TTPDbtn">The Tortured Poets Department</label>
+                <div id="submit">
+                    <input type="submit" value="VOTE" name="vote">
                 </div>
             </div>
 
-            <div id="submit">
-                <input type="submit" value="VOTE" name="vote">
-            </div>
         </form>
         <hr>
     </div>
 
     <footer>
-        <p><a href="#top">Back-To-Top</a></p>
-
-        <p>Taylor Swift Official Links</p>
+        <p id="toTop"><a href="#top">Back-To-Top</a></p>
 
         <div id="links">
-            <p>
-                <a href="https://www.taylorswift.com/"> Website</a>
-                <br>
-                <a href="https://store.taylorswift.com/">Store</a>
-                <br>
-                <a href="https://x.com/taylorswift13">Twitter</a>
-                <br>
-                <a href="https://www.instagram.com/taylorswift/?hl=en">Instagram</a>
-                <br>
-                <a href="https://www.facebook.com/TaylorSwift/">Facebook</a>
-                <br>
-                <a href="https://www.youtube.com/channel/UCqECaJ8Gagnn7YCbPEzWH6g">YouTube</a>
-            </p>
+            <p id="footerHead">Taylor Swift Official Links</p>
+            
+            <div id="linksText">
+                <p>
+                    <a href="https://www.taylorswift.com/"> Website</a>
+                    <br>
+                    <br>
+                    <a href="https://store.taylorswift.com/">Store</a>
+                    <br>
+                    <br>
+                    <a href="https://x.com/taylorswift13">Twitter</a>
+                    <br>
+                </p>
+                <p>
+                    <a href="https://www.instagram.com/taylorswift/?hl=en">Instagram</a>
+                    <br>
+                    <br>
+                    <a href="https://www.facebook.com/TaylorSwift/">Facebook</a>
+                    <br>
+                    <br>
+                    <a href="https://www.youtube.com/channel/UCqECaJ8Gagnn7YCbPEzWH6g">YouTube</a>
+                </p>
+            </div>
         </div>
     </footer>
 </body>

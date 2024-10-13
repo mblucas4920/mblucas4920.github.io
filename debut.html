@@ -1,98 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LD3HSV26YY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-LD3HSV26YY');
-    </script>
     <title>debut</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Debut">
-    <meta name="keywords" content="Taylor Swift, UofSC, Swifties, Music, The Eras Tour">
     <meta name="author" content="Madeline Lucas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--CSS-->
+    <link href="uscswifties.css" rel="stylesheet">
+    <style>
+        html{
+            background-color:var(--debutColor);
+        }
+    </style>
     
 </head>
-<body>
+<body id="debut">
     <header>
-        <hr>
-        <h2>Debut (Taylor Swift)</h2>
-        <hr>
+        <hr class="debutLine">
+        <h2 class="albumHead">Debut (Taylor Swift)</h2>
+        <hr class="debutLine">
     </header>
-
+    
     <div id="desc">
-        <p>
-            "Taylor Swift" is the self-titled debut album of singer/songwriter 
-             Taylor Swift, and  was released on October 24, 2006. This album was released under
-             Big Machine Records and marked the beginning of Taylor Swifts music career.
-        </p>
-        <p>
-            "Taylor Swift" features a track list of 14 songs and is 50 minutes in length. 
-            The album is classified under the country and country-pop genres.
-        </p>
-
-        <img src="Images/debut.jpg" alt="Debut">
+        <div id="descText">
+            <p>
+                "Taylor Swift" is the self-titled debut album of singer/songwriter 
+                Taylor Swift, and  was released on October 24, 2006. This album was released under
+                Big Machine Records and marked the beginning of Taylor Swifts music career.
+            </p>
+            <p>
+                "Taylor Swift" features a track list of 14 songs and is 50 minutes in length. 
+                The album is classified under the country and country-pop genres.
+            </p>
+        </div>
+        <figure>
+            <img src="Images/debut.jpg" alt="Debut">
+        </figure>
     </div>
 
-    <hr>
+    <hr class="debutLine">
 
-    <div id="tL/mV">
+    <div id="tLmV">
         <div id="trackList">
-            <h2>Track List</h2>
-            <ol>
-                <li>Tim McGraw &nbsp;&nbsp; 3:52</li>
-                <li>Picture to Burn &nbsp;&nbsp; 2:53</li>
-                <li>Teardrops On My Guitar &nbsp;&nbsp; 3:23</li>
-                <li>A Place in this World &nbsp;&nbsp; 3:19</li>
-                <li>Cold As You &nbsp;&nbsp; 3:59</li>
-                <li>The Outside &nbsp;&nbsp; 3:27</li>
-                <li>Tied Together with a Smile &nbsp;&nbsp; 4:08 </li>
-                <li>Stay Beautiful &nbsp;&nbsp; 3:56</li>
-                <li>Should've Said No &nbsp;&nbsp; 4:02</li>
-                <li>Mary's Song (Oh My My My) &nbsp;&nbsp; 3:33</li>
-                <li>Our Song &nbsp;&nbsp; 3:21</li>
-                <li>I'm Only Me When I'm With You &nbsp;&nbsp; 3:33</li>
-                <li>Invisible &nbsp;&nbsp; 3:23</li>
-                <li>A Perfectly Good Heart &nbsp;&nbsp; 3:40</li>
-            </ol>
+            <h2 class="albumHead">Track List</h2>
+            <div id="debuttrackList">
+                <div class="song">
+                    <span>1. Tim McGraw</span> <span class="time">3:52</span>
+                </div>
+                <div class="song">
+                    <span>2. Picture to Burn</span> <span class="time">2:53</span>
+                </div>
+                <div class="song">
+                    <span>3. Teardrops On My Guitar</span> <span class="time">3:23</span>
+                </div>
+                <div class="song">
+                    <span>4. A Place in this World</span> <span class="time">3:19</span>
+                </div>
+                <div class="song">
+                    <span>5. Cold As You</span> <span class="time">3:59</span>
+                </div>
+                <div class="song">
+                    <span>6. The Outside</span> <span class="time">3:27</span>
+                </div>
+                <div class="song">
+                    <span>7. Tied Together with a Smile</span> <span class="time">4:08</span>
+                </div>
+                <div class="song">
+                    <span>8. Stay Beautiful</span> <span class="time">3:56</span>
+                </div>
+                <div class="song">
+                    <span>9. Should've Said No</span> <span class="time">4:02</span>
+                </div>
+                <div class="song">
+                    <span>10. Mary's Song (Oh My My My)</span> <span class="time">3:33</span>
+                </div>
+                <div class="song">
+                    <span>11. Our Song</span> <span class="time">3:21</span>
+                </div>
+                <div class="song">
+                    <span>12. I'm Only Me When I'm With You</span> <span class="time">3:33</span>
+                </div>
+                <div class="song">
+                    <span>13. Invisible </span> <span class="time">3:23</span>
+                </div>
+                <div class="song">
+                    <span>14. A Perfectly Good Heart</span> <span class="time">3:40</span>
+                </div>
+            </div>
         </div>
+        <div id="line">
 
-        <div id="musicVideos">
-            <h2>Music Videos</h2>
-            <div id="videoOne">
-                <h3>Tim McGraw</h3>
-                <iframe name="mcgrawVideo" id="mcgrawFrame" src="https://www.youtube.com/embed/Jb2stN7kH28">
-                </iframe>
-            </div>
-            <div id="videoTwo"></div>
-                <h3>Picture to Burn</h3>
-                <iframe name="burnVideo" id="burnFrame" src="https://www.youtube.com/embed/yCMqcFAigRg">
-                </iframe>
-            </div>
-            <div id="videoThree"></div>
-                <h3>Teardrops On My Guitar</h3>
-                <iframe name="teardropsVideo" id="teardropsFrame" src="https://www.youtube.com/embed/xKCek6_dB0M">
-                </iframe>
-            </div>
-            <div id="videoFour"></div>
-                <h3>Our Song</h3>
-                <iframe name="burnVideo" id="burnFrame" src="https://www.youtube.com/embed/Jb2stN7kH28">
-                </iframe>
+        </div>
+        <div id="mVfits">
+            <div id="musicVideos">
+                <h2 class="albumHead">Music Videos</h2>
+                <div id="vidrowOne">
+                    <figure id="videoOne">
+                        <figcaption> <h3>Tim McGraw</h3> </figcaption>
+                        <iframe name="mcgrawVideo" id="mcgrawFrame" src="https://www.youtube.com/embed/Jb2stN7kH28">
+                        </iframe>
+                    </figure>
+                    <figure id="videoTwo">
+                        <figcaption> <h3>Picture to Burn</h3> </figcaption>
+                        <iframe name="burnVideo" id="burnFrame" src="https://www.youtube.com/embed/yCMqcFAigRg">
+                        </iframe>
+                    </figure>
+                </div>
+                <div id="vidrowTwo">
+                    <figure id="videoThree">
+                        <figcaption> <h3>Teardrops On My Guitar</h3> </figcaption>
+                        
+                        <iframe name="teardropsVideo" id="teardropsFrame" src="https://www.youtube.com/embed/xKCek6_dB0M">
+                        </iframe>
+                    </figure>
+                    <figure id="videoFour">
+                        <figcaption> <h3>Our Song</h3> </figcaption>
+                        <iframe name="burnVideo" id="burnFrame" src="https://www.youtube.com/embed/Jb2stN7kH28">
+                        </iframe>
+                    </div>
             </div>
         </div>
-
-        <hr>
-
-        <div id="outfits">
-            <h2>Tour Outfits</h2>
-            <img src="Images/surprise.png" alt="Surprise song outfits" height="450" width="310">
-        </div>
+    </div>
+    <div id="outfits">
+        <hr class="debutLine">
+        <h2 class="albumHead">Tour Outfits</h2>
+        <img src="Images/surprise.png" alt="Surprise song outfits" height="450" width="310">
     </div>
 
 

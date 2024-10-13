@@ -1,60 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LD3HSV26YY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-LD3HSV26YY');
-    </script>
     <title>USCSwifties</title>
     <meta charset="UTF-8">
-    <meta name="description" content="USC Swifties Homepage">
-    <meta name="keywords" content="Taylor Swift, UofSC, Swifties, Music, The Eras Tour">
     <meta name="author" content="Madeline Lucas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS-->
+    <link href="uscswifties.css" rel="stylesheet">
+
 </head>
-<body>
-    <header>
-        <nav>
+<body id="home">
+    <nav>
+        <span id="logo">
+            <h2>USCSwifties</h2>
+        </span>
+        <span id="navTabs">
             <ul>
-                <li id="logo"><h2>USCSwifties</h2></li>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="albums.html">Albums/Eras</a></li>
                 <li><a href="bio.html">Bio</a></li>
                 <li><a href="poll.html">Poll</a></li>
             </ul>
-        </nav>
-    </header>
-    <br>
-    <br>
-    <br>
-    <br>
+        </span>
+    </nav>
+
     <!-- First Section -->
-    <div class="content" id="topSec">
-        <hr>
-        <img src="Images/swift_home.jpg" alt="Taylor Swift" width="288" height="384" style="float:left;">
-        <h1>USC Swifties</h1>
-        <hr>
-        <p id="welcome">
-            Welcome to the hub for Taylor Swift Fans (Swifties) attending
-            school at the University of South Carolina. The world is big and
-            hard to navigate, especially for students leaving home for the first
-            time, but through Taylor Swift and her music fans can find
-            communities of like-minded souls wherever they go. Our website’s
-            goal is to create A ‘Place in This World’ where the Swifties of USC
-            never go out of ‘Style’!
-        </p>
+    <div class="secOne" id="topSec"> 
+        <div id="blankLine">
+            <hr>
+        </div>
+        <header id="welcomeImg" >
+            <img src="Images/swift_home.jpg" alt="Taylor Swift">
+        </header>        
+        <div id="welcomeText">
+            <h1>USC Swifties</h1>
+            <hr>
+            <p>
+                    Welcome to the hub for Taylor Swift Fans (Swifties) attending
+                    school at the University of South Carolina. The world is big and
+                    hard to navigate, especially for students leaving home for the first
+                    time, but through Taylor Swift and her music fans can find
+                    communities of like-minded souls wherever they go. Our website’s
+                    goal is to create A ‘Place in This World’ where the Swifties of USC
+                    never go out of ‘Style’!
+            </p>
+        </div>
+        <div id="blankLine">
+            <br>
+            <hr>
+            <br>
+        </div>
     </div>
+    
     <!--"Explore" Section-->
-    <div id="explore" class="content" style="clear:both">
+    <div id="explore" class="secTwo">
         <div id="title">
             <h2>Explore!</h2>
             <hr>
         </div>
+        <br>
+        <br>
         <div id="sections">
             <div id="bioSec">
                 <h2><a href="bio.html">Bio</a></h2>
@@ -164,22 +170,32 @@
     </div>
 
     <footer>
-        <p><a href="#top">Back-To-Top</a></p>
+        <p id="toTop"><a href="#top">Back-To-Top</a></p>
 
         <div id="links">
-            <p>Taylor Swift Official Links</p>
+            <p id="footerHead">Taylor Swift Official Links</p>
             
-            <p><a href="https://www.taylorswift.com/"> Website</a></p>
-            <br>
-            <p><a href="https://store.taylorswift.com/">Store</a></p>
-            <br>
-            <p><a href="https://x.com/taylorswift13">Twitter</a></p>
-            <br>
-            <p><a href="https://www.instagram.com/taylorswift/?hl=en">Instagram</a></p>
-            <br>
-            <p><a href="https://www.facebook.com/TaylorSwift/">Facebook</a></p>
-            <br>
-            <p><a href="https://www.youtube.com/channel/UCqECaJ8Gagnn7YCbPEzWH6g">YouTube</a></p>
+            <div id="linksText">
+                <p>
+                    <a href="https://www.taylorswift.com/"> Website</a>
+                    <br>
+                    <br>
+                    <a href="https://store.taylorswift.com/">Store</a>
+                    <br>
+                    <br>
+                    <a href="https://x.com/taylorswift13">Twitter</a>
+                    <br>
+                </p>
+                <p>
+                    <a href="https://www.instagram.com/taylorswift/?hl=en">Instagram</a>
+                    <br>
+                    <br>
+                    <a href="https://www.facebook.com/TaylorSwift/">Facebook</a>
+                    <br>
+                    <br>
+                    <a href="https://www.youtube.com/channel/UCqECaJ8Gagnn7YCbPEzWH6g">YouTube</a>
+                </p>
+            </div>
         </div>
     </footer>
 </body>

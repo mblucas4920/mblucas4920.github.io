@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LD3HSV26YY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-LD3HSV26YY');
-    </script>
-
     <title>Speak Now</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Speak Now">
-    <meta name="keywords" content="Taylor Swift, UofSC, Swifties, Music, The Eras Tour">
     <meta name="author" content="Madeline Lucas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--CSS-->
+    <link href="uscswifties.css" rel="stylesheet">
+    <style>
+        html{
+            background-color:var(--speakNowColor);
+        }
+    </style>
 </head>
-<body>
+<body id="speakNow">
     <header>
         <hr>
-        <h2>Speak Now</h2>
+        <h2 class="albumHead">Speak Now</h2>
         <hr>
     </header>
 
@@ -47,9 +42,9 @@
 
     <hr>
 
-    <div id="tL/mV">
+    <div id="tLmV">
         <div id="trackList">
-            <h2>Track List</h2>
+            <h2 class="albumHead">Track List</h2>
             <ol>
                 <li>Mine &nbsp;&nbsp; 3:51</li>
                 <li>Sparks Fly &nbsp;&nbsp; 4:21</li>
@@ -77,7 +72,7 @@
         </div>
 
         <div id="musicVideos">
-            <h2>Music Videos</h2>
+            <h2 class="albumHead">Music Videos</h2>
             <div id="videoOne">
                 <h3>Mine</h3>
                 <iframe name="mineVideo" id="mineFrame" src="https://www.youtube.com/embed/XPBwXKgDTdE">
@@ -113,7 +108,7 @@
         <hr>
 
         <div id="outfits">
-            <h2>Tour Outfits</h2>
+            <h2 class="albumHead">Tour Outfits</h2>
             <img src="Images/speakNowOutfits.png" alt="Speak Now outfits" height="400" width="400">
         </div>
     </div>
