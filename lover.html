@@ -12,6 +12,11 @@
         html{
             background-color:var(--loverColor);
         }
+
+        #videoFour iframe{
+            position: relative;
+            top:-4px;
+        }
     </style>
 </head>
 <body id="lover">
@@ -22,23 +27,23 @@
     </header>
 
     <div id="desc">
-        <p>
-            Lover by Taylor Swift was released on August 23, 2019, 
-            as her seventh studio album. Lover was the singers first album released under
-            Republic Records after leaving her previous record label
-            of thirteen years, Big Machine Records.
-        </p>
-        <p>
-            Lover features a track list of 18 songs and is 
-            1 hour and 1 minute in length. The album is classified
-            under the pop and electro-pop genres.
-        </p>
-
-        <img src="Images/lover.jpg" alt="lover">
-
-        <p>
-            Pitchfork: 7.1/10
-        </p>
+        <span>
+            <p>
+                Lover by Taylor Swift was released on August 23, 2019, 
+                as her seventh studio album. Lover was the singers first album released under
+                Republic Records after leaving her previous record label
+                of thirteen years, Big Machine Records.
+            </p>
+            <p>
+                Lover features a track list of 18 songs and is 
+                1 hour and 1 minute in length. The album is classified
+                under the pop and electro-pop genres.
+            </p>
+        </span>
+        <figure>
+            <img src="Images/lover.jpg" alt="lover">
+            <figcaption>Pitchfork: 7.1/10</figcaption>
+        </figure>
     </div>
 
     <hr>
@@ -46,56 +51,101 @@
     <div id="tLmV">
         <div id="trackList">
             <h2 class="albumHead">Track List</h2>
-            <ol>
-                <li>I Forgot That You Existed &nbsp;&nbsp; 2:50</li>
-                <li>Cruel Summer &nbsp;&nbsp; 2:58</li>
-                <li>Lover &nbsp;&nbsp; 3:41</li>
-                <li>The Man &nbsp;&nbsp; 3:10</li>
-                <li>The Archer &nbsp;&nbsp; 3:31</li>
-                <li>I Think He Knows &nbsp;&nbsp; 2:53</li>
-                <li>Miss Americana & The Heartbreak Prince &nbsp;&nbsp; 3:54</li>
-                <li>Paper Rings &nbsp;&nbsp; 3:42</li>
-                <li>Cornelia Street &nbsp;&nbsp; 4:47</li>
-                <li>Death By A Thousand Cuts &nbsp;&nbsp; 3:18</li>
-                <li>London Boy &nbsp;&nbsp; 3:10</li>
-                <li>Soon You'll Get Better (feat. The Chicks) &nbsp;&nbsp; 3:21</li>
-                <li>False God &nbsp;&nbsp; 3:20</li>
-                <li>You Need To Calm Down &nbsp;&nbsp; 2:51</li>
-                <li>Afterglow &nbsp;&nbsp; 3:43</li>
-                <li>ME! (feat. Brendon Urie of Panic! At The Disco) &nbsp;&nbsp; 3:13</li>
-                <li>It's Nice To Have A Friend &nbsp;&nbsp; 2:30</li>
-                <li>Daylight &nbsp;&nbsp; 4:53</li>
-            </ol>
+            <div id="lovertrackList">
+                <div class="song">
+                    <span>1. I Forgot That You Existed </span> <span class="time">2:50</span>
+                </div>
+                <div class="song">
+                    <span>2. Cruel Summer </span> <span class="time">2:58</span>
+                </div>
+                <div class="song">
+                    <span>3. Lover </span> <span class="time">3:41</span>
+                </div>
+                <div class="song">
+                    <span>4. The Man </span> <span class="time">3:10</span>
+                </div>
+                <div class="song">
+                    <span>5. The Archer </span> <span class="time">3:31</span>
+                </div>
+                <div class="song">
+                    <span>6. I Think He Knows </span> <span class="time">2:53</span>
+                </div>
+                <div class="song">
+                    <span>7. Miss Americana & The Heartbreak Prince </span> <span class="time">3:54</span>
+                </div>
+                <div class="song">
+                    <span>8. Paper Rings </span> <span class="time">3:42</span>
+                </div>
+                <div class="song">
+                    <span>9. Cornelia Street </span> <span class="time">4:47</span>
+                </div>
+                <div class="song">
+                    <span>10. Death By A Thousand Cuts </span> <span class="time">3:18</span>
+                </div>
+                <div class="song">
+                    <span>11. London Boy </span> <span class="time">3:10</span>
+                </div>
+                <div class="song">
+                    <span>12. Soon You'll Get Better (feat. The Chicks) </span> <span class="time">3:21</span>
+                </div>
+                <div class="song">
+                    <span>13. False God </span> <span class="time">3:20</span>
+                </div>
+                <div class="song">
+                    <span>14. You Need To Calm Down </span> <span class="time">2:51</span>
+                </div>
+                <div class="song">
+                    <span>15. Afterglow </span> <span class="time">3:43</span>
+                </div>
+                <div class="song">
+                    <span>16. Me (feat. Brendon Urie) </span> <span class="time">3:13</span>
+                </div>
+                <div class="song">
+                    <span>17. It's Nice To Have A Friend </span> <span class="time">2:30</span>
+                </div>
+                <div class="song">
+                    <span>18. Daylight </span> <span class="time">4:53</span>
+                </div>
+            </div>
         </div>
-
-        <div id="musicVideos"></div>
-            <h2 class="albumHead">Music Videos</h2>
-            <div id="videoOne">
-                <h3>Lover</h3>
-                <iframe name="loverVideo" id="loverFrame" src="https://www.youtube.com/embed/-BjZmE2gtdo">
-                </iframe>
-            </div>
-            <div id="videoTwo">
-                <h3>The Man</h3>
-                <iframe name="manVideo" id="manFrame" src="https://www.youtube.com/embed/AqAJLh9wuZ0">
-                </iframe>
-            </div>
-            <div id="videoThree">
-                <h3>You Need To Calm Down</h3>
-                <iframe name="calmVideo" id="calmFrame" src="https://www.youtube.com/embed/Dkk9gvTmCXY">
-                </iframe>
-            </div>
-            <div id="videoFour">
-                <h3>ME! (feat. Brendon Urie of Panic! At The Disco)</h3>
-                <iframe name="meVideo" id="meFrame" src="https://www.youtube.com/embed/FuXNumBwDOM">
-                </iframe>
+        <div id="line">
+            
         </div>
+        <div id="mVfits">
+            <div id="musicVideos">
+                <h2 class="albumHead">Music Videos</h2>
+                <div id="vidrowOne">
+                    <div id="videoOne">
+                        <h3>Lover</h3>
+                        <iframe name="loverVideo" id="loverFrame" src="https://www.youtube.com/embed/-BjZmE2gtdo">
+                        </iframe>
+                    </div>
+                    <div id="videoTwo">
+                        <h3>The Man</h3>
+                        <iframe name="manVideo" id="manFrame" src="https://www.youtube.com/embed/AqAJLh9wuZ0">
+                        </iframe>
+                    </div>
+                </div>
+                <div id="vidrowTwo">
+                    <div id="videoThree">
+                        <br>
+                        <h3>You Need To Calm Down</h3>
+                        <iframe name="calmVideo" id="calmFrame" src="https://www.youtube.com/embed/Dkk9gvTmCXY">
+                        </iframe>
+                    </div>
+                    <div id="videoFour">
+                        <h3>ME! (feat. Brendon Urie of <br> Panic! At The Disco)</h3>
+                        <iframe name="meVideo" id="meFrame" src="https://www.youtube.com/embed/FuXNumBwDOM">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
 
-        <hr>
-
-        <div id="outfits">
-            <h2 class="albumHead">Tour Outfits</h2>
-            <img src="Images/loverOutfits.png" alt="Lover outfits" height="500" width="300">
+            <div id="outfits">
+                <hr>
+                <h2 class="albumHead">Tour Outfits</h2>
+                <img src="Images/loverOutfits.png" alt="Lover outfits" height="500" width="300">
+            </div>
         </div>
     </div>
 

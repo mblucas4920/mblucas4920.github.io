@@ -9,7 +9,7 @@
     <!--CSS-->
     <link href="uscswifties.css" rel="stylesheet">
 </head>
-<body>
+<body id="bioBody">
     <header>
         <nav>
             <span id="logo">
@@ -18,99 +18,158 @@
             <span id="navTabs">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="albums.html">Albums/Eras</a></li>
+                    <div class="dropTab">
+                        <li><a href="albums.html">Albums/Eras</a></li>
+                        <div class="dropdown-content">
+                            <li><a href="albums.html?iframeSrc=debut.html#album" id="debut">Debut</a></li>
+                            <li><a href="albums.html?iframeSrc=fearless.html#album" id="fearless">Fearless</a></li>
+                            <li><a href="albums.html?iframeSrc=speakNow.html#album" id="speakNow">Speak Now</a></li>
+                            <li><a href="albums.html?iframeSrc=red.html#album" id="red">Red</a></li>
+                            <li><a href="albums.html?iframeSrc=1989.html#album" id="ts1989">1989</a></li>
+                            <li><a href="albums.html?iframeSrc=reputation.html#album" id="reputation">reputation</a></li>
+                            <li><a href="albums.html?iframeSrc=lover.html#album" id="lover">Lover</a></li>
+                            <li><a href="albums.html?iframeSrc=folklore.html#album" id="folklore">folklore</a></li>
+                            <li><a href="albums.html?iframeSrc=evermore.html#album" id="evermore">evermore</a></li>
+                            <li><a href="albums.html?iframeSrc=midnights.html#album" id="midnights">Midnights</a></li>
+                            <li><a href="albums.html?iframeSrc=ttpd.html#album" id="ttpd">The Tortured Poets Department</a></li>
+                        </div>
+                    </div>
                     <li><a href="bio.html">Bio</a></li>
                     <li><a href="poll.html">Poll</a></li>
                 </ul>
             </span>
         </nav>
-
-        <h1>The Life of Taylor Swift</h1>
-
     </header>
     <div id="bio">
+        <div>
+            <hr>
+            <h1>The Life of Taylor Swift</h1>
+            <hr>
+        </div>
         <img src="Images/taylorVMAs2024.jpg" alt="Taylor Swift at the 2024 VMAs" height="400" width="275">
-
-        <p>
-            Taylor 'Alison' Swift was born on December 13, 1989.
-        </p>
-
+        <span>
+            <p>
+                Taylor 'Alison' Swift was born on December 13, 1989.
+            </p>
+        </span>
+    </div>
+    <div id="blankLine">
+        <br>
+        <hr>
     </div>
 
-    <hr>
-
-    <div id="careerTL">
+    <div id="careerTL" class="secTwo">
+        <hr style="margin-top:25px;">
         <h2>Career Timeline</h2>
+        <hr style="margin-bottom: 50px;">
         <!--Div for 2005-->
-        <div id="timeLine1">
+        <div id="timeLine1" class="timeLineDiv">
             <h3>2005</h3>
-            <p>
-                Signed with Big Machine Records
-            </p>
+            <span>
+                <p>
+                    Signed with Big Machine Records
+                </p>
+            </span>
+            <div class="hiddenInfo">
+                <span>
+                    <p>In 2005, Taylor Swift signed a record <br>  deal with record label "Big Machine Records" at the age of 16.</p>
+                </span>
+                <img src="Images/bigMachine.jpg" alt="Swift Contract 2005" width="300px" height="200px">
+            </div>
         </div>
         <!--Div for 2006-->
-        <div id="timeLine2"></div>
+        <div id="timeLine2" class="timeLineDiv">
             <h3>2006</h3>
             <p>
                 Released self-titled debut album, <i>Taylor Swift</i>.
             </p>
+            <div class="hiddenInfo">
+                <img src="Images/debut.jpg" alt="Debut Album Cover" width="200px" height="200px">
+            </div>
         </div>
         <!--Div for 2008-->
-        <div id="timeLine3"></div>
+        <div id="timeLine3" class="timeLineDiv">
             <h3>2008</h3>
             <p>
                 Released sophomore album, <i>Fearless</i>.
             </p>
+            <div class="hiddenInfo">
+                <img src="Images/fearless.jpg" alt="Fearless Album Cover" width="200px" height="200px">
+            </div>
         </div>
         <!--Div for 2009-->
-        <div id="timeLine4"></div>
+        <div id="timeLine4" class="timeLineDiv">
             <h3>2009</h3>
             <p>
                 Received first award for “Best Music Video” at the 2009 VMAs
             </p>
+            <div class="hiddenInfo">
+                <span style="position:relative; top:100px; left:-200px; text-align: left;">
+                    
+                    <p>At the 2009 MTV Video Music Awards Swift won the award for <br>
+                        "Best Music Video" with her music video for the song <br>
+                        "You Belong With Me" from the singers sophomore album "Fearless."</p>
+                    <p>This was signifigant not just because it marked Swift's first<br> 
+                        main-stream award, but also because while accepting the award,<br>
+                        rapper Kanye West came on stage and interrupted the at-the-time <br>
+                        19 year old girl.
+                    </p>
+                    <p>This incident garnered critisisms of West, and support for Swift, <br>
+                        and marked the beginning of what would become a years long fued<br> between the two.
+                    </p>
+                </span>
+                <img src="Images/2009vmas.jpg" alt="2009 VMAs Kanye West Interrupts Taylor Swift Acceptance Speech" width="300px" height="200px" 
+                style="position: relative; top:-250px; left:100px">
+            </div>
         </div>
         <!--Div for 2010-->
-        <div id="timeLine5"></div>
+        <div id="timeLine5" class="timeLineDiv">
             <h3>2010</h3>
             <p>
                 Released third studio album, <i>Speak Now</i>.
             </p>
             <p>
-                Received first awards for… “Album of the Year” (“Fearless”), “Best Country Female
-                Performance” (“White Horse”), Best Country Song (“White Horse”), and “Best Country
+                Received first awards for… <br>“Album of the Year” (“Fearless”), <br>“Best Country Female
+                Performance” (“White Horse”), <br>"Best Country Song" (“White Horse”), and <br>“Best Country
                 Album” (“Fearless”) at the 52nd Annual Grammy Awards Show.
             </p>
         </div>
         <!--Div for 2012-->
-        <div id="timeLine6"></div>
+        <div id="timeLine6" class="timeLineDiv">
             <h3>2012</h3>
             <p>
                 Released fourth studio album, <i>Red</i>.
             </p>
         </div>
         <!--Div for 2014-->
-        <div id="timeLine7"></div>
+        <div id="timeLine7" class="timeLineDiv">
             <h3>2014</h3>
             <p>
                 Released fifth studio album, <i>1989</i>.
             </p>
+            <div class="hiddenInfo">
+                <img src="Images/1989.jpg" alt="1989 Album Cover" height="200px" width="200px">
+            </div>
         </div>
         <!--Div for 2017-->
-        <div id="timeLine7"></div>
+        <div id="timeLine7" class="timeLineDiv">
             <h3>2017</h3>
             <p>
                 Released sixth studio album, <i>reputation</i>.
             </p>
+            <div class="hiddenInfo">
+                <img src="Images/reputation.jpg" alt="reputation Album Cover" width="200px" height="200px">
+            </div>
         </div>
         <!--Div for 2018-->
-        <div id="timeLine8"></div>
+        <div id="timeLine8" class="timeLineDiv">
             <h3>2018</h3>
             <p>
                 Contract with Big Machine Records expires; Swift signs with Republic Records
             </p>
         </div>
         <!--Div for 2019-->
-        <div id="timeLine9"></div>
+        <div id="timeLine9" class="timeLineDiv">
             <h3>2019</h3>
             <p>
                 Released seventh studio album <i>Lover</i>. This was her first album under Republic Records
@@ -125,21 +184,21 @@
             </p>
         </div>
         <!--Div for 2020-->
-        <div id="timeLine10"></div>
+        <div id="timeLine10" class="timeLineDiv">
             <h3>2020</h3>
             <p>
                 Released eighth and ninth studio albums, <i>folklore</i> and <i>evermore</i>.
             </p>
         </div>
         <!--Div for 2021-->
-        <div id="timeLine11"></div>
+        <div id="timeLine11" class="timeLineDiv">
             <h3>2021</h3>
             <p>
                 Released first and second re-recorded albums, <i>Fearless(Taylors Version)</i> and <i>Red(Taylors Version)</i>
             </p>
         </div>
         <!--Div for 2022-->
-        <div id="timeLine12"></div>
+        <div id="timeLine12" class="timeLineDiv">
             <h3>2022</h3>
             <p>
                 Released tenth studio album, <i>Midnights</i>.
@@ -147,9 +206,13 @@
             <p>
                 Announced 'The Eras Tour.'
             </p>
+            <div class="hiddenInfo">
+                <img src="Images/midnights.jpg" alt="Midnights Album Cover" width="200px" height="200px">
+                <img src="Images/ErasTour.jpg" alt="The Eras Tour" width="200px" height="200px">
+            </div>
         </div>
         <!--Div for 2023-->
-        <div id="timeLine13"></div>
+        <div id="timeLine13" class="timeLineDiv">
             <h3>2023</h3>
             <p>
                 Released third and fourth re-recorded albums, <i>Speak Now(Taylors Version)</i> and <i>1989(Taylors Version)</i>
@@ -159,16 +222,21 @@
             </p>
         </div>
         <!--Div for 2024-->
-        <div id="timeLine14"></div>
+        <div id="timeLine14" class="timeLineDiv">
             <h3>2024</h3>
             <p>
                 Released eleventh studio album, <i>The Tortured Poets Department</i>.
             </p>
+            <div class="hiddenInfo">
+                <img src="Images/ttpd.png" alt="The Tortured Poets Department Album Cover" height="200px" width="200px">
+            </div>
         </div>
     </div>
-
-    <hr>
-
+    <div class="space">
+        <div id="blankLine">
+            <hr style="position:relative; top:40px;">
+        </div>
+    </div>
     <footer>
         <p id="toTop"><a href="#top">Back-To-Top</a></p>
 

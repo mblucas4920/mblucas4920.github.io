@@ -1,12 +1,11 @@
 /* --------- General CSS Rules for ALL WebPages ----------- */
-
 /* sets site-wide background color and font-family */
 html {
     background-color: #F0E9DF;
     font-family: Verdana, Tahoma, sans-serif;
 }
 
-/* centers entire webpage */
+/* centers entire webpage (including text) */
 body {
     margin: 0 auto;
     text-align:center;
@@ -17,16 +16,23 @@ img {
     border: 3px solid;    
 }
 
-/* establishes nav tab as a flex-box, fixes its position to the top of the webpage */
+/* --- Nav --- */
+
+/* establishes nav tab as a flex-box, fixes its position to the top of the webpage, names 'nav' using grid-area */
 nav {
     display:flex;
+    /* sets position to 'fixed' */
     position: fixed;
+    /* 'sticks' the navbar to the top by establishing a 0px distance between the top edge and the nav */
     top: 0;
     width:100%;
     background-color: #ADA497;
-    box-shadow: 0px 5px 5px 1px rgba(133, 123, 109, 50%);
+    box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 20%);
     color:white;
+    /* naming "nav" allows for layout changes using grid-template-areas*/
     grid-area:nav;
+    z-index: 5;
+    align-items:center;
 }
 
 /* removes the bullet points from the unordered list, establishes the unordered list as a flex-box, 
@@ -36,6 +42,7 @@ nav ul {
     display:flex;
     padding:0;
     justify-content: flex-end;
+
 }
 
 /* changes font-size and margin of the h2 tag that is a direct child of an element with the id logo */
@@ -54,17 +61,18 @@ nav ul {
 /* changes the flex-basis of the "navTabs" span element to 75% */
 #navTabs {
     flex-basis: 75%;
+    overflow:hidden;
 }
 
 /* changes padding, margin, font-size, and font-family of links inside the nav element, removes underline from links,
 and changes color to white */
 nav a{
-    padding: 30px 100px 27px;
-    margin-top: 20px;
+    padding: 30px 90px;
     line-height:50px;
     font-size:25px;
     font-family:'Times New Roman', Times, serif;
     text-decoration: none;
+    text-align: left;
     color:white;
     background-color: #7d7566;
 
@@ -75,10 +83,92 @@ gives the element a box-shadow when hovered over
 changes text-color to black when hovered over */
 nav a:hover {
     background-color: #ADA497;
-    box-shadow: 0px 5px 5px 1px rgba(133, 123, 109, 50%);
+    box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 25%);
     color:black;
 }
 
+.dropTab{
+    float:left;
+    overflow:visible;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top:80px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 5px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    font-size: 15px;
+    float:none;
+    display: block;
+    padding: 3px 20px;
+    text-align: left;
+    font-weight: bolder;
+    border:1px solid black;
+    text-shadow: 1px 1px black;
+}
+
+.dropdown-content a:hover{
+    text-shadow: 1px 1px white;
+}  
+
+
+/* Show the dropdown menu on hover */
+div.dropTab:hover .dropdown-content {
+    display: block;
+}
+
+
+/*Changes the background color of each link within dropdown-content to be a darker shade when clicked (active)*/
+.dropdown-content #debut:active{
+    background-color: #88ad80;
+}
+
+.dropdown-content #fearless:active{
+    background-color: #cc9d56;
+}
+
+.dropdown-content #speakNow:active{
+    background-color: #b47dbd;
+}
+
+.dropdown-content #red:active{
+    background-color: #591722;
+}
+
+.dropdown-content #ts1989:active{
+    background-color: #60a6c4;
+}
+
+.dropdown-content #reputation:active{
+    background-color: #4a4647;
+}
+
+.dropdown-content #lover:active{
+    background-color: #db769f;
+}
+
+.dropdown-content #folklore:active{
+    background-color: #b0ada7;
+}
+
+.dropdown-content #evermore:active{
+    background-color: #9e8264;
+}
+
+.dropdown-content #midnights:active{
+    background-color:  #202e5e;
+}
+
+.dropdown-content #ttpd:active{
+    background-color: #59534c;
+}
 
 /* --- Footer --- */
 
@@ -87,6 +177,7 @@ sets with too 100%, and all-around padding to 25px
 establishes footer element as a flex-box and justifies flex-content with space-between
 use grid-area to name footer "foot" to allow it to be used in "grid-template-area" within the body grid-container*/
 footer {
+    border-top:1px solid #F0E9DF;
     text-align: left;
     background-color: #ADA497;
     padding-top: 25px;
@@ -94,6 +185,8 @@ footer {
     display:flex;
     justify-content: space-between;
     grid-area:foot;
+    position:relative;
+    bottom: 0;
 }
 
 /*establishes the div with ID "links" inside the footer div as a grid-container with two auto-sizing rows
@@ -144,11 +237,12 @@ div.secTwo  {
 /* change style of lines across webpages (HR elements) */
 hr {
     border: 2px solid #978E7F;
-    margin-right:25px;
-    margin-left:25px;
+    margin-right:50px;
+    margin-left:50px;
 }
 
-/* --------------- FOCUSED ON INDEX/HOMEPAGE --------------------- */
+
+/* --------------- FOCUSED ON INDEX/HOMEPAGE --------------------- */                                              /*NEW FILE*/
 /* establishes div with ID "topSec" as a grid-container with 2 auto-sizing columns and 2 auto-sizing rows */
 #topSec {
     display:grid;
@@ -195,19 +289,21 @@ gives image a box-shadow that is off centered left-down */
     padding-right:50px;
 }
 
-/* establishes body with ID "home" to be a grid */
+/* establishes body with ID "home" to be a grid with one 100px row, and 4 auto sizing rows*/
 body#home{
     display:grid;
-    grid-template-rows: 100px auto auto auto auto;
+    grid-template-rows: 100px auto auto auto 20px auto;
+    /* grid-template-areas allows for position of content within the grid using "names" that were previously established using "grid-area" */
     grid-template-areas: 
         "nav"
         "welcome"
         "explore"
         "album"
+        "space"
         "foot";
 }
 
-/* names the "top section" div */
+/* names the "top section" div to 'welcome'*/
 div#topSec {
     grid-area:welcome;
 }
@@ -239,60 +335,96 @@ div#sections {
     margin: 0 auto;
 }
 
+/* removes underline from links within #explore, changes line height, gives 50px padding to top/bottom 150px to right/left
+changes text color to 'black', changes background color, creates a boxshadow
+establishes a 'transition' to the <a> elements padding (further used in a:hover)*/
 #explore a{
     text-decoration: none;
-    text-align:center;
     line-height: 100px;
-    padding: 50px 150px 50px;
+    padding: 50px 150px;
 
     color:black;
     background-color: #F0E9DF;
     box-shadow: -10px -10px 5px 1px rgba(133, 123, 109, 50%);
-    
+    /* declares that the elements padding will change within 250ms */
     transition: padding 250ms;
+    /* changes the 'timing' to 'ease-in-out', meaning slow start and slow end */
     transition-timing-function: ease-in-out;
 }
 
+/* changes background color, textcolor, and padding of <a> element within #explore when hovered. 
+also adds a solid border*/
 #explore a:hover{
     background-color: #ADA497;
     color:#F0E9DF;
     border:solid #F0E9DF;
+    /* this is the end result of the "transition" established in #explore a */
     padding:75px 200px;
 }
 
-/* divs that say "Bio" and "Poll" */
+/* divs that say "Bio" and "Poll"
+establishes top/bottom padding as 10px, and right/left as 25px */
 #bioSec, #pollSec {
     padding: 10px 25px;
 }
 
 /* --- albums section --- */
-
+/* sets all-around margin to 25px, and height to 100% for div within #erasText */
 #erasText div{
     margin:25px;
     height:100%;
 }
 
+/* names element with ID albumEras "albums" using grid-area */
 #albumEras{
     grid-area:albums;
 }
 
-#albumsEras a{
+/* removes underline, changes text-color to white, changes background color, 
+and establishes 10px top/bottom padding & 250 right/left padding to <a> within #albumEras */
+#albumsEras h1 a{
     text-decoration: none;
     color:white;
     background-color: #ADA497;
     padding:10px 250px;
 }
 
+div#albumEras h1 a:hover{
+    border:1px solid #ADA497;
+    background-color: #F0E9DF;
+    color:black;
+}
+
+div#albumCovers{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top:20px;
+}
+
+#albumCovers a{
+    text-decoration: none;
+    color:black;
+    border:none;
+}
+
+/*centers divs with IDs "topRow" "midRow" and "botRow" and sets their width to "fit-content" */
 div#topRow, div#midRow, div#botRow{
     margin: 0 auto;
+    margin-top:40px;
+    margin-bottom: 40px;
     width:fit-content;
+    display: flex;
+    flex-wrap:wrap;
 }
 
+/* makes ALL figures float left on the webpage*/
 figure {
     float:left;
-    align-items: center;
 }
 
+/*sets width (210px), height (75px), and line-height (75px) of all figcaptions
+centers all figcaptions using margin: 0 auto */
 figcaption{
     width:210px;
     height:75px;
@@ -300,27 +432,40 @@ figcaption{
     margin:0 auto;
 }
 
-figcaption#ttpd{
-    line-height: 50px;
+#albumCovers figure{
+    border:3px solid black;
+    padding:10px;
+    margin-top:0px;
+    box-shadow: none;
+
+    transition: margin-top 1s, box-shadow 300ms;
 }
 
-figcaption#department {
-    line-height:0px;
+#albumCovers figure img{
+    border:2px solid black;
 }
 
-#albumCovers figure img {
-    box-shadow: -10px -10px 8px #857b6d
+#albumCovers figure:hover{
+    position:relative;
+    margin-top: -20px;
+    box-shadow:0px 5px 10px 6px rgba(0, 0, 0, 20%);
 }
 
+
+/* estbalishes all-around padding (1px) of element with class space, and clears float on both sides
+purpose of this is to allow room for <hr> under #albumCovers */
 .space {
     padding-top:1px;
     clear:both;
+    grid-area:space;
 }
 
-/* --------------- FOCUSED ON ALBUMS/ERAS PAGE ------------------ */
 
-/* makes the album a "div container" for every other div within this page */
+/* --------------- FOCUSED ON ALBUMS/ERAS PAGE ------------------ */                                  /*NEW FILE*/
 
+/* makes the album a "div container" for every other div within this page 
+with a row of 3%, a row of 160px, and three auto-sizing rows
+utilizes grid-template-areas to position named divs within body#albums*/
 body#albums{
     display:grid;
     grid-template-rows:3% 160px auto auto auto;
@@ -333,10 +478,13 @@ body#albums{
         "foot";
 }
 
+/* names header with ID title to "head" using grid-area*/
 header#title{
     grid-area:head;   
 }
 
+/*changes background-color, text-color, margin (25px top/bottom), all-around padding (15px), border radius (20px)
+width (50%) and centers (using margin:0 auto;) <h1> element within header#title */
 header#title h1{
     background-color: #ADA497;
     color:white;
@@ -346,9 +494,10 @@ header#title h1{
     padding:15px;
     border-radius: 20px;
     width:50%;
-    
 }
 
+/* sets text-align to justify, font-size 20px, all-around padding (10px), and margin (10px top/bottom, 25px right/left)
+of <p> within #erasText */
 #erasText p{
     text-align: justify;
     font-size:20px;
@@ -356,61 +505,95 @@ header#title h1{
     margin: 10px 25px;
 }
 
+/* sets all-around margin of img within #erasTourImg to 20px*/
 #erasTourImg img{
     margin:20px;
+    margin-right:50px;
 }
 
+/* changes font-size of <h2> within #erasText*/
 #erasText h2{
     font-size:30px;
 }
 
+/* establishes element with ID "erasTour" as a grid with two auto-sizing columns
+names it 'erasTour' using grid-area*/
 #erasTour {
     display:grid;
     grid-template-columns: auto auto;
-    grid-template-rows: auto;
     grid-area:erasTour;
 }
 
-/* change style of hr in albumSec */
+/* names element with ID "albumSec" to 'albumSec' using grid-area*/
 #albumSec {
     grid-area:albumSec;
 }
 
+/* changes size and color of <hr> within #albumSec */
 #albumSec hr {
     border: 2px solid #F0E9DF;
 }
 
+#albumSec h2{
+    font-size:30px;
+    margin:20px auto;
+    background-color:#F0E9DF;
+    padding:15px 40px;
+    width:50%;
+    border-radius:20px;
+}
+
+/* sets element with class "buttons" all-around padding to 10px,
+establishes it as a grid with three auto-sizing rows with vertical gaps of 25px and horizontal gaps of 15px
+align-contents with even space*/
 .buttons {
     padding: 10px;
     display:grid;
-    grid-template-rows:auto auto auto;
-    gap:25px 15px;
-    align-content:space-evenly;
+    grid-template-rows:30% 20% 30%;
+    gap:25px 20px;
+    align-content:space-around;
 }
 
+/*sets top-margin of element with ID "btnTopRow" to 25px */
 #btnTopRow{
     margin-top:25px;
 }
 
+/*sets bottom-margin of element with ID "btnBotRow" to 25px*/
 #btnBotRow{
     margin-bottom:25px;
 }
 
+/* sets width (225px), height (50px) and all-around margin (5px) of all button elements within an element with class "buttons" */
 .buttons button {
-    width:225px;
+    width:250px;
     height:50px;
-    margin:5px;
+    margin:0 20px;
+    font-size: 18px;
+    border:2px solid black;
+    border-radius: 10px;
 }
 
+
+/*increases button within an element with class "buttons" brightness by 50% and changes text-color to white when hovered over*/
 .buttons button:hover{
     filter:brightness(50%);
     color:white;
+    cursor:pointer;
 }
 
+.buttons button:active{
+    filter:brightness(25%);
+    color:white;
+}
+
+/* gives element (iFrame) with ID 'albumFrame' a top-margin of 25px, a solid 5px border, sets height and width to 1200px, 
+and gives a box-shadow that is visible on all sides*/
 #albumFrame{ 
     margin-top:25px;
     height:1200px;
-    width:1200px;
+    width:90%;
+    max-width:1200px;
     border:solid 5px #5e574a;
     box-shadow: -10px 0px 7px 3px rgba(133, 123, 109, 75%), 
                 10px 0px 7px 3px rgba(133, 123, 109, 75%),
@@ -418,123 +601,431 @@ header#title h1{
 }
 
 /* Inside IFrame */
+/*applies to all elements with class "albumHead" (in this case, it is used on all h2 tags within each 'album file' to stylize them the same)
+centers albumhead, sets top and bottom margin to 20px, sets top/bottom padding to 30px & left/right padding to 20px, sets width to 50%,
+and creates a "box-shadow" under every element with class albumHead */
 .albumHead {
     margin: auto;
     margin-top:20px;
     margin-bottom:20px;
     padding:30px 20px;
     width:50%;
-    box-shadow: -5px 5px 3px 1px rgba(133, 123, 109, 50%);
+    box-shadow: -5px 5px 3px 1px rgba(0, 0, 0, 25%);
 }
 
+/* establishes element with ID "desc" as a grid with two auto-sizing columns, and...
+text-aligned left, all-around margin of 50px, font-size of 16px */
 #desc{
     display:grid;
     grid-template-columns: auto auto;
-    text-align: left;
-    margin: 50px;
-    font-size:16px;
+    text-align: justify;
+    margin: 50px 150px;
+    font-size:18px;
 }
 
+#desc img{
+    margin-left:50px;
+}
 
+/* establishes element with ID "tLmV" as a grid with two auto sizing columns, and one 3px column between them
+(the 3px one is for div#line) */
 #tLmV {
     display:grid;
-    grid-template-columns: auto 3px auto;
+    grid-template-columns: 40% 3px auto;
 }
 
+/* establishes element with ID "mVfits" as a grid with two auto-sizing rows 
+used in cases where there isnt enough musicvideos to justify it having its own FULL column
+changes are made in other areas where this isnt the cast (such as debut.html)*/
 #mVfits{
     display:grid;
     grid-template-rows: auto auto;
 }
 
-#musicVideos{
+/* gives element with ID "musicVideos" a 15px margin on the top */
+div#musicVideos{
     margin-top:15px;
+    display:grid;
 }
 
+#musicVideos h3{
+    text-align: center;
+}
+
+/*establishes div with ID #vidrowOne as a grid with two auto-sizing columns*/
+div#vidrowOne {
+    display:grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto;
+} 
+
+/*establishes div with ID #vidrowTwo as a grid with two auto-sizing columns */
+div#vidrowTwo {
+    display:grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto;
+} 
+
+/* gives div with ID "trackList" a margin of 15px on the top, right, and left, and a 50px margin on the bottom */
 div#trackList{
     margin:15px;
     margin-bottom:50px;
 }
 
+/* gives all-around padding of 10px to div elements that are within element#trackList*/
 #trackList div{
     padding:10px;
 }
 
+/*establishes all elements with class .song as a grid with two auto-sizing columns with content justified as "space-between" 
+this is used to create the "tracklists" and evenly align each songs title and song-length*/
 .song {
     display:grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
 }
 
-/* - debut.html - */
+#outfits {
+    margin-bottom: 50px;
+}
 
-hr.debutLine{
+/* - debut.html - */                                                                       /*NEW FILE*/
+
+/* changes color of HR elements in #debut */
+#debut hr{
     border: 2px solid #88ad80;
 }
 
+/* changes the background color of all <h2> elements within #debut */
 #debut h2{
     background-color:#a4c99b;
 }
 
+/* changes the background color of every other div within #debuttrackList */
 #debuttrackList div:nth-child(odd){
     background-color: #a4c99b;
 } 
 
+/* changes background-color and margin (25px top/bottom) of dive#line within #debut */
 #debut div#line{
     background-color: #88ad80;
     margin-top:25px;
     margin-bottom:25px;
 }
 
+/*establishes div with ID "musicVideos" within #debut as a grid with two auto-sizing rows */
+/*purpose of this is to properly align music videos by separating them into rows
+row one (div#vidrowOne) with 2 videos on top
+and row two (div#vidrowTwo) with 2 videos below row one */
 #debut div#musicVideos {
-    display:grid;
-    grid-template-rows: auto auto;
+    grid-template-rows: 130px 30% 50%;
 }
 
-#debut div#vidrowOne {
-    display:grid;
-    grid-template-columns: auto auto;
-} 
 
-#debut div#vidrowTwo {
-    display:grid;
-    grid-template-columns: auto auto;
-} 
+/* -- Fearless.html -- */                                                         /*NEW FILE */
 
-/* -- Fearless.html -- */
-
+/* changes the size and color of <hr> elements within #fearless */
 #fearless hr{
     border:2px solid #cc9d56;
 }
 
+/* changes background-color of all <h2> elements within #fearless */
 #fearless h2{
     background-color:#edbc72;
 }
 
-/* --- speakNow.html --- */
+#fearlesstrackList div:nth-child(odd){
+    background-color: #edbc72;
+} 
 
+/*line inbetween tracklist and music videos */
+#fearless div#line{
+    background-color: #cc9d56;
+    margin-top:25px;
+    margin-bottom:25px;
+}
+
+#fearless div#musicVideos {
+    grid-template-rows: 130px 30% 30%;
+}
+
+/* establishes div with ID #vidrowThree as a grid with ONE autosizing column that is centered with a bottom-margin*/
+#fearless div#vidrowThree {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+#fearless div#outfits {
+    margin-bottom: 50px;
+}
+/* --- speakNow.html --- */                                                     /*NEW FILE*/
+
+/* changes the size and color of <hr> elements within #speakNow */
 #speakNow hr{
     border:2px solid #b47dbd;
 }
 
-/* -------- folklore.html -------*/
+#speakNow h2{
+    background-color: #c095c7;
+}
 
+/* changes the background color of every other div within #speakNowtrackList */
+#speakNowtrackList div:nth-child(odd){
+    background-color: #c095c7;
+} 
+
+/*a div I created to display a "vertical" line inbetween the "tracklist" and "music video" sections */
+#speakNow div#line{
+    background-color: #b47dbd;
+    margin-top:25px;
+    margin-bottom:25px;
+}
+
+/* establishes div with ID #vidrowThree as a grid with ONE autosizing column that is centered with a bottom-margin*/
+#speakNow div#vidrowThree {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
+}
+
+/* ---- red.html ---- */                                                           /*NEW FILE */
+
+/*red trackList needed to be larger in "red" to compensate for longer song titles */
+#red #tLmV {
+    grid-template-columns: 45% 3px auto;
+}
+
+#red hr{
+    border:2px solid #591722;
+}
+
+#red h2{
+    background-color: #782c39;
+    color:white;
+}
+
+#redtrackList {
+    color:#baa4a5;
+}
+
+#redtrackList div:nth-child(odd){
+    background-color: #782c39;
+} 
+
+/* changes background-color and margin (25px top/bottom) of dive#line within #red */
+#red div#line{
+    background-color: #591722;
+    margin-top:25px;
+    margin-bottom:25px;
+}
+
+#red div#musicVideos {
+    grid-template-rows: 130px 20% 20% 20% 20%;
+    gap:2px;
+}
+
+/* change size of iframes within #red so they are more visually appealing */
+#red iframe{
+    width: 80%;
+    height: 50%;
+}
+
+#red div#vidrowThree {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+}
+
+#red div#videoSeven {
+    width:50%;
+    position: relative;
+    left:170px;
+}
+
+/* ----- 1989.html ----- */                                                      /*NEW FILE*/
+#ts1989 hr{
+    border: 2px solid #60a6c4;
+}
+
+#ts1989 h2{
+    background-color: #9cdcf7;
+}
+
+/* changes the background color of every other div within #ts1989trackList */
+#ts1989trackList div:nth-child(odd){
+    background-color: #9cdcf7;
+} 
+
+#ts1989trackList div.song > span.time{
+    color:#5d92a8;    
+}
+
+/* changes background-color and margin (25px top/bottom) of dive#line within #ts1989 */
+#ts1989 div#line{
+    background-color: #60a6c4;
+    margin-top:25px;
+    margin-bottom:25px;
+}
+
+#ts1989 div#vidrowThree{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
+}
+
+/*------ reputation.html ------*/                                               /*NEW FILE*/
+#reputation hr{
+    border:2px solid #4a4647;
+}
+
+#reputation h2{
+    background-color: #70696b;
+}
+
+#reptrackList div:nth-child(odd){
+    background-color:#70696b;
+}
+
+#reputation div#line{
+    background-color: #4a4647;
+}
+
+#reputation div#musicVideos {
+    grid-template-rows: 130px auto auto;
+}
+
+/*------- lover.html ------- */                                                  /*NEW FILE*/
+#lover hr{
+    border:2px solid #db769f;
+}
+
+#lover h2{
+    background-color: #e890b4;
+}
+
+/* changes the background color of every other div within #lover */
+#lovertrackList div:nth-child(odd){
+    background-color: #e890b4;
+} 
+
+#lovertrackList div.song > span.time{
+    color:#c75483;    
+}
+
+/* changes background-color and margin (25px top/bottom) of dive#line within #lover */
+#lover div#line{
+    background-color: #db769f;
+    margin-top:25px;
+    margin-bottom:25px;
+}
+
+#lover #musicVideos{
+    gap:25px;
+}
+
+/* -------- folklore.html -------*/                                              /*NEW FILE*/
+
+/* changes background color of all <h2> elements within #folklore */
 #folklore h2{
     background-color:#CFCCC5;
 }
 
+/* changes the background color of every other div within #folktrackList */
 #folktrackList div:nth-child(odd){
     background-color: #CFCCC5;
 } 
 
+/*changes text-color of the text that displays song length */
 #folktrackList div.song > span.time{
     color:#767676;
 }
 
+/*a div I created to display a "vertical" line inbetween the "tracklist" and "music video" sections */
 #folklore div#line{
     background-color: #978E7F;
     margin-top:25px;
     margin-bottom:25px;
 }
+
+#folklore #musicVideos {
+    grid-template-columns: 100%;
+    grid-template-rows: 130px auto;
+}
+
+/* --------- evermore.html --------- */                                              /* NEW FILE */
+#evermore hr{
+    border: 2px solid #785e41;
+}
+
+#evermore h2{
+    background-color: #ba9e7f;
+}
+
+#evermoretrackList div:nth-child(odd){
+    background-color: #ba9e7f;
+} 
+
+
+/* changes background-color and margin (25px top/bottom) of dive#line within #evermore */
+#evermore div#line{
+    background-color: #785e41;
+    margin-top:25px;
+    margin-bottom:25px;
+}
+
+#evermore #musicVideos {
+    grid-template-columns: 100%;
+    grid-template-rows: 130px auto;
+}
+
+/* ---------- midnights.html ---------- */                                  /* NEW FILE */
+#midnights hr{
+    border:2px solid #202e5e;
+}
+
+#midnights h2{
+    background-color: #4a5a91;
+}
+
+#midtrackList div:nth-child(odd){
+    background-color: #4a5a91;
+}
+
+#midnights div#line {
+    border: 2px solid #202e5e;
+    margin:25px 0;
+}
+
+/* ----------- ttpd.html ----------- */                                    /* NEW FILE */
+#ttpd hr{
+    border:2px solid #59534c;
+}
+
+#ttpd h2{
+    background-color: #807a75;
+}
+
+#ttpd #tLmV {
+    grid-template-columns: 50% 3px auto;
+}
+
+#ttpdtrackList div:nth-child(odd){
+    background-color: #807a75;
+}
+
+#ttpd div#line{
+    background-color: #59534c;
+    margin: 25px 0;
+}
+
+#ttpd div#musicVideos {
+    grid-template-rows: 130px auto auto;
+}
+
 
 /* album colors */
 /* creates variables for each albums color */
@@ -548,7 +1039,7 @@ hr.debutLine{
     --loverColor:#FABDD6;
     --folkloreColor:#DEDDDA;
     --evermoreColor:#CCB49A;
-    --midnightsColor:#46517A;
+    --midnightsColor:#717ead;
     --ttpdColor:#948F8A;
 }
 
@@ -598,7 +1089,7 @@ hr.debutLine{
 }
 
 
-/* - vote sec - */
+/* - vote sec - */                                                              /*NEW FILE*/
 /*"names" the div with ID "vote"
 div#vote is inside body#albums, naming allows use of "grid-template-areas" */
 div#vote{
@@ -609,6 +1100,134 @@ div#vote{
 div#vote hr{
     margin-top:50px;
     margin-bottom: 50px;
+}
+
+/* ---------------- Bio Page ---------------- */                              /*NEW FILE*/
+#bioBody{
+    display:grid;
+    grid-template-rows: 100px auto 50px 4200px 100px auto;
+    grid-template-areas:
+            "nav"
+            "bio"
+            "blank"
+            "timeLine"
+            "space"
+            "foot";
+}
+
+div#bio{
+    display: grid;
+    grid-template-rows: 100px auto;
+    grid-template-columns: 70% auto;
+    grid-template-areas: 
+            "title bioPic"
+            "bioText bioPic";
+    grid-area:bio;
+    margin:0 50px;
+}
+
+#bio #blankLine{
+    grid-area:blank;
+}
+
+#bio div{
+    grid-area: title;
+}
+
+#bio img{
+    grid-area: bioPic;
+}
+
+#bio span{
+    grid-area: bioText;
+}
+
+div#careerTL{
+    grid-area:timeLine;
+}
+#careerTL hr{
+    border:2px solid #F0E9DF;
+}
+
+#careerTL h2{
+    margin:25px;
+}
+
+#careerTL div#timeLine5, 
+#careerTL div#timeLine12,
+#careerTL div#timeLine13{
+    height:6%;
+}
+
+#careerTL div#timeLine9 {
+    height:7%;
+}
+
+/* styling the career timeline divs */
+#careerTL div[id^="timeLine"] {
+    display:flex;
+    flex-direction: column;
+    text-align: left;
+    margin:25px;
+    margin-left:100px;
+    border:2px solid #59534c;
+    padding:15px;
+    width:50%;
+    height:4%;
+    background-color: #F0E9DF;
+    overflow:hidden;
+
+    transition: width 2s, height 2s;
+    transition-timing-function: ease-in-out;
+}
+
+/* changes width and height of all timeLine divs when hovered over
+specific timelines added for specificity because they have different default heights */
+#careerTL div[id^="timeLine"]:hover, 
+#careerTL div#timeLine5:hover, 
+#careerTL div#timeLine9:hover,
+#careerTL div#timeLine12:hover, 
+#careerTL div#timeLine13:hover {
+    width:75%;
+    height:10%;
+    cursor:pointer;
+}
+
+/*styling all imgs inside timeline divs */
+#careerTL div[id^="timeLine"] img{
+    position:relative;
+    margin-top:50px;
+    margin-left:25px;
+}
+
+/*info that only appears when the relevant div is hovered over */
+.hiddenInfo{
+    opacity: 0%;
+    text-align: center;
+    position:relative;
+    top:-100px;
+    left:200px;
+
+    transition: opacity 2s;
+    transition-timing-function: ease-in-out;
+}
+
+#careerTL div[id^="timeLine"]:hover .hiddenInfo {
+    opacity: 100%;
+}
+
+/* styling the <p> elements within timeline divs */
+#careerTL div[id^="timeLine"] p {
+    margin-left:25px;
+}
+
+/* styling the h3 elements within timeline divs */
+#careerTL div[id^="timeLine"] h3{
+    background-color:#ADA497;
+    text-align: center;
+    margin-left:25px;
+    padding:10px;
+    width:25%;
 }
 
 /* ------------- Poll Page -------------- */
@@ -643,6 +1262,10 @@ div#albumBtns {
     border-radius: 5%;
 }
 
+#albumBtns label:hover{
+    cursor:pointer;
+}
+
 /* establishes btnTopRow and btnMidRow as grid-containers with 4 columns
 centers grid-content within the grid-containers */
 div#albumBtns #btnTopRow, div#albumBtns #btnMidRow {
@@ -660,7 +1283,7 @@ div#albumBtns #btnBotRow {
 }
 
 /* changes the img margin of The Tortured Poets Department to make it align with the others */
-#ttpd img{
+#pollForm #ttpd img{
     margin-bottom: 25px;
 }
 
@@ -669,13 +1292,16 @@ div#albumBtns #btnBotRow {
     line-height: 25px;
 }
 
+/* establishes top/right/left padding of div#submit to 10px, and bottom-padding to 25px */
 div#submit {
     padding:10px;
     padding-bottom: 25px;
 }
 
+/*changes border-radius (5%), width, all-around padding, background-color, and text color of input within #submit */
 #submit input {
-    border-radius:5%;
+    font-size:20px;
+    border-radius:15px;
     width:250px;
     padding:25px;
     background-color: #7d7566;

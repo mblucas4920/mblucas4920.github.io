@@ -18,7 +18,22 @@
         <span id="navTabs">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="albums.html">Albums/Eras</a></li>
+                <div class="dropTab">
+                    <li><a href="albums.html">Albums/Eras</a></li>
+                    <div class="dropdown-content">
+                        <li><a href="albums.html?iframeSrc=debut.html#album" id="debut">Debut</a></li>
+                        <li><a href="albums.html?iframeSrc=fearless.html#album" id="fearless">Fearless</a></li>
+                        <li><a href="albums.html?iframeSrc=speakNow.html#album" id="speakNow">Speak Now</a></li>
+                        <li><a href="albums.html?iframeSrc=red.html#album" id="red">Red</a></li>
+                        <li><a href="albums.html?iframeSrc=1989.html#album" id="ts1989">1989</a></li>
+                        <li><a href="albums.html?iframeSrc=reputation.html#album" id="reputation">reputation</a></li>
+                        <li><a href="albums.html?iframeSrc=lover.html#album" id="lover">Lover</a></li>
+                        <li><a href="albums.html?iframeSrc=folklore.html#album" id="folklore">folklore</a></li>
+                        <li><a href="albums.html?iframeSrc=evermore.html#album" id="evermore">evermore</a></li>
+                        <li><a href="albums.html?iframeSrc=midnights.html#album" id="midnights">Midnights</a></li>
+                        <li><a href="albums.html?iframeSrc=ttpd.html#album" id="ttpd">The Tortured Poets Department</a></li>
+                    </div>
+                </div>
                 <li><a href="bio.html">Bio</a></li>
                 <li><a href="poll.html">Poll</a></li>
             </ul>
@@ -99,76 +114,83 @@
         <!--Album Covers-->
         <div id="albumCovers">
             <div id="topRow">
-                <figure>
-                    <img src="Images/debut.jpg" alt="Taylor Swift Debut" width="200" height="200">
-                    <figcaption id="debut">Debut</figcaption>
-                </figure>
-                <figure>
-                    <img src="Images/fearless.jpg" alt="Taylor Swift Fearless" width="200" height="200">
-                    <figcaption id="fearless">Fearless</figcaption>
-                </figure>
-                <figure>
-                    <img src="Images/speak_now.jpg" alt="Taylor Swift Speak Now" width="200" height="200">
-                    <figcaption id="speakNow">Speak Now</figcaption>
-                </figure>
-                <figure>
-                    <img src="Images/red.jpg" alt="Taylor Swift Red" width="200" height="200">
-                    <figcaption id="red">Red</figcaption>
-                </figure>
+                <a href="albums.html?iframeSrc=debut.html#album">
+                    <figure id="debut">
+                        <img src="Images/debut.jpg" alt="Taylor Swift Debut" width="200" height="200">
+                        <figcaption id="debut">Debut</figcaption>
+                    </figure>
+                </a>
+                <a href="albums.html?iframeSrc=fearless.html#album">
+                    <figure id="fearless">
+                        <img src="Images/fearless.jpg" alt="Taylor Swift Fearless" width="200" height="200">
+                        <figcaption id="fearless">Fearless</figcaption>
+                    </figure>
+                </a>
+                <a href="albums.html?iframeSrc=speakNow.html#album">
+                    <figure id="speakNow">
+                        <img src="Images/speak_now.jpg" alt="Taylor Swift Speak Now" width="200" height="200" id="speakNow">
+                        <figcaption id="speakNow">Speak Now</figcaption>
+                    </figure>
+                </a>
+                <a href="albums.html?iframeSrc=red.html#album">
+                    <figure id="red">
+                        <img src="Images/red.jpg" alt="Taylor Swift Red" width="200" height="200" id="red">
+                        <figcaption id="red">Red</figcaption>
+                    </figure>
+                </a>
             </div>
-
-            <div class="space">
-                <p></p>
-            </div>
-
             <div id="midRow">
-                <figure>
-                    <img src="Images/1989.jpg" alt="Taylor Swift 1989" width="200" height="200">
-                    <figcaption id="ts1989">1989</figcaption>
-                </figure>
-                <figure>
-                    <img src="Images/reputation.jpg" alt="Taylor Swift Reputation" width="200" height="200">
-                    <figcaption id="reputation">reputation</figcaption>
-                </figure>
-                <figure>
-                    <img src="Images/lover.jpg" alt="Taylor Swift Lover" width="200" height="200">
-                    <figcaption id="lover">Lover</figcaption>
-                </figure>
-                <figure>
-                    <img src="Images/folklore.jpg" alt="Taylor Swift Folklore" width="200" height="200">
-                    <figcaption id="folklore">folklore</figcaption>
-                </figure>
+                <a href="albums.html?iframeSrc=1989.html#album">
+                    <figure id="ts1989">
+                        <img src="Images/1989.jpg" alt="Taylor Swift 1989" width="200" height="200">
+                        <figcaption id="ts1989">1989</figcaption>
+                    </figure>
+                </a>
+                <a href="albums.html?iframeSrc=reputation.html#album">
+                    <figure id="reputation">
+                        <img src="Images/reputation.jpg" alt="Taylor Swift Reputation" width="200" height="200">
+                        <figcaption id="reputation">reputation</figcaption>
+                    </figure>
+                </a>
+                <a href="albums.html?iframeSrc=lover.html#album">
+                    <figure id="lover">
+                        <img src="Images/lover.jpg" alt="Taylor Swift Lover" width="200" height="200">
+                        <figcaption id="lover">Lover</figcaption>
+                    </figure>
+                </a>
+                <a href="albums.html?iframeSrc=folklore.html#album">
+                    <figure id="folklore">
+                        <img src="Images/folklore.jpg" alt="Taylor Swift Folklore" width="200" height="200">
+                        <figcaption id="folklore">folklore</figcaption>
+                    </figure>
+                </a>
             </div>
-
-            <div class="space">
-                <p></p>
-            </div>
-
             <div id="botRow">
-                <figure>
-                    <img src="Images/evermore.jpg" alt="Taylor Swift Evermore" width="200" height="200">
-                    <figcaption id="evermore">evermore</figcaption>
-                </figure>
-                <figure>
-                    <img src="Images/midnights.jpg" alt="Taylor Swift Midnights" width="200" height="200">
-                    <figcaption id="midnights">Midnights</figcaption>
-                </figure>
-                <figure>
-                    <img src="Images/ttpd.png" alt="Taylor Swift TTPD" width="200" height="200">
-                    <figcaption id="ttpd">The Tortured Poets <figcaption id="department">Department</figcaption></figcaption>
-                </figure>
+                <a href="albums.html?iframeSrc=evermore.html#album">
+                    <figure id="evermore">
+                        <img src="Images/evermore.jpg" alt="Taylor Swift Evermore" width="200" height="200">
+                        <figcaption id="evermore">evermore</figcaption>
+                    </figure>
+                </a>
+                <a href="albums.html?iframeSrc=midnights.html#album">
+                    <figure id="midnights">
+                        <img src="Images/midnights.jpg" alt="Taylor Swift Midnights" width="200" height="200">
+                        <figcaption id="midnights">Midnights</figcaption>
+                    </figure>
+                </a>
+                <a href="albums.html?iframeSrc=ttpd.html#album">
+                    <figure id="ttpd">
+                        <img src="Images/ttpd.png" alt="Taylor Swift TTPD" width="200" height="200">
+                        <!-- removes <figcaption> and used inline styling because the formatting is different (title too long for 1 line)-->
+                        <p id="ttpd"  >The Tortured Poets <br> Department</p>
+                    </figure>
+                </a>
             </div>
-
-            <div class="space">
-                <p></p>
-            </div>
-
-        </div>
-        
-        <hr>
-
+        </div> 
     </div>
-
+    <div class="space">
+        <hr>
+    </div>
     <footer>
         <p id="toTop"><a href="#top">Back-To-Top</a></p>
 
