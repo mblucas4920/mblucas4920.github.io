@@ -42,7 +42,6 @@ nav ul {
     display:flex;
     padding:0;
     justify-content: flex-end;
-
 }
 
 /* changes font-size and margin of the h2 tag that is a direct child of an element with the id logo */
@@ -87,6 +86,10 @@ nav a:hover {
     color:black;
 }
 
+nav a:active{
+    background-color:#7d7566;
+}
+
 .dropTab{
     float:left;
     overflow:visible;
@@ -118,12 +121,14 @@ nav a:hover {
     text-shadow: 1px 1px white;
 }  
 
-
 /* Show the dropdown menu on hover */
 div.dropTab:hover .dropdown-content {
     display: block;
 }
 
+div.dropTab:hover li#maindropTab a{
+    background-color: #ADA497;
+}
 
 /*Changes the background color of each link within dropdown-content to be a darker shade when clicked (active)*/
 .dropdown-content #debut:active{
@@ -139,7 +144,7 @@ div.dropTab:hover .dropdown-content {
 }
 
 .dropdown-content #red:active{
-    background-color: #591722;
+    background-color: #ad4040;
 }
 
 .dropdown-content #ts1989:active{
@@ -248,7 +253,6 @@ hr {
     display:grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-   
 }
 
 /* spans the hr inside "topSec" across 2 columns */
@@ -292,7 +296,7 @@ gives image a box-shadow that is off centered left-down */
 /* establishes body with ID "home" to be a grid with one 100px row, and 4 auto sizing rows*/
 body#home{
     display:grid;
-    grid-template-rows: 100px auto auto auto 20px auto;
+    grid-template-rows: 100px auto auto 1500px 20px auto;
     /* grid-template-areas allows for position of content within the grid using "names" that were previously established using "grid-area" */
     grid-template-areas: 
         "nav"
@@ -362,6 +366,11 @@ also adds a solid border*/
     padding:75px 200px;
 }
 
+#explore a:active{
+    background-color: #F0E9DF;
+    color:#ADA497;
+}
+
 /* divs that say "Bio" and "Poll"
 establishes top/bottom padding as 10px, and right/left as 25px */
 #bioSec, #pollSec {
@@ -382,24 +391,40 @@ establishes top/bottom padding as 10px, and right/left as 25px */
 
 /* removes underline, changes text-color to white, changes background color, 
 and establishes 10px top/bottom padding & 250 right/left padding to <a> within #albumEras */
-#albumsEras h1 a{
-    text-decoration: none;
+div#albumsEras h1 a{
+
     color:white;
     background-color: #ADA497;
-    padding:10px 250px;
+    padding:15px 250px;
 }
 
-div#albumEras h1 a:hover{
-    border:1px solid #ADA497;
-    background-color: #F0E9DF;
+/* changes background-color, border, and text-color of <a> when hovered over*/
+div#albumsEras h1 a:hover{
+    background-color:#bdb4a8;
+    border:3px solid #ADA497;
+    border-style: inset;
     color:black;
+}
+
+/*changes the background color of <a> when clicked (active)*/
+div#albumsEras h1 a:active{
+    background-color: #8f8577;
+}
+
+/*styles the <p> tag within div#albumsEras - purpose is to create space between <h1> and <a>*/
+div#albumsEras p{
+    margin-top:35px;
+}
+
+/*gives the <p> within #ttpd's figure a 20px top-margin because otherwise it would NOT align*/
+div#albumsEras #ttpd p{
+    margin-top:20px;
 }
 
 div#albumCovers{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-top:20px;
 }
 
 #albumCovers a{
@@ -451,6 +476,10 @@ figcaption{
     box-shadow:0px 5px 10px 6px rgba(0, 0, 0, 20%);
 }
 
+#albumCovers figure:active{
+    transform: scale(0.95, 0.95);
+    filter:brightness(75%);
+}
 
 /* estbalishes all-around padding (1px) of element with class space, and clears float on both sides
 purpose of this is to allow room for <hr> under #albumCovers */
@@ -706,6 +735,10 @@ this is used to create the "tracklists" and evenly align each songs title and so
     background-color: #a4c99b;
 } 
 
+#debuttrackList div{
+    border:3px solid #a4c99b;
+}
+
 /* changes background-color and margin (25px top/bottom) of dive#line within #debut */
 #debut div#line{
     background-color: #88ad80;
@@ -737,6 +770,11 @@ and row two (div#vidrowTwo) with 2 videos below row one */
 #fearlesstrackList div:nth-child(odd){
     background-color: #edbc72;
 } 
+
+/*Gives the tracklist a border*/
+#fearlesstrackList div{
+    border:3px solid #edbc72;
+}
 
 /*line inbetween tracklist and music videos */
 #fearless div#line{
@@ -776,6 +814,11 @@ and row two (div#vidrowTwo) with 2 videos below row one */
     background-color: #c095c7;
 } 
 
+/*gives the tracklist a border*/
+#speakNowtrackList div{
+    border:3px solid #c095c7;
+}
+
 /*a div I created to display a "vertical" line inbetween the "tracklist" and "music video" sections */
 #speakNow div#line{
     background-color: #b47dbd;
@@ -795,29 +838,27 @@ and row two (div#vidrowTwo) with 2 videos below row one */
 
 /*red trackList needed to be larger in "red" to compensate for longer song titles */
 #red #tLmV {
-    grid-template-columns: 45% 3px auto;
+    grid-template-columns: 46% 3px auto;
 }
 
 #red hr{
-    border:2px solid #591722;
+    border:2px solid #8c3838;
 }
 
 #red h2{
-    background-color: #782c39;
-    color:white;
+    background-color: #ad4040;
 }
 
-#redtrackList {
-    color:#baa4a5;
-}
-
-#redtrackList div:nth-child(odd){
-    background-color: #782c39;
+#redtrackList div:nth-child(even){
+    background-color:#dd7070;
 } 
 
+#redtrackList div{
+    border:3px solid #dd7070;
+}
 /* changes background-color and margin (25px top/bottom) of dive#line within #red */
 #red div#line{
-    background-color: #591722;
+    background-color: #8c3838;
     margin-top:25px;
     margin-bottom:25px;
 }
@@ -859,8 +900,8 @@ and row two (div#vidrowTwo) with 2 videos below row one */
     background-color: #9cdcf7;
 } 
 
-#ts1989trackList div.song > span.time{
-    color:#5d92a8;    
+#ts1989trackList div{
+    border:3px solid #9cdcf7;
 }
 
 /* changes background-color and margin (25px top/bottom) of dive#line within #ts1989 */
@@ -912,8 +953,8 @@ and row two (div#vidrowTwo) with 2 videos below row one */
     background-color: #e890b4;
 } 
 
-#lovertrackList div.song > span.time{
-    color:#c75483;    
+#lovertrackList div{
+    border:3px solid #e890b4;
 }
 
 /* changes background-color and margin (25px top/bottom) of dive#line within #lover */
@@ -934,14 +975,18 @@ and row two (div#vidrowTwo) with 2 videos below row one */
     background-color:#CFCCC5;
 }
 
+#folklore #tLmV{
+    grid-template-columns: 50% 3px auto;
+}
+
 /* changes the background color of every other div within #folktrackList */
 #folktrackList div:nth-child(odd){
     background-color: #CFCCC5;
 } 
 
-/*changes text-color of the text that displays song length */
-#folktrackList div.song > span.time{
-    color:#767676;
+/*gives the tracklist a border*/
+#folktrackList div{
+    border:3px solid #CFCCC5;
 }
 
 /*a div I created to display a "vertical" line inbetween the "tracklist" and "music video" sections */
@@ -969,6 +1014,9 @@ and row two (div#vidrowTwo) with 2 videos below row one */
     background-color: #ba9e7f;
 } 
 
+#evermoretrackList div{
+    border:3px solid #ba9e7f;
+}
 
 /* changes background-color and margin (25px top/bottom) of dive#line within #evermore */
 #evermore div#line{
@@ -984,19 +1032,25 @@ and row two (div#vidrowTwo) with 2 videos below row one */
 
 /* ---------- midnights.html ---------- */                                  /* NEW FILE */
 #midnights hr{
-    border:2px solid #202e5e;
+    border:2px solid #212f69;
 }
 
 #midnights h2{
     background-color: #4a5a91;
 }
 
-#midtrackList div:nth-child(odd){
-    background-color: #4a5a91;
+/*changes the background color of every-other song*/
+#midtrackList div:nth-child(even){
+    background-color: #8c9abf;
+}
+
+/*gives tracklist a border*/
+#midtrackList div{
+    border:3px solid #8c9abf;
 }
 
 #midnights div#line {
-    border: 2px solid #202e5e;
+    border: 2px solid #212f69;
     margin:25px 0;
 }
 
@@ -1017,6 +1071,11 @@ and row two (div#vidrowTwo) with 2 videos below row one */
     background-color: #807a75;
 }
 
+/*gives tracklist a border*/
+#ttpdtrackList div{
+    border:3px solid #807a75;
+}
+
 #ttpd div#line{
     background-color: #59534c;
     margin: 25px 0;
@@ -1033,7 +1092,7 @@ and row two (div#vidrowTwo) with 2 videos below row one */
     --debutColor:#BED5B9;
     --fearlessColor:#F2CB8F;
     --speakNowColor:#CCB1D0;
-    --redColor: #873B48;
+    --redColor: #bd5959;
     --ts1989Color:#C1E8F9;
     --reputationColor:#807A7C;
     --loverColor:#FABDD6;
@@ -1089,7 +1148,7 @@ and row two (div#vidrowTwo) with 2 videos below row one */
 }
 
 
-/* - vote sec - */                                                              /*NEW FILE*/
+/* - vote sec - */                                                             
 /*"names" the div with ID "vote"
 div#vote is inside body#albums, naming allows use of "grid-template-areas" */
 div#vote{
@@ -1144,13 +1203,19 @@ div#bio{
 
 div#careerTL{
     grid-area:timeLine;
+    background-color: #ADA497;
+    margin:15px 40px;
+    margin-top:5px;
+    padding-bottom:30px;
 }
 #careerTL hr{
     border:2px solid #F0E9DF;
 }
 
 #careerTL h2{
-    margin:25px;
+    margin:8px 50px;
+    background-color: #F0E9DF;
+    padding:30px;
 }
 
 #careerTL div#timeLine5, 
@@ -1200,13 +1265,23 @@ specific timelines added for specificity because they have different default hei
     margin-left:25px;
 }
 
+#careerTL div#timeLine5 ul{
+    position:relative; top:90px; left:-215px;
+    text-align:left; 
+    list-style-type: none;
+}
+
+#careerTL div#timeLine5 div#images{
+    display: flex;
+    gap:0px;
+    position:relative; top:-150px; left:300px;
+}
+
 /*info that only appears when the relevant div is hovered over */
 .hiddenInfo{
     opacity: 0%;
     text-align: center;
-    position:relative;
-    top:-100px;
-    left:200px;
+    position:relative; top:-100px; left:200px;
 
     transition: opacity 2s;
     transition-timing-function: ease-in-out;
@@ -1230,7 +1305,7 @@ specific timelines added for specificity because they have different default hei
     width:25%;
 }
 
-/* ------------- Poll Page -------------- */
+/* ------------- Poll Page -------------- */                                       /*NEW FILE*/
 /*sets display of the div with ID "pollForm" to grid and establishes 2 rows that automatically size */
 div#pollForm{
     display: grid;
@@ -1243,7 +1318,11 @@ rounds border by 5%
 changes background color */
 div#albumBtns {
     display:grid;
-    margin:25px 50px;
+    gap:40px;
+
+    padding-top:20px;
+    padding-bottom:40px;
+    margin:25px 75px;
     border-radius: 5%;
     grid-template-rows: auto auto auto auto;
     background-color: #B5AB9F;
@@ -1254,12 +1333,25 @@ div#albumBtns {
     width:150px;
     height:150px;
     margin-top: 25px;
+    border:2px solid black;
 }
 
 /* gives each figure element within div#albumBtns a border, and rounds the border by 5% */
 #albumBtns figure{
     border:2px solid black;
     border-radius: 5%;
+    margin:0px;
+}
+
+/*adds a box-shadow to figure when hovered over, and increases scale to "focus" on the figure*/
+#albumBtns figure:hover{
+    box-shadow:0px 0px 5px 6px rgba(0, 0, 0, 20%);
+    transform:scale(1.05,1.05);
+}
+
+/*'presses' on figures when clicked by de-scaling to original size */
+#albumBtns figure:active{
+    transform: scale(1,1);
 }
 
 #albumBtns label:hover{
@@ -1272,6 +1364,7 @@ div#albumBtns #btnTopRow, div#albumBtns #btnMidRow {
     display: grid;
     grid-template-columns: auto auto auto auto;
     justify-content: center;
+    gap:40px;
 }
 
 /* establishes btnBotRow as a grid-container with 3 columns
@@ -1280,6 +1373,13 @@ div#albumBtns #btnBotRow {
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: center;
+    gap:40px;
+}
+
+/*makes the bottom row figures taller than the other rows for visual appeal since
+taylor wanted to name ts11 the LONGEST NAME OF ALL TIME*/
+div#albumBtns #btnBotRow figure{
+    height:286.5px;
 }
 
 /* changes the img margin of The Tortured Poets Department to make it align with the others */
@@ -1306,4 +1406,15 @@ div#submit {
     padding:25px;
     background-color: #7d7566;
     color:white;
+}
+
+/* makes div appear larger when hovered over and changes cursor to appear as "pointer"*/
+#submit input:hover {
+    transform:scale(1.05,1.05);
+    cursor:pointer
+}
+
+/*'presses' on button when clicked by de-scaling it to original size*/
+#submit input:active{
+    transform:scale(1,1);
 }
