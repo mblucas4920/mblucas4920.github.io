@@ -28,7 +28,6 @@ nav {
     width:100%;
     background-color: #ADA497;
     box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 20%);
-    color:white;
     /* naming "nav" allows for layout changes using grid-template-areas*/
     grid-area:nav;
     z-index: 5;
@@ -74,19 +73,22 @@ nav a{
     text-align: left;
     color:white;
     background-color: #7d7566;
-
 }
 
-/* changes the background color of links within the nav element when the link is hovered over, 
-gives the element a box-shadow when hovered over
+/* gives the element a box-shadow when hovered over
 changes text-color to black when hovered over */
-nav a:hover {
-    background-color: #ADA497;
+nav a:hover{
     box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 25%);
     color:black;
 }
 
-nav a:active{
+/* changes the background color of links within the nav element when the link is hovered over, excluding the 
+links within .dropdown-content*/
+nav a:hover:not(.dropdown-content a){
+    background-color: #ADA497;
+}
+
+nav a:active:not(.dropdown-content a){
     background-color:#7d7566;
 }
 
@@ -108,17 +110,19 @@ nav a:active{
 
 .dropdown-content a{
     font-size: 15px;
+    color:black;
     float:none;
     display: block;
     padding: 3px 20px;
     text-align: left;
     font-weight: bolder;
     border:1px solid black;
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px white;
 }
 
 .dropdown-content a:hover{
-    text-shadow: 1px 1px white;
+    color:white;
+    text-shadow: 1px 1px black;
 }  
 
 /* Show the dropdown menu on hover */
@@ -126,52 +130,52 @@ div.dropTab:hover .dropdown-content {
     display: block;
 }
 
-div.dropTab:hover li#maindropTab a{
+div.dropTab:hover li#maindropTab > a{
     background-color: #ADA497;
 }
 
 /*Changes the background color of each link within dropdown-content to be a darker shade when clicked (active)*/
-.dropdown-content #debut:active{
+.dropdown-content .debut:active{
     background-color: #88ad80;
 }
 
-.dropdown-content #fearless:active{
+.dropdown-content .fearless:active{
     background-color: #cc9d56;
 }
 
-.dropdown-content #speakNow:active{
+.dropdown-content .speakNow:active{
     background-color: #b47dbd;
 }
 
-.dropdown-content #red:active{
+.dropdown-content .red:active{
     background-color: #ad4040;
 }
 
-.dropdown-content #ts1989:active{
+.dropdown-content .ts1989:active{
     background-color: #60a6c4;
 }
 
-.dropdown-content #reputation:active{
+.dropdown-content .reputation:active{
     background-color: #4a4647;
 }
 
-.dropdown-content #lover:active{
+.dropdown-content .lover:active{
     background-color: #db769f;
 }
 
-.dropdown-content #folklore:active{
+.dropdown-content .folklore:active{
     background-color: #b0ada7;
 }
 
-.dropdown-content #evermore:active{
+.dropdown-content .evermore:active{
     background-color: #9e8264;
 }
 
-.dropdown-content #midnights:active{
+.dropdown-content .midnights:active{
     background-color:  #202e5e;
 }
 
-.dropdown-content #ttpd:active{
+.dropdown-content .ttpd:active{
     background-color: #59534c;
 }
 
@@ -206,7 +210,6 @@ footer #links {
 
 /* changes text-color, font-size, and font-weight of <p> tag with ID "footerhead" */
 p#footerHead {
-    color:white;
     font-size: 20px;
     font-weight: bold;
 }
@@ -219,7 +222,7 @@ footer #linksText {
 
 /* changes the text-color of links inside the footer to white and adds 10px of all-around padding */
 footer a{
-    color:white;
+    color:black;
     padding:10px;
 }
 
@@ -285,7 +288,7 @@ gives image a box-shadow that is off centered left-down */
 
 /* changes alignment, font-size, padding, and margin of <p> elements inside element#welcomeText */
 #welcomeText p{
-    text-align: justify;
+    text-align: left;
     font-size: 25px;
     padding:10px;
     margin:10px 25px;
@@ -296,7 +299,7 @@ gives image a box-shadow that is off centered left-down */
 /* establishes body with ID "home" to be a grid with one 100px row, and 4 auto sizing rows*/
 body#home{
     display:grid;
-    grid-template-rows: 100px auto auto 1500px 20px auto;
+    grid-template-rows: 100px auto auto auto 20px auto;
     /* grid-template-areas allows for position of content within the grid using "names" that were previously established using "grid-area" */
     grid-template-areas: 
         "nav"
@@ -387,6 +390,7 @@ establishes top/bottom padding as 10px, and right/left as 25px */
 /* names element with ID albumEras "albums" using grid-area */
 #albumEras{
     grid-area:albums;
+    max-height: 1700px;
 }
 
 /* removes underline, changes text-color to white, changes background color, 
@@ -416,8 +420,8 @@ div#albumsEras p{
     margin-top:35px;
 }
 
-/*gives the <p> within #ttpd's figure a 20px top-margin because otherwise it would NOT align*/
-div#albumsEras #ttpd p{
+/*gives the <p> within .ttpd's figure a 20px top-margin because otherwise it would NOT align*/
+div#albumsEras .ttpd p{
     margin-top:20px;
 }
 
@@ -425,6 +429,7 @@ div#albumCovers{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    max-height:2500px;
 }
 
 #albumCovers a{
@@ -441,6 +446,7 @@ div#topRow, div#midRow, div#botRow{
     width:fit-content;
     display: flex;
     flex-wrap:wrap;
+    flex-shrink:2;
 }
 
 /* makes ALL figures float left on the webpage*/
@@ -718,19 +724,23 @@ this is used to create the "tracklists" and evenly align each songs title and so
     margin-bottom: 50px;
 }
 
+div#line{
+    margin:25px 0;
+}
+
 /* - debut.html - */                                                                       /*NEW FILE*/
 
-/* changes color of HR elements in #debut */
-#debut hr{
+/* changes color of HR elements in .debut */
+.debut hr{
     border: 2px solid #88ad80;
 }
 
-/* changes the background color of all <h2> elements within #debut */
-#debut h2{
+/* changes the background color of all <h2> elements within .debut */
+.debut h2{
     background-color:#a4c99b;
 }
 
-/* changes the background color of every other div within #debuttrackList */
+/* changes the background color of every other div within .debuttrackList */
 #debuttrackList div:nth-child(odd){
     background-color: #a4c99b;
 } 
@@ -739,31 +749,31 @@ this is used to create the "tracklists" and evenly align each songs title and so
     border:3px solid #a4c99b;
 }
 
-/* changes background-color and margin (25px top/bottom) of dive#line within #debut */
-#debut div#line{
+/* changes background-color and margin (25px top/bottom) of dive#line within .debut */
+.debut div#line{
     background-color: #88ad80;
     margin-top:25px;
     margin-bottom:25px;
 }
 
-/*establishes div with ID "musicVideos" within #debut as a grid with two auto-sizing rows */
+/*establishes div with ID "musicVideos" within .debut as a grid with two auto-sizing rows */
 /*purpose of this is to properly align music videos by separating them into rows
 row one (div#vidrowOne) with 2 videos on top
 and row two (div#vidrowTwo) with 2 videos below row one */
-#debut div#musicVideos {
+.debut div#musicVideos {
     grid-template-rows: 130px 30% 50%;
 }
 
 
 /* -- Fearless.html -- */                                                         /*NEW FILE */
 
-/* changes the size and color of <hr> elements within #fearless */
-#fearless hr{
+/* changes the size and color of <hr> elements within .fearless */
+.fearless hr{
     border:2px solid #cc9d56;
 }
 
-/* changes background-color of all <h2> elements within #fearless */
-#fearless h2{
+/* changes background-color of all <h2> elements within .fearless */
+.fearless h2{
     background-color:#edbc72;
 }
 
@@ -777,39 +787,39 @@ and row two (div#vidrowTwo) with 2 videos below row one */
 }
 
 /*line inbetween tracklist and music videos */
-#fearless div#line{
+.fearless div#line{
     background-color: #cc9d56;
     margin-top:25px;
     margin-bottom:25px;
 }
 
-#fearless div#musicVideos {
+.fearless div#musicVideos {
     grid-template-rows: 130px 30% 30%;
 }
 
 /* establishes div with ID #vidrowThree as a grid with ONE autosizing column that is centered with a bottom-margin*/
-#fearless div#vidrowThree {
+.fearless div#vidrowThree {
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
     margin-bottom: 100px;
 }
 
-#fearless div#outfits {
+.fearless div#outfits {
     margin-bottom: 50px;
 }
 /* --- speakNow.html --- */                                                     /*NEW FILE*/
 
-/* changes the size and color of <hr> elements within #speakNow */
-#speakNow hr{
+/* changes the size and color of <hr> elements within .speakNow */
+.speakNow hr{
     border:2px solid #b47dbd;
 }
 
-#speakNow h2{
+.speakNow h2{
     background-color: #c095c7;
 }
 
-/* changes the background color of every other div within #speakNowtrackList */
+/* changes the background color of every other div within .speakNowtrackList */
 #speakNowtrackList div:nth-child(odd){
     background-color: #c095c7;
 } 
@@ -820,14 +830,14 @@ and row two (div#vidrowTwo) with 2 videos below row one */
 }
 
 /*a div I created to display a "vertical" line inbetween the "tracklist" and "music video" sections */
-#speakNow div#line{
+.speakNow div#line{
     background-color: #b47dbd;
     margin-top:25px;
     margin-bottom:25px;
 }
 
 /* establishes div with ID #vidrowThree as a grid with ONE autosizing column that is centered with a bottom-margin*/
-#speakNow div#vidrowThree {
+.speakNow div#vidrowThree {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-evenly;
@@ -837,15 +847,15 @@ and row two (div#vidrowTwo) with 2 videos below row one */
 /* ---- red.html ---- */                                                           /*NEW FILE */
 
 /*red trackList needed to be larger in "red" to compensate for longer song titles */
-#red #tLmV {
+.red #tLmV {
     grid-template-columns: 46% 3px auto;
 }
 
-#red hr{
+.red hr{
     border:2px solid #8c3838;
 }
 
-#red h2{
+.red h2{
     background-color: #ad4040;
 }
 
@@ -856,46 +866,46 @@ and row two (div#vidrowTwo) with 2 videos below row one */
 #redtrackList div{
     border:3px solid #dd7070;
 }
-/* changes background-color and margin (25px top/bottom) of dive#line within #red */
-#red div#line{
+/* changes background-color and margin (25px top/bottom) of dive#line within .red */
+.red div#line{
     background-color: #8c3838;
     margin-top:25px;
     margin-bottom:25px;
 }
 
-#red div#musicVideos {
+.red div#musicVideos {
     grid-template-rows: 130px 20% 20% 20% 20%;
     gap:2px;
 }
 
-/* change size of iframes within #red so they are more visually appealing */
-#red iframe{
+/* change size of iframes within .red so they are more visually appealing */
+.red iframe{
     width: 80%;
     height: 50%;
 }
 
-#red div#vidrowThree {
+.red div#vidrowThree {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-evenly;
 }
 
-#red div#videoSeven {
+.red div#videoSeven {
     width:50%;
     position: relative;
     left:170px;
 }
 
 /* ----- 1989.html ----- */                                                      /*NEW FILE*/
-#ts1989 hr{
+.ts1989 hr{
     border: 2px solid #60a6c4;
 }
 
-#ts1989 h2{
+.ts1989 h2{
     background-color: #9cdcf7;
 }
 
-/* changes the background color of every other div within #ts1989trackList */
+/* changes the background color of every other div within .ts1989trackList */
 #ts1989trackList div:nth-child(odd){
     background-color: #9cdcf7;
 } 
@@ -904,14 +914,14 @@ and row two (div#vidrowTwo) with 2 videos below row one */
     border:3px solid #9cdcf7;
 }
 
-/* changes background-color and margin (25px top/bottom) of dive#line within #ts1989 */
-#ts1989 div#line{
+/* changes background-color and margin (25px top/bottom) of dive#line within .ts1989 */
+.ts1989 div#line{
     background-color: #60a6c4;
     margin-top:25px;
     margin-bottom:25px;
 }
 
-#ts1989 div#vidrowThree{
+.ts1989 div#vidrowThree{
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-evenly;
@@ -919,63 +929,70 @@ and row two (div#vidrowTwo) with 2 videos below row one */
 }
 
 /*------ reputation.html ------*/                                               /*NEW FILE*/
-#reputation hr{
+.reputation hr{
     border:2px solid #4a4647;
 }
 
-#reputation h2{
+.reputation h2{
     background-color: #70696b;
 }
 
-#reptrackList div:nth-child(odd){
-    background-color:#70696b;
+/*changes background color of every-other div within reptrackList*/
+#reptrackList div:nth-child(even){
+    background-color:#999194;
 }
 
-#reputation div#line{
+/*puts a border around #reptrackList*/
+#reptrackList div{
+    border:3px solid #999194;
+}
+
+.reputation div#line{
     background-color: #4a4647;
 }
 
-#reputation div#musicVideos {
+.reputation div#musicVideos {
     grid-template-rows: 130px auto auto;
 }
 
 /*------- lover.html ------- */                                                  /*NEW FILE*/
-#lover hr{
+.lover hr{
     border:2px solid #db769f;
 }
 
-#lover h2{
+.lover h2{
     background-color: #e890b4;
 }
 
-/* changes the background color of every other div within #lover */
+/* changes the background color of every other div within .lover */
 #lovertrackList div:nth-child(odd){
     background-color: #e890b4;
 } 
 
+/*gives tracklist a border*/
 #lovertrackList div{
     border:3px solid #e890b4;
 }
 
-/* changes background-color and margin (25px top/bottom) of dive#line within #lover */
-#lover div#line{
+/* changes background-color and margin (25px top/bottom) of dive#line within .lover */
+.lover div#line{
     background-color: #db769f;
     margin-top:25px;
     margin-bottom:25px;
 }
 
-#lover #musicVideos{
+.lover #musicVideos{
     gap:25px;
 }
 
 /* -------- folklore.html -------*/                                              /*NEW FILE*/
 
-/* changes background color of all <h2> elements within #folklore */
-#folklore h2{
+/* changes background color of all <h2> elements within .folklore */
+.folklore h2{
     background-color:#CFCCC5;
 }
 
-#folklore #tLmV{
+.folklore #tLmV{
     grid-template-columns: 50% 3px auto;
 }
 
@@ -990,23 +1007,23 @@ and row two (div#vidrowTwo) with 2 videos below row one */
 }
 
 /*a div I created to display a "vertical" line inbetween the "tracklist" and "music video" sections */
-#folklore div#line{
+.folklore div#line{
     background-color: #978E7F;
     margin-top:25px;
     margin-bottom:25px;
 }
 
-#folklore #musicVideos {
+.folklore #musicVideos {
     grid-template-columns: 100%;
     grid-template-rows: 130px auto;
 }
 
 /* --------- evermore.html --------- */                                              /* NEW FILE */
-#evermore hr{
+.evermore hr{
     border: 2px solid #785e41;
 }
 
-#evermore h2{
+.evermore h2{
     background-color: #ba9e7f;
 }
 
@@ -1018,24 +1035,24 @@ and row two (div#vidrowTwo) with 2 videos below row one */
     border:3px solid #ba9e7f;
 }
 
-/* changes background-color and margin (25px top/bottom) of dive#line within #evermore */
-#evermore div#line{
+/* changes background-color and margin (25px top/bottom) of dive#line within .evermore */
+.evermore div#line{
     background-color: #785e41;
     margin-top:25px;
     margin-bottom:25px;
 }
 
-#evermore #musicVideos {
+.evermore #musicVideos {
     grid-template-columns: 100%;
     grid-template-rows: 130px auto;
 }
 
 /* ---------- midnights.html ---------- */                                  /* NEW FILE */
-#midnights hr{
+.midnights hr{
     border:2px solid #212f69;
 }
 
-#midnights h2{
+.midnights h2{
     background-color: #4a5a91;
 }
 
@@ -1049,21 +1066,21 @@ and row two (div#vidrowTwo) with 2 videos below row one */
     border:3px solid #8c9abf;
 }
 
-#midnights div#line {
+.midnights div#line {
     border: 2px solid #212f69;
     margin:25px 0;
 }
 
 /* ----------- ttpd.html ----------- */                                    /* NEW FILE */
-#ttpd hr{
+.ttpd hr{
     border:2px solid #59534c;
 }
 
-#ttpd h2{
+.ttpd h2{
     background-color: #807a75;
 }
 
-#ttpd #tLmV {
+.ttpd #tLmV {
     grid-template-columns: 50% 3px auto;
 }
 
@@ -1076,12 +1093,12 @@ and row two (div#vidrowTwo) with 2 videos below row one */
     border:3px solid #807a75;
 }
 
-#ttpd div#line{
+.ttpd div#line{
     background-color: #59534c;
     margin: 25px 0;
 }
 
-#ttpd div#musicVideos {
+.ttpd div#musicVideos {
     grid-template-rows: 130px auto auto;
 }
 
@@ -1103,47 +1120,47 @@ and row two (div#vidrowTwo) with 2 videos below row one */
 }
 
 /* sets background-color of ANY element with one of these ID's to the assigned color */
-#debut {
+.debut {
     background-color: var(--debutColor);
 }
 
-#fearless {
+.fearless {
     background-color: var(--fearlessColor);
 }
 
-#speakNow {
+.speakNow {
     background-color: var(--speakNowColor);
 }
 
-#red {
+.red {
     background-color: var(--redColor);
 }
 
-#ts1989 {
+.ts1989 {
     background-color: var(--ts1989Color);
 }
 
-#reputation {
+.reputation {
     background-color: var(--reputationColor);
 }
 
-#lover {
+.lover {
     background-color: var(--loverColor);
 }
 
-#folklore {
+.folklore {
     background-color: var(--folkloreColor);
 }
 
-#evermore {
+.evermore {
     background-color: var(--evermoreColor);
 }
 
-#midnights {
+.midnights {
     background-color: var(--midnightsColor);
 }
 
-#ttpd {
+.ttpd {
     background-color: var(--ttpdColor);
 }
 
@@ -1218,17 +1235,19 @@ div#careerTL{
     padding:30px;
 }
 
+/*size of larger timeline divs*/
 #careerTL div#timeLine5, 
 #careerTL div#timeLine12,
 #careerTL div#timeLine13{
     height:6%;
 }
 
+/*size of largest timeline div*/
 #careerTL div#timeLine9 {
     height:7%;
 }
 
-/* styling the career timeline divs */
+/* styling the career average timeline divs */
 #careerTL div[id^="timeLine"] {
     display:flex;
     flex-direction: column;
@@ -1265,17 +1284,53 @@ specific timelines added for specificity because they have different default hei
     margin-left:25px;
 }
 
+/*ALL hiddenInfo > span*/
+#careerTL div.hiddenInfo > span{
+    position: relative;
+    top:100px; left:-200px;
+    text-align: left;
+}
+
+/*careerTL 1 (year 2005) & careerTL 2 (Year 2006)*/
+#careerTL div#timeLine1 div.hiddenInfo img,
+#careerTL div#timeLine2 div.hiddenInfo img{
+    top:-80px;
+}
+
+/*careerTL 4 (Year 2009)*/
+#careerTL div#timeLine4 div.hiddenInfo > span{
+    position:relative;
+    top:100px; left:-200px;
+    text-align: left;
+}
+
+#careerTL div#timeLine4 div.hiddenInfo img{
+    top:-200px; left:100px;
+}
+
+/*careerTL 5 (Year 2010)*/
 #careerTL div#timeLine5 ul{
     position:relative; top:90px; left:-215px;
     text-align:left; 
     list-style-type: none;
 }
 
-#careerTL div#timeLine5 div#images{
+#careerTL div#timeLine5 div.images{
     display: flex;
     gap:0px;
     position:relative; top:-150px; left:300px;
 }
+
+/*careerTL 10 (Year 2020) */
+#careerTL div#timeLine10 div.hiddenInfo>span{
+    position: relative; top:100px; left:-200px;
+    text-align: left;
+}
+
+#careerTL div#timeLine10 div.images{
+    position: relative; top:-90px;
+}
+
 
 /*info that only appears when the relevant div is hovered over */
 .hiddenInfo{
@@ -1383,12 +1438,12 @@ div#albumBtns #btnBotRow figure{
 }
 
 /* changes the img margin of The Tortured Poets Department to make it align with the others */
-#pollForm #ttpd img{
+#pollForm .ttpd img{
     margin-bottom: 25px;
 }
 
 /* changes the line-height of The Tortured Poets Department text to make it align with the others */
-#ttpd figcaption{
+.ttpd figcaption{
     line-height: 25px;
 }
 

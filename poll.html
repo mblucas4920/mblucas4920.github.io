@@ -21,17 +21,17 @@
                     <div class="dropTab">
                         <li id="maindropTab"><a href="albums.html">Albums/Eras</a></li>
                         <div class="dropdown-content">
-                            <li><a href="albums.html?iframeSrc=debut.html#album" id="debut">Debut</a></li>
-                            <li><a href="albums.html?iframeSrc=fearless.html#album" id="fearless">Fearless</a></li>
-                            <li><a href="albums.html?iframeSrc=speakNow.html#album" id="speakNow">Speak Now</a></li>
-                            <li><a href="albums.html?iframeSrc=red.html#album" id="red">Red</a></li>
-                            <li><a href="albums.html?iframeSrc=1989.html#album" id="ts1989">1989</a></li>
-                            <li><a href="albums.html?iframeSrc=reputation.html#album" id="reputation">reputation</a></li>
-                            <li><a href="albums.html?iframeSrc=lover.html#album" id="lover">Lover</a></li>
-                            <li><a href="albums.html?iframeSrc=folklore.html#album" id="folklore">folklore</a></li>
-                            <li><a href="albums.html?iframeSrc=evermore.html#album" id="evermore">evermore</a></li>
-                            <li><a href="albums.html?iframeSrc=midnights.html#album" id="midnights">Midnights</a></li>
-                            <li><a href="albums.html?iframeSrc=ttpd.html#album" id="ttpd">The Tortured Poets Department</a></li>
+                            <li><a href="albums.html?iframeSrc=debut.html#album" class="debut">Debut</a></li>
+                            <li><a href="albums.html?iframeSrc=fearless.html#album" class="fearless">Fearless</a></li>
+                            <li><a href="albums.html?iframeSrc=speakNow.html#album" class="speakNow">Speak Now</a></li>
+                            <li><a href="albums.html?iframeSrc=red.html#album" class="red">Red</a></li>
+                            <li><a href="albums.html?iframeSrc=1989.html#album" class="ts1989">1989</a></li>
+                            <li><a href="albums.html?iframeSrc=reputation.html#album" class="reputation">reputation</a></li>
+                            <li><a href="albums.html?iframeSrc=lover.html#album" class="lover">Lover</a></li>
+                            <li><a href="albums.html?iframeSrc=folklore.html#album" class="folklore">folklore</a></li>
+                            <li><a href="albums.html?iframeSrc=evermore.html#album" class="evermore">evermore</a></li>
+                            <li><a href="albums.html?iframeSrc=midnights.html#album" class="midnights">Midnights</a></li>
+                            <li><a href="albums.html?iframeSrc=ttpd.html#album" class="ttpd">The Tortured Poets Department</a></li>
                         </div>
                     </div>
                     <li><a href="bio.html">Bio</a></li>
@@ -52,109 +52,99 @@
             <hr>
         </div>
         <!--Poll Form (Label surrounding <img>'s allows the pictures to be clicked and activate its assigned button')-->
+            <!--"Label" only included ONCE on the outside of each figure-->
         <form method="GET">
             <div id="albumBtns">
                 <div id="btnTopRow">
                     <label for="debutbtn">
-                        <figure id="debut">
+                        <figure class="debut">
                             <img src="Images/debut.jpg" alt="Taylor Swift Debut">
                             <figcaption>
-                                <input type="radio" name="favAlbum" id="debutbtn">
-                                <label for="debutbtn">Debut</label>
+                                <input type="radio" name="favAlbum" id="debutbtn">&nbsp;Debut
                             </figcaption>
                         </figure>
                     </label>
                     <label for="fearlessbtn">
-                        <figure id="fearless">
+                        <figure class="fearless">
                             <img src="Images/fearless.jpg" alt="Taylor Swift Fearless">
                             <figcaption>
-                                <input type="radio" name="favAlbum" id="fearlessbtn">
-                                <label for="fearlessbtn">Fearless</label>
+                                <input type="radio" name="favAlbum" id="fearlessbtn">&nbsp;Fearless
                             </figcaption>
                         </figure>
                     </label>
                     <label for="speakNowbtn">
-                        <figure id="speakNow">
+                        <figure class="speakNow">
                             <img src="Images/speak_now.jpg" alt="Taylor Swift Speak Now">
                             <figcaption>
-                                <input type="radio" name="favAlbum" id="speakNowbtn">
-                                <label for="speakNowbtn">Speak Now</label>
+                                <input type="radio" name="favAlbum" id="speakNowbtn">&nbsp;Speak Now
                             </figcaption>
                         </figure>
                     </label>
                     <label for="redbtn">
-                        <figure id="red">
+                        <figure class="red">
                             <img src="Images/red.jpg" alt="Taylor Swift Red">
                             <figcaption>
-                                <input type="radio" name="favAlbum" id="redbtn">
-                                <label for="redbtn">Red</label>
+                                <input type="radio" name="favAlbum" id="redbtn">&nbsp;Red
                             </figcaption>
                         </figure>
                     </label>
                 </div>
                 <div id="btnMidRow">
                     <label for="1989btn">
-                        <figure id="ts1989">
+                        <figure class="ts1989">
                             <img src="Images/1989.jpg" alt="Taylor Swift 1989">
                             <figcaption>
-                                <input type="radio" name="favAlbum" id="1989btn">
-                                <label for="1989btn">1989</label>
+                                <input type="radio" name="favAlbum" id="1989btn">&nbsp;1989
                             </figcaption>
                         </figure>
                     </label>
                     <label for="reputationbtn">
-                        <figure id="reputation">
+                        <figure class="reputation">
                             <img src="Images/reputation.jpg" alt="Taylor Swift Reputation">
                             <figcaption>
-                                <input type="radio" name="favAlbum" id="reputationbtn">
-                                <label for="reputationbtn">reputation</label>
+                                <input type="radio" name="favAlbum" id="reputationbtn">&nbsp;reputation
                             </figcaption>
                         </figure>
                     </label>
                     <label for="loverbtn">
-                        <figure id="lover">
+                        <figure class="lover">
                             <img src="Images/lover.jpg" alt="Taylor Swift Lover">
                             <figcaption>
-                                <input type="radio" name="favAlbum" id="loverbtn">
-                                <label for="loverbtn">Lover</label>
+                                <input type="radio" name="favAlbum" id="loverbtn">&nbsp;Lover
                             </figcaption>
                         </figure>
                     </label>
                     <label for="folklorebtn">
-                        <figure id="folklore">
+                        <figure class="folklore">
                             <img src="Images/folklore.jpg" alt="Taylor Swift Folklore">
                             <figcaption>
-                                <input type="radio" name="favAlbum" id="folklorebtn">
-                                <label for="folklorebtn">folklore</label>
+                                <input type="radio" name="favAlbum" id="folklorebtn">&nbsp;folklore
                             </figcaption>
                         </figure>
                     </label>
                 </div>
                 <div id="btnBotRow">
                     <label for="evermorebtn">
-                        <figure id="evermore">
+                        <figure class="evermore">
                             <img src="Images/evermore.jpg" alt="Taylor Swift Evermore">
                             <figcaption>
-                                <input type="radio" name="favAlbum" id="evermorebtn">
-                                <label for="evermorebtn">evermore</label>
+                                <input type="radio" name="favAlbum" id="evermorebtn">&nbsp;evermore
                             </figcaption>
                         </figure>
                     </label>
                     <label for="midnightsbtn">
-                        <figure id="midnights">
+                        <figure class="midnights">
                             <img src="Images/midnights.jpg" alt="Taylor Swift Midnights">
                             <figcaption>
-                                <input type="radio" name="favAlbum" id="midnightsbtn">
-                                <label for="midnightsbtn">Midnights</label>
+                                <input type="radio" name="favAlbum" id="midnightsbtn">&nbsp;Midnights
                             </figcaption>
                         </figure>
                     </label>
                     <label for="TTPDbtn">
-                        <figure id="ttpd">
+                        <figure class="ttpd">
                             <img src="Images/ttpd.png" alt="Taylor Swift TTPD">
                             <figcaption>
-                                <input type="radio" name="favAlbum" id="TTPDbtn">
-                                <label for="TTPDbtn">The Tortured Poets Department</label>
+                                <input type="radio" name="favAlbum" id="TTPDbtn">&nbsp;The Tortured Poets Department
                             </figcaption>
                         </figure>
                     </label>
