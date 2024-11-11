@@ -5,17 +5,40 @@
     <meta charset="UTF-8">
     <meta name="author" content="Madeline Lucas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!--CSS-->
     <link href="uscswifties.css" rel="stylesheet">
+
+    <!-- Script-->
+    <script>
+        function validateForm() {
+            const albumChoices = document.getElementsByName('favAlbum');
+            let voteSelected = false;
+
+            // Loop through the radio buttons to see if one is selected
+            for (let i = 0; i < albumChoices.length; i++) {
+                if (albumChoices[i].checked) {
+                    voteSelected = true;
+                    break;
+                }
+            }
+
+            // If no radio button is selected, show an alert and prevent form submission
+            if (!voteSelected) {
+                alert("Please select an album");
+                return false;
+            }
+
+            return true; // Submit form if validation passes
+        }
+    </script>
 </head>
 <body>
     <header>
         <nav>
-            <span id="logo">
+            <div id="logo">
                 <h2>USCSwifties</h2>
-            </span>
-            <span id="navTabs">
+            </div>
+            <div id="navTabs">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <div class="dropTab">
@@ -37,7 +60,7 @@
                     <li><a href="bio.html">Bio</a></li>
                     <li><a href="poll.html">Poll</a></li>
                 </ul>
-            </span>
+            </div>
         </nav>
     </header>
 
@@ -53,7 +76,7 @@
         </div>
         <!--Poll Form (Label surrounding <img>'s allows the pictures to be clicked and activate its assigned button')-->
             <!--"Label" only included ONCE on the outside of each figure-->
-        <form method="GET">
+        <form method="GET" onsubmit="return validateForm()">
             <div id="albumBtns">
                 <div id="btnTopRow">
                     <label for="debutbtn">
@@ -143,7 +166,7 @@
                     <label for="TTPDbtn">
                         <figure class="ttpd">
                             <img src="Images/ttpd.png" alt="Taylor Swift TTPD">
-                            <figcaption>
+                            <figcaption style="line-height: 25px;">
                                 <input type="radio" name="favAlbum" id="TTPDbtn">&nbsp;The Tortured Poets Department
                             </figcaption>
                         </figure>

@@ -34,6 +34,7 @@ nav {
     align-items:center;
 }
 
+
 /* removes the bullet points from the unordered list, establishes the unordered list as a flex-box, 
 justifies content to align with the end of the flex-box */
 nav ul {
@@ -59,6 +60,7 @@ nav ul {
 /* changes the flex-basis of the "navTabs" span element to 75% */
 #navTabs {
     flex-basis: 75%;
+    flex-grow:2;
     overflow:hidden;
 }
 
@@ -74,6 +76,7 @@ nav a{
     color:white;
     background-color: #7d7566;
 }
+
 
 /* gives the element a box-shadow when hovered over
 changes text-color to black when hovered over */
@@ -259,7 +262,7 @@ hr {
 }
 
 /* spans the hr inside "topSec" across 2 columns */
-#topSec>#blankLine{
+#topSec>.blankLine{
     grid-column: 1/3;
 }
 
@@ -318,7 +321,7 @@ div#topSec {
 /* --- explore section --- */
 /* changes the color, padding, and names the "explore" div */
 div#explore {
-    color:white;
+    color:black;
     padding: 25px 0 50px;
     clear:both;
     font-size:25px;
@@ -396,16 +399,17 @@ establishes top/bottom padding as 10px, and right/left as 25px */
 /* removes underline, changes text-color to white, changes background color, 
 and establishes 10px top/bottom padding & 250 right/left padding to <a> within #albumEras */
 div#albumsEras h1 a{
-
-    color:white;
+    color:black;
     background-color: #ADA497;
     padding:15px 250px;
+    border-radius: 20px;
 }
 
 /* changes background-color, border, and text-color of <a> when hovered over*/
 div#albumsEras h1 a:hover{
     background-color:#bdb4a8;
     border:3px solid #ADA497;
+    text-shadow:1px 1px white;
     border-style: inset;
     color:black;
 }
@@ -523,18 +527,19 @@ width (50%) and centers (using margin:0 auto;) <h1> element within header#title 
 header#title h1{
     background-color: #ADA497;
     color:white;
+    font-size:45px;
     margin:0 auto;
     margin-top:25px;
     margin-bottom: 25px;
     padding:15px;
     border-radius: 20px;
-    width:50%;
+    width:75%;
 }
 
-/* sets text-align to justify, font-size 20px, all-around padding (10px), and margin (10px top/bottom, 25px right/left)
+/*font-size 20px, all-around padding (10px), and margin (10px top/bottom, 25px right/left)
 of <p> within #erasText */
 #erasText p{
-    text-align: justify;
+    text-align: left;
     font-size:20px;
     padding: 10px;
     margin: 10px 25px;
@@ -542,8 +547,10 @@ of <p> within #erasText */
 
 /* sets all-around margin of img within #erasTourImg to 20px*/
 #erasTourImg img{
-    margin:20px;
-    margin-right:50px;
+    margin:10px;
+    margin-top:50px;
+    margin-right: 70px;
+    transform:scale(1.09,1.09);
 }
 
 /* changes font-size of <h2> within #erasText*/
@@ -612,13 +619,15 @@ align-contents with even space*/
 
 /*increases button within an element with class "buttons" brightness by 50% and changes text-color to white when hovered over*/
 .buttons button:hover{
-    filter:brightness(50%);
+    filter:brightness(110%);
+    transform:scale(1.05,1.05);
     color:white;
     cursor:pointer;
 }
 
 .buttons button:active{
-    filter:brightness(25%);
+    filter:brightness(50%);
+    transform: scale(0.99,0.99);
     color:white;
 }
 
@@ -652,8 +661,8 @@ and creates a "box-shadow" under every element with class albumHead */
 text-aligned left, all-around margin of 50px, font-size of 16px */
 #desc{
     display:grid;
+    text-align: left;
     grid-template-columns: auto auto;
-    text-align: justify;
     margin: 50px 150px;
     font-size:18px;
 }
@@ -1178,6 +1187,27 @@ div#vote hr{
     margin-bottom: 50px;
 }
 
+#vote h3{
+    font-size:25px;
+}
+
+#vote h3 a{
+    color:#978E7F;
+    border:3px solid #978E7F; 
+    font-size:35px;
+    padding:10px;
+    border-radius: 20px;
+}
+
+#vote h3 a:hover{
+    background-color:#978E7F;
+    color:#F0E9DF;
+}
+
+#vote h3 a:active{
+    filter:brightness(50%);
+}
+
 /* ---------------- Bio Page ---------------- */                              /*NEW FILE*/
 #bioBody{
     display:grid;
@@ -1214,7 +1244,7 @@ div#bio{
     grid-area: bioPic;
 }
 
-#bio span{
+#bio div#text{
     grid-area: bioText;
 }
 
@@ -1235,15 +1265,20 @@ div#careerTL{
     padding:30px;
 }
 
+#careerTLsub {
+    text-align: left;
+    margin-left:100px;
+}
+
 /*size of larger timeline divs*/
 #careerTL div#timeLine5, 
-#careerTL div#timeLine12,
-#careerTL div#timeLine13{
-    height:6%;
+#careerTL div#timeLine13,
+#careerTL div#timeLine14{
+    height:5%;
 }
 
 /*size of largest timeline div*/
-#careerTL div#timeLine9 {
+#careerTL div#timeLine10 {
     height:7%;
 }
 
@@ -1269,9 +1304,9 @@ div#careerTL{
 specific timelines added for specificity because they have different default heights */
 #careerTL div[id^="timeLine"]:hover, 
 #careerTL div#timeLine5:hover, 
-#careerTL div#timeLine9:hover,
-#careerTL div#timeLine12:hover, 
-#careerTL div#timeLine13:hover {
+#careerTL div#timeLine10:hover,
+#careerTL div#timeLine13:hover, 
+#careerTL div#timeLine14:hover {
     width:75%;
     height:10%;
     cursor:pointer;
@@ -1285,7 +1320,7 @@ specific timelines added for specificity because they have different default hei
 }
 
 /*ALL hiddenInfo > span*/
-#careerTL div.hiddenInfo > span{
+#careerTL div.hiddenInfo > div.tlText{
     position: relative;
     top:100px; left:-200px;
     text-align: left;
@@ -1298,7 +1333,7 @@ specific timelines added for specificity because they have different default hei
 }
 
 /*careerTL 4 (Year 2009)*/
-#careerTL div#timeLine4 div.hiddenInfo > span{
+#careerTL div#timeLine4 div.hiddenInfo > div.tlText{
     position:relative;
     top:100px; left:-200px;
     text-align: left;
@@ -1321,16 +1356,20 @@ specific timelines added for specificity because they have different default hei
     position:relative; top:-150px; left:300px;
 }
 
-/*careerTL 10 (Year 2020) */
-#careerTL div#timeLine10 div.hiddenInfo>span{
-    position: relative; top:100px; left:-200px;
-    text-align: left;
-}
-
-#careerTL div#timeLine10 div.images{
+/*position images within timeline11 (Year 2020)*/
+#careerTL div#timeLine11 div.images{
     position: relative; top:-90px;
 }
 
+/*position images within timeline12 (Year 2021)*/
+#careerTL div#timeLine12 div.images{
+    position: relative;top: -70px;
+}
+
+/*position images within timeline13 (Year 2022)*/
+#careerTL div#timeLine13 div.images{
+    position: relative; top:-70px;
+}
 
 /*info that only appears when the relevant div is hovered over */
 .hiddenInfo{
@@ -1440,11 +1479,6 @@ div#albumBtns #btnBotRow figure{
 /* changes the img margin of The Tortured Poets Department to make it align with the others */
 #pollForm .ttpd img{
     margin-bottom: 25px;
-}
-
-/* changes the line-height of The Tortured Poets Department text to make it align with the others */
-.ttpd figcaption{
-    line-height: 25px;
 }
 
 /* establishes top/right/left padding of div#submit to 10px, and bottom-padding to 25px */

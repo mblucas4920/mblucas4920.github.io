@@ -14,10 +14,10 @@
 </head>
 <body id="albums">
     <nav>
-        <span id="logo">
+        <div id="logo">
             <h2>USCSwifties</h2>
-        </span>
-        <span id="navTabs">
+        </div>
+        <div id="navTabs">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <div class="dropTab">
@@ -39,7 +39,7 @@
                 <li><a href="bio.html">Bio</a></li>
                 <li><a href="poll.html">Poll</a></li>
             </ul>
-        </span>
+        </div>
     </nav>
     <header id="title">
         <hr>
@@ -49,7 +49,7 @@
     <div id="erasTour" class="secOne">
         <div id="erasText" >
             <h2>The Eras Tour</h2>
-            <hr>
+            <hr style="width:75%; margin:0 auto;">
             <div>
                 <p>
                     In November 2022, Taylor Swift announced her biggest project yet
@@ -117,11 +117,14 @@
             </iframe>
         </div>
         <!--START OF SCRIPT-->
-        <!--Only works when i put it here, not in head or in tsScript.js. - not sure why -->
+        <!--Only works when i put it here, not in head or in tsScript.js. - needed to be declared AFTER the elements it effects -->
         <script>
             // Function to get URL query parameter by name
             function getQuery(query) {
                 // Searching for the "query" inside the link (query being what comes after ? in the link)
+                // const urlQuery - creates a consistent (unchanging) variable
+                // variable is equal to new URLSearchParams, which establishes urlQuery as a NEW CONSTRUCTOR FUNCTION called URLSearchParams
+                // property window.location.search finds the "query" within the windows url
                 const urlQuery = new URLSearchParams(window.location.search);
                 // returns the value taken after "?" in the link
                 return urlQuery.get(query);

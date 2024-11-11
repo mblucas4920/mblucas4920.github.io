@@ -12,10 +12,10 @@
 <body id="bioBody">
     <header>
         <nav>
-            <span id="logo">
+            <div id="logo">
                 <h2>USCSwifties</h2>
-            </span>
-            <span id="navTabs">
+            </div>
+            <div id="navTabs">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <div class="dropTab">
@@ -37,7 +37,7 @@
                     <li><a href="bio.html">Bio</a></li>
                     <li><a href="poll.html">Poll</a></li>
                 </ul>
-            </span>
+            </div>
         </nav>
     </header>
     <div id="bio">
@@ -47,34 +47,35 @@
             <hr>
         </div>
         <img src="Images/taylorVMAs2024.jpg" alt="Taylor Swift at the 2024 VMAs" height="400" width="275">
-        <span>
+        <div id="text">
             <p>
                 Taylor 'Alison' Swift was born on December 13, 1989.
             </p>
-        </span>
+        </div>
     </div>
-    <div id="blankLine">
+    <div class="blankLine">
         <br>
         <hr>
     </div>
 
     <div id="careerTL">
-        <hr style="margin-top:25;">
+        <hr style="margin-top:25px;">
         <h2>Career Timeline</h2>
-        <hr style="margin-bottom: 50;">
+        <hr style="margin-bottom: 25px;">
+        <p id="careerTLsub">Hover over each year for more info!</p>
         <!--Div for 2005-->
         <div id="timeLine1" class="timeLineDiv">
             <h3>2005</h3>
-            <span>
+            <div>
                 <p>
                     Signed with Big Machine Records
                 </p>
-            </span>
+            </div>
             <div class="hiddenInfo">
-                <span>
+                <div class="tlText">
                     <p>In 2005, Taylor Swift signed a record 
                     <br>deal with record label "Big Machine Records" <br> at the age of 16.</p>
-                </span>
+                </div >
                 <img src="Images/bigMachine.jpg" alt="Swift Contract 2005" width="300" height="200">
             </div>
         </div>
@@ -85,11 +86,11 @@
                 Released self-titled debut album, <i>Taylor Swift</i>.
             </p>
             <div class="hiddenInfo">
-                <span>
+                <div class="tlText">
                     <p>"Taylor Swift" also refered to by fans as "Debut" 
                         <br>is the first studio-album by Taylor Swift</p>
                     <p>It was released on October 24, 2006.</p>
-                </span>
+                </div>
                 <img src="Images/debut.jpg" alt="Debut Album Cover" width="200" height="200">
             </div>
         </div>
@@ -110,7 +111,7 @@
                 Received first award for “Best Music Video” at the 2009 VMAs
             </p>
             <div class="hiddenInfo">
-                <span>
+                <div class="tlText">
                     <p>At the 2009 MTV Video Music Awards Swift won the award for <br>
                         "Best Music Video" with her music video for the song <br>
                         "You Belong With Me" from the singers sophomore album "Fearless."</p>
@@ -122,7 +123,7 @@
                     <p>This incident garnered critisisms of West, and support for Swift, <br>
                         and marked the beginning of what would become a years long fued<br> between the two.
                     </p>
-                </span>
+                </div>
                 <img src="Images/2009vmas.jpg" alt="2009 VMAs Kanye West Interrupts Taylor Swift Acceptance Speech" width="300" height="200">
             </div>
         </div>
@@ -170,7 +171,7 @@
             </div>
         </div>
         <!--Div for 2017-->
-        <div id="timeLine7" class="timeLineDiv">
+        <div id="timeLine8" class="timeLineDiv">
             <h3>2017</h3>
             <p>
                 Released sixth studio album, <i>reputation</i>.
@@ -180,7 +181,7 @@
             </div>
         </div>
         <!--Div for 2018-->
-        <div id="timeLine8" class="timeLineDiv">
+        <div id="timeLine9" class="timeLineDiv">
             <h3>2018</h3>
             <p>
                 Contract with Big Machine Records expires; Swift signs with Republic Records
@@ -191,7 +192,7 @@
             </div>
         </div>
         <!--Div for 2019-->
-        <div id="timeLine9" class="timeLineDiv">
+        <div id="timeLine10" class="timeLineDiv">
             <h3>2019</h3>
             <p>
                 Released seventh studio album <i>Lover</i>. This was her first album under Republic Records
@@ -206,34 +207,43 @@
             </p>
         </div>
         <!--Div for 2020-->
-        <div id="timeLine10" class="timeLineDiv">
+        <div id="timeLine11" class="timeLineDiv">
             <h3>2020</h3>
             <p>
                 Released eighth and ninth studio albums, <i>folklore</i> and <i>evermore</i>.
             </p>
             <div class="hiddenInfo">
-                <span>
+                <div class="tlText">
                     <p>During quarantine in 2020, Taylor Swift wrote and 
                         <br>recorded 17 songs for her album "folklore," 
                         <br>but after finishing enough songs for a full-length 
                         <br>studio album, she kept writing. 17 additional songs 
-                        <br>were created, and compiled into Swift's 10th studio 
+                        <br>were created, and compiled into Swift's 9th studio 
                         <br>album, evermore.
                     </p>
-                </span>
+                </div>
                 <div class="images">
                     <img src="Images/folklore.jpg" alt="Folklore Album Cover" height="200" width="200">
-                    <img src="Images/evermore.jpg" alt="Evermore Album Cover" hiehgt="200" width="200">
+                    <img src="Images/evermore.jpg" alt="Evermore Album Cover" height="200" width="200">
                 </div>
             </div>
         </div>
         <!--Div for 2021-->
-        <div id="timeLine11" class="timeLineDiv">
+        <div id="timeLine12" class="timeLineDiv">
             <h3>2021</h3>
             <p>
                 Released first and second re-recorded albums, <i>Fearless(Taylors Version)</i> and <i>Red(Taylors Version)</i>
             </p>
             <div class="hiddenInfo">
+                <div class="tlText">
+                    <p>
+                        After loser the master rights of her first 6 studio 
+                        <br>albums, Taylor Swift decided to re-record them 
+                        <br>under her new record label and included songs 
+                        <br>"From The Vault" that her previous label did 
+                        <br>not allow her to feature in the original releases.
+                    </p>
+                </div>
                 <div class="images">
                     <img src="Images/fearless.jpg" alt="Fearless (Taylors Version) Album Cover" height="200" width="200">
                     <img src="Images/red.jpg" alt="Red (Taylors Version) Album Cover" height="200" width="200">
@@ -241,7 +251,7 @@
             </div>
         </div>
         <!--Div for 2022-->
-        <div id="timeLine12" class="timeLineDiv">
+        <div id="timeLine13" class="timeLineDiv">
             <h3>2022</h3>
             <p>
                 Released tenth studio album, <i>Midnights</i>.
@@ -252,12 +262,12 @@
             <div class="hiddenInfo">
                 <div class="images">
                     <img src="Images/midnights.jpg" alt="Midnights Album Cover" width="200" height="200">
-                    <img src="Images/ErasTour.jpg" alt="The Eras Tour" width="200" height="300">
+                    <img src="Images/ErasTour.jpg" alt="The Eras Tour" width="220" height="300">
                 </div>
             </div>
         </div>
         <!--Div for 2023-->
-        <div id="timeLine13" class="timeLineDiv">
+        <div id="timeLine14" class="timeLineDiv">
             <h3>2023</h3>
             <p>
                 Released third and fourth re-recorded albums, <i>Speak Now(Taylors Version)</i> and <i>1989(Taylors Version)</i>
@@ -273,7 +283,7 @@
             </div>
         </div>
         <!--Div for 2024-->
-        <div id="timeLine14" class="timeLineDiv">
+        <div id="timeLine15" class="timeLineDiv">
             <h3>2024</h3>
             <p>
                 Released eleventh studio album, <i>The Tortured Poets Department</i>.
@@ -284,8 +294,8 @@
         </div>
     </div>
     <div class="space">
-        <div id="blankLine">
-            <hr style="position:relative; top:40;">
+        <div class="blankLine">
+            <hr style="position:relative; top:40px;">
         </div>
     </div>
     <footer>
