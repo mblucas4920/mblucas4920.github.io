@@ -9,28 +9,7 @@
     <link href="uscswifties.css" rel="stylesheet">
 
     <!-- Script-->
-    <script>
-        function validateForm() {
-            const albumChoices = document.getElementsByName('favAlbum');
-            let voteSelected = false;
-
-            // Loop through the radio buttons to see if one is selected
-            for (let i = 0; i < albumChoices.length; i++) {
-                if (albumChoices[i].checked) {
-                    voteSelected = true;
-                    break;
-                }
-            }
-
-            // If no radio button is selected, show an alert and prevent form submission
-            if (!voteSelected) {
-                alert("Please select an album");
-                return false;
-            }
-
-            return true; // Submit form if validation passes
-        }
-    </script>
+    <script src="tsScript.js"></script>
 </head>
 <body>
     <header>

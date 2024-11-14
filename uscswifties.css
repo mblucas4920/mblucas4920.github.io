@@ -667,7 +667,37 @@ text-aligned left, all-around margin of 50px, font-size of 16px */
     font-size:18px;
 }
 
+/* add a 50px margin to the left of <img> within #desc*/
 #desc img{
+    margin-left:50px;
+}
+
+div#ratings{
+    display:grid;
+    grid-template-rows:300px 50px 50px;
+    
+}
+
+div#rsRating p{
+    display:inline-block;
+}
+
+/*set image to float right, remove border thats is inhereted from a previous rule, adjust margin-left*/
+img#stars {
+    float:right;
+    border:none;
+    margin-left:10px;
+    position: relative; top:15px;
+}
+
+/*italicize and bold figcaptions within #desc (this is for the Pitchfork ratings under each Img)
+uses position:relative to shift the <figcaption> to the left 20 pixels, and up 15 pixels
+this should make the figcaption align with the <img> im a more visually appealing way*/
+#ratings p{
+    font-style: italic;
+    font-weight: 600;
+    position: relative;
+    top:5px;
     margin-left:50px;
 }
 
@@ -1230,6 +1260,8 @@ div#bio{
             "bioText bioPic";
     grid-area:bio;
     margin:0 50px;
+    margin-left:10%;
+    margin-right:5%;
 }
 
 #bio #blankLine{
@@ -1246,6 +1278,9 @@ div#bio{
 
 #bio div#text{
     grid-area: bioText;
+    text-align: left;
+    margin:10px 50px;
+    
 }
 
 div#careerTL{
@@ -1326,10 +1361,39 @@ specific timelines added for specificity because they have different default hei
     text-align: left;
 }
 
-/*careerTL 1 (year 2005) & careerTL 2 (Year 2006)*/
-#careerTL div#timeLine1 div.hiddenInfo img,
-#careerTL div#timeLine2 div.hiddenInfo img{
+/*careerTL 1 (year 2005)*/
+#careerTL div#timeLine1 div.hiddenInfo img{
     top:-80px;
+}
+
+/*careerTL 2 (Year 2006)*/                              /*TL DEBUT*/
+#careerTL div#timeLine2 div.hiddenInfo img{
+    position: relative;
+    top:-180px;
+}
+       /*changes color of link within tl2*/
+a#debutTLLink {
+    color:#1c8000;
+}
+
+a#debutTLLink:hover{
+    background-color: #1c8000;
+    color:white;
+}
+
+/*careerTL 3 (Year 2008)*/                              /*TL FEARLESS*/
+#careerTL div#timeLine3 div.hiddenInfo img{
+    top:-180px; left:100px;
+}
+
+    /*changes color of link within tl*/
+a#fearlessTLLink {
+    color:#8b590e;
+}
+
+a#fearlessTLLink:hover{
+    background-color: #8b590e;
+    color:white;
 }
 
 /*careerTL 4 (Year 2009)*/
@@ -1343,7 +1407,7 @@ specific timelines added for specificity because they have different default hei
     top:-200px; left:100px;
 }
 
-/*careerTL 5 (Year 2010)*/
+/*careerTL 5 (Year 2010)*/                              /*TL SPEAK NOW*/
 #careerTL div#timeLine5 ul{
     position:relative; top:90px; left:-215px;
     text-align:left; 
@@ -1353,12 +1417,97 @@ specific timelines added for specificity because they have different default hei
 #careerTL div#timeLine5 div.images{
     display: flex;
     gap:0px;
-    position:relative; top:-150px; left:300px;
+    position:relative; top:-250px; left:300px;
 }
 
-/*position images within timeline11 (Year 2020)*/
+    /*changes color of link within tl*/
+a#speakNowTLLink {
+    color:#5b365e;
+}
+    
+a#speakNowTLLink:hover{
+    background-color: #5b365e;
+    color:white;
+}
+    
+/*careerTL 6 (Year 2012)*/                              /*TL RED*/
+#careerTL div#timeLine6 img{
+    position: relative; top:-180px;
+}
+    /*changes color of link within tl*/
+a#redTLLink {
+    color:#842e2e;
+}
+    
+a#redTLLink:hover{
+    background-color: #842e2e;
+    color:white;
+}
+
+/*careerTL 7 (Year 2014)*/                              /*TL 1989*/
+#careerTL div#timeLine7 img{
+    position: relative; top:-180px;
+}
+    /*changes color of link within tl*/
+a#ts1989TLLink {
+    color:#0e6286;
+}
+    
+a#ts1989TLLink:hover{
+    background-color: #0e6286;
+    color:white;
+}
+
+/*careerTL 8 (Year 2017)*/                              /*TL REP*/
+#careerTL div#timeLine8 img{
+    position: relative; top:-180px;
+}
+    /*changes color of link within tl*/
+a#repTLLink {
+    color:#565254;
+}
+    
+a#repTLLink:hover{
+    background-color: #565254;
+    color:white;
+}
+
+/*careerTL 10 (Year 2019)*/                             /*TL LOVER*/
+#careerTL div#timeLine10 img{
+    position: relative; top:-220px;
+}
+    /*changes color of link within tl*/
+a#loverTLLink {
+    color:#ba0d55;
+}
+    
+a#loverTLLink:hover{
+    background-color: #ba0d55;
+    color:white;
+}
+/*position images within timeline11 (Year 2020)*/       /*TL FOLKLORE/EVERMORE*/
 #careerTL div#timeLine11 div.images{
-    position: relative; top:-90px;
+    position: relative; top:-220px;
+}
+
+    /*changes color of link within tl*/
+a#folkloreTLLink {
+    color:#54534a;
+}
+            
+a#folkloreTLLink:hover{
+    background-color: #54534a;
+    color:white;
+}
+    
+        /*changes color of link within tl*/
+a#evermoreTLLink {
+    color:#83633f;
+}
+        
+a#evermoreTLLink:hover{
+    background-color: #83633f;
+    color:white;
 }
 
 /*position images within timeline12 (Year 2021)*/
@@ -1368,7 +1517,34 @@ specific timelines added for specificity because they have different default hei
 
 /*position images within timeline13 (Year 2022)*/
 #careerTL div#timeLine13 div.images{
-    position: relative; top:-70px;
+    position: relative; top:-160px; left:150px;
+    width:500px;
+}
+
+    /*changes color of link within tl*/
+a#midTLLink {
+    color:#3a4469;
+}
+                
+a#midTLLink:hover{
+    background-color: #3a4469;
+    color:white;
+}
+
+/*position imagines within timeline 15 (Year 2024)*/
+#careerTL div#timeLine15 img{
+    position:relative; top:-180px; left:40px;
+}
+
+
+    /*changes color of link within tl*/
+a#ttpdTLLink {
+    color:#6d6b5f;
+}
+                    
+a#ttpdTLLink:hover{
+    background-color: #6d6b5f;
+    color:white;
 }
 
 /*info that only appears when the relevant div is hovered over */
@@ -1398,6 +1574,7 @@ specific timelines added for specificity because they have different default hei
     padding:10px;
     width:25%;
 }
+
 
 /* ------------- Poll Page -------------- */                                       /*NEW FILE*/
 /*sets display of the div with ID "pollForm" to grid and establishes 2 rows that automatically size */
