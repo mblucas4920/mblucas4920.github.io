@@ -508,12 +508,12 @@ purpose of this is to allow room for <hr> under #albumCovers */
 /* --------------- FOCUSED ON ALBUMS/ERAS PAGE ------------------ */                                  /*NEW FILE*/
 
 /* makes the album a "div container" for every other div within this page 
-with a row of 3%, a row of 160px, and three auto-sizing rows
+with a row of 100px, a row of 160px, and three auto-sizing rows
 utilizes grid-template-areas to position named divs within body#albums*/
 body#albums{
     height: 100%;
     display:grid;
-    grid-template-rows:3% 160px auto auto auto;
+    grid-template-rows:100px 160px auto auto auto;
     grid-template-areas: 
         "nav"
         "head"
