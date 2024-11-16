@@ -11,7 +11,7 @@
     <!-- Script-->
     <script src="tsScript.js"></script>
 </head>
-<body>
+<body id="pollPage">
     <header>
         <nav>
             <div id="logo">
@@ -42,13 +42,8 @@
             </div>
         </nav>
     </header>
-
-    <br>
-    <br>
-    <br>
-    <br>
     <div id="pollForm">
-        <div style="margin-top:30px;">
+        <div style="margin-top:10px;">
             <hr>
             <h1>Which Is YOUR Favorite Album?</h1>
             <hr>
@@ -92,11 +87,11 @@
                     </label>
                 </div>
                 <div id="btnMidRow">
-                    <label for="1989btn">
+                    <label for="ts1989btn">
                         <figure class="ts1989">
                             <img src="Images/1989.jpg" alt="Taylor Swift 1989">
                             <figcaption>
-                                <input type="radio" name="favAlbum" id="1989btn">&nbsp;1989
+                                <input type="radio" name="favAlbum" id="ts1989btn">&nbsp;1989
                             </figcaption>
                         </figure>
                     </label>
@@ -142,11 +137,11 @@
                             </figcaption>
                         </figure>
                     </label>
-                    <label for="TTPDbtn">
+                    <label for="ttpdbtn">
                         <figure class="ttpd">
                             <img src="Images/ttpd.png" alt="Taylor Swift TTPD">
                             <figcaption style="line-height: 25px;">
-                                <input type="radio" name="favAlbum" id="TTPDbtn">&nbsp;The Tortured Poets Department
+                                <input type="radio" name="favAlbum" id="ttpdbtn">&nbsp;The Tortured Poets Department
                             </figcaption>
                         </figure>
                     </label>
@@ -157,9 +152,13 @@
             </div>
 
         </form>
-        <hr>
+        
     </div>
-
+    <div class="blankLine">
+        <hr>
+        <br>
+        <br>
+    </div>
     <footer>
         <p id="toTop"><a href="#top">Back-To-Top</a></p>
 

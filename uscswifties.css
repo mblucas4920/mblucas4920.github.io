@@ -1,6 +1,7 @@
 /* --------- General CSS Rules for ALL WebPages ----------- */
 /* sets site-wide background color and font-family */
 html {
+    height:100%;
     background-color: #F0E9DF;
     font-family: Verdana, Tahoma, sans-serif;
 }
@@ -42,6 +43,9 @@ nav ul {
     display:flex;
     padding:0;
     justify-content: flex-end;
+
+    width:100%;
+    
 }
 
 /* changes font-size and margin of the h2 tag that is a direct child of an element with the id logo */
@@ -59,10 +63,11 @@ nav ul {
 
 /* changes the flex-basis of the "navTabs" span element to 75% */
 #navTabs {
-    flex-basis: 75%;
-    flex-grow:2;
+    display:flex;
+    flex-basis:75%;
     overflow:hidden;
 }
+
 
 /* changes padding, margin, font-size, and font-family of links inside the nav element, removes underline from links,
 and changes color to white */
@@ -257,8 +262,9 @@ hr {
 /* establishes div with ID "topSec" as a grid-container with 2 auto-sizing columns and 2 auto-sizing rows */
 #topSec {
     display:grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 450px auto;
     grid-template-rows: auto auto;
+    margin:0px 5%;
 }
 
 /* spans the hr inside "topSec" across 2 columns */
@@ -275,7 +281,7 @@ hr {
 changes height and width of img
 sets float to left
 gives image a box-shadow that is off centered left-down */
-#welcomeImg img{
+img#welcomeImg{
     margin:15px 50px;
     height:520px;
     width:392px;
@@ -294,13 +300,12 @@ gives image a box-shadow that is off centered left-down */
     text-align: left;
     font-size: 25px;
     padding:10px;
-    margin:10px 25px;
-    margin-right:50px;
-    padding-right:50px;
+    margin:10px 50px;
 }
 
 /* establishes body with ID "home" to be a grid with one 100px row, and 4 auto sizing rows*/
 body#home{
+    height:100%;
     display:grid;
     grid-template-rows: 100px auto auto auto 20px auto;
     /* grid-template-areas allows for position of content within the grid using "names" that were previously established using "grid-area" */
@@ -506,6 +511,7 @@ purpose of this is to allow room for <hr> under #albumCovers */
 with a row of 3%, a row of 160px, and three auto-sizing rows
 utilizes grid-template-areas to position named divs within body#albums*/
 body#albums{
+    height: 100%;
     display:grid;
     grid-template-rows:3% 160px auto auto auto;
     grid-template-areas: 
@@ -688,6 +694,37 @@ img#stars {
     border:none;
     margin-left:10px;
     position: relative; top:15px;
+}
+
+/* changes the appearance of the "Star" images I made. Originally they were all in yellow, 
+but i am using the "hue-rotate" "brightness" "greyscale" and "contrast" filters to adjust
+each images color using CSS instead of making new images in photoshop for each album*/
+.speakNow img#stars {
+    filter:hue-rotate(206deg) brightness(80%);
+}
+.red img#stars {
+    filter:hue-rotate(306deg) brightness(53%) contrast(5);
+}
+.ts1989 img#stars {
+    filter:hue-rotate(174deg) brightness(100%);
+}
+.reputation img#stars {
+    filter:grayscale(100%) brightness(40%);
+}
+.lover img#stars {
+    filter:hue-rotate(281deg) brightness(88%) contrast(1);
+}
+.folklore img#stars {
+    filter:grayscale(100%) brightness(80%);
+}
+.evermore img#stars {
+    filter:hue-rotate(337deg) brightness(52%) contrast(1);
+}
+.midnights img#stars {
+    filter:hue-rotate(173deg) brightness(57%) contrast(2);
+}
+.ttpd img#stars {
+    filter:grayscale(100%) brightness(45%);
 }
 
 /*italicize and bold figcaptions within #desc (this is for the Pitchfork ratings under each Img)
@@ -1264,7 +1301,7 @@ div#bio{
     margin-right:5%;
 }
 
-#bio #blankLine{
+#blankLine{
     grid-area:blank;
 }
 
@@ -1577,10 +1614,23 @@ a#ttpdTLLink:hover{
 
 
 /* ------------- Poll Page -------------- */                                       /*NEW FILE*/
+
+body#pollPage{
+    height: 100%;
+    display:grid;
+    grid-template-rows:100px auto 40px auto;
+    grid-template-areas: 
+    "nav"
+    "form"
+    "blank"
+    "foot";
+}
+
 /*sets display of the div with ID "pollForm" to grid and establishes 2 rows that automatically size */
 div#pollForm{
-    display: grid;
-    grid-template-rows: auto auto;
+    display: flex;
+    flex-direction: column;
+    grid-area:form;
 }
 
 /*sets the display of the div with ID "albumBtns" to grid and establishes 4 rows that automatically size
@@ -1593,8 +1643,9 @@ div#albumBtns {
 
     padding-top:20px;
     padding-bottom:40px;
-    margin:25px 75px;
-    border-radius: 5%;
+    margin:20px auto;
+    width:80%;
+    border-radius: 50px;
     grid-template-rows: auto auto auto auto;
     background-color: #B5AB9F;
 }
@@ -1627,6 +1678,46 @@ div#albumBtns {
 
 #albumBtns label:hover{
     cursor:pointer;
+}
+
+/*gives the entire figure a "glow" (white box shadow) when its radio box has been "checked"*/
+#albumBtns figure:has(input:checked){
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8);
+}
+
+/*Change the radio button "checked" color to match each Era*/
+#albumBtns input#debutbtn:checked{
+    accent-color: #496c42;
+}
+#albumBtns input#fearlessbtn:checked{
+    accent-color: #956113;
+}
+#albumBtns input#speakNowbtn:checked{
+    accent-color: #774e7e;
+}
+#albumBtns input#redbtn:checked{
+    accent-color: #5f0707;
+}
+#albumBtns input#ts1989btn:checked{
+    accent-color: #087bb0;
+}
+#albumBtns input#reputationbtn:checked{
+    accent-color: #272525;
+}
+#albumBtns input#loverbtn:checked{
+    accent-color: #c70a56;
+}
+#albumBtns input#folklorebtn:checked{
+    accent-color: #636255;
+}
+#albumBtns input#evermorebtn:checked{
+    accent-color: #6b5633;
+}
+#albumBtns input#midnightsbtn:checked{
+    accent-color: #28324d;
+}
+#albumBtns input#ttpdbtn:checked{
+    accent-color: #3e3b37;
 }
 
 /* establishes btnTopRow and btnMidRow as grid-containers with 4 columns
@@ -1666,8 +1757,9 @@ div#submit {
 
 /*changes border-radius (5%), width, all-around padding, background-color, and text color of input within #submit */
 #submit input {
-    font-size:20px;
-    border-radius:15px;
+    font-size:30px;
+    font-weight: 800;
+    border-radius:25px;
     width:250px;
     padding:25px;
     background-color: #7d7566;
