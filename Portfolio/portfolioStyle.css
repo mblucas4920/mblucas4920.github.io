@@ -1,20 +1,21 @@
+/*sets height, color, and font family for EVERY html file in website*/
 html{
     height:100%;
     background-color: white;
     font-family: Trebuchet MS, sans-serif;
 }
+/*centers the body of every page and sets height to 100% to match HTML*/
 body{
     margin:0 auto;
     height:100%;
 }
+
 a{text-decoration: none;}
 p{font-size: 18px;}
 h3 {font-size: 20px;}
 
-main {
-    clear:left;
-    grid-area:main;
-}
+/*names grid-area off ALL <main> to "main" */
+main {grid-area:main;}
 
 /*Navigation */
 nav, footer{
@@ -24,18 +25,16 @@ nav, footer{
     box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 25%);
 }
 
+/* sets the grid-area name of <nav> to "nav"*/
 nav{
     grid-area:nav;
     position: fixed;
     justify-content: space-between;
     top:0;
     z-index:5;
-    border-bottom:2px solid #36548c;
-}
+    border-bottom:2px solid #36548c;}
 
-nav a{
-    color:white;
-}
+nav a{color:white;}
 
 nav div.logo{
     padding:20px 50px;
@@ -48,8 +47,11 @@ nav div.logo{
     display:flex;
     justify-content: space-between;
     overflow:hidden;
+
+    flex-shrink:2;
 }
 
+/* changes the background-color of the links to be darker than the rest of the <nav>*/
 .mainLink{
     background-color: #36548c;
     width:33%;
@@ -61,7 +63,6 @@ nav div.logo{
     height:100%;
     width:100%;
 }
-
 a.mainLink, .mainLink>a{
     display:inline-block;
     line-height:55px;
@@ -71,18 +72,18 @@ a.mainLink, .mainLink>a{
     font-size:larger;
     font-weight: 500;
 }
-
 a.mainLink:hover, .mainLink>a:hover{
     background-color: #5d80c2;
     color:black;
     box-shadow: 1px 0px 20px rgba(0, 0, 0, 35%);
 }
-
 a.mainLink:active, .mainLink>a:active{
     background-color: #9fb9ea;
     border:3px #2f497a solid;
 }
 
+/*contains the drop down links feature when user hovers over "academic gallery"
+initial display set is "none" so that the list is hidden when not hovered over*/
 .dropDown{
     display: none;
     position: absolute;
@@ -92,18 +93,16 @@ a.mainLink:active, .mainLink>a:active{
     box-shadow: 0px 8px 16px 5px rgba(0,0,0,0.2);
     z-index: 1;
 }
-
+/*makes the dropDown list visible when hovered over*/
 div#dropLink:hover .dropDown{
     display:block;
 }
-
 div#dropLink:hover >a{
     background-color: #5d80c2;
 }
 div#dropLink:active >a{
     background-color: #9fb9ea;
 }
-
 .dropdown-content{
     font-size: 15px;
     color:black;
@@ -115,9 +114,11 @@ div#dropLink:active >a{
     border:1px solid black;
     text-shadow: 1px 1px white;
 }
-
 .dropdown-content:hover{
     background-color:#adb9c9;
+}
+.dropdown-content:active{
+    background-color: white;
 }
 
 /* CSS For footer */
@@ -139,16 +140,26 @@ footer a:hover{
 }
 
 footer div#backToTop{
-    margin-top:35px;
-    margin-left:5%;
+    padding-top:35px;
+    padding-left:5%;
+    padding-right:5%;
+}
+
+#backToTop a{
+    padding: 10px;
 }
 
 footer div#links{
     display:flex;
     flex-direction: column;
-    margin:20px;
-    margin-top:25px;
-    margin-right:5%;
+    padding:20px;
+    padding-top:25px;
+    padding-right:5%;
+    padding-left:3%;
+}
+
+#links, #backToTop{
+    background-color: #7ea0e0;
 }
 
 div#links h4{
@@ -174,10 +185,9 @@ div#links a{
     grid-area:purpose;
 }
 
-.home div.line{
+div.line{
     grid-area:divider;
     background-color: #9fb9ea;
-    width:3px;
 }
 
 @media screen and (min-width: 480px){
@@ -193,9 +203,12 @@ main#summary{
     display:grid;
     grid-template-columns: 50% auto auto;
     grid-template-areas: 
-    "photo divider summary"
-    ;
+    "photo divider summary";
     box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 25%);
+}
+
+.home div.line{
+    width:3px;
 }
 
 main#summary #photo{
@@ -270,12 +283,20 @@ section#purpose h2{
 
 body.careerProfile {
     display:grid;
-    grid-template-rows: 100px auto auto auto;
+    grid-template-rows: 80px 100px  1300px auto auto;
     grid-template-areas:
         "nav"
+        "careerHead"
         "main"
         "resume"
         "foot";
+}
+
+.careerProfile header{
+    font-weight:900px;
+    font-size:27px;
+    text-align: center;
+    grid-area:careerHead;
 }
 
 section#resume{
@@ -285,14 +306,14 @@ section#resume{
 .careerProfile main {
     width:65%;
     margin:20px auto;
+    margin-bottom:50px;
     padding:30px;
     border-radius: 25px;
     border:5px solid #9fb9ea;
     background-color: white;
     box-shadow: 0px 0px 25px 6px rgba(0, 0, 0, 15%);
-    display:grid;
-    grid-template-rows: auto auto;
-    gap:100px;
+    display:flex;
+    flex-direction: column;
 }
 
 .careerProfile main p{
@@ -310,7 +331,13 @@ section#resume{
     border:5px solid #36548c;
 }
 
-div#PCs, section#resume{
+div#experience section{
+    display:flex;
+    flex-direction: column;
+    gap:50px;
+}
+
+div#PCs, section#resume, div#webExp{
     width:75%;
 
     background-color: white;
@@ -329,14 +356,23 @@ div#goals p{
     box-shadow: 0px 0px 25px 6px rgba(0, 0, 0, 15%);
 }
 
-div#PCs, div#goals{
-    height:75%;
+div#PCs{
+    height:50%;
 }
 
-#PCs{
+#PCs, #webExp{
     padding:10px 50px 50px;
     border-radius: 25px;
     border:5px solid #9fb9ea;
+}
+
+#webExp a{
+    text-decoration: underline;
+    color: #2f497a;
+}
+#webExp a:hover{
+    background-color: #9fb9ea;
+    color:#2f497a;
 }
 
 #PCs h3{
@@ -344,9 +380,10 @@ div#PCs, div#goals{
 }
 
 section#resume{
-    width:60%;
+    width:65%;
     height:85%;
     text-align: center;
+    margin-top:25px;
     display:grid;
     grid-template-rows: auto auto 800px;
     grid-template-areas: 
@@ -354,7 +391,6 @@ section#resume{
         "link"
         "frame";
 }
-
 
 section#resume h2{
     grid-area:head;
@@ -387,7 +423,8 @@ section#resume a:hover{
 
 body.gallery{
     display:grid;
-    grid-template-rows:100px auto auto;
+    grid-template-rows:80px auto auto;
+    gap:20px;
     grid-template-areas:
         "nav"
         "main"
@@ -395,18 +432,22 @@ body.gallery{
 }
 
 body.gallery main {
-    height:600px;
     display:grid;
+    gap:20px;
     grid-template-rows: 100px auto;
 }
 
 .gallery header{
     font-weight: 800;
-    font-size:30px;
+    font-size:45px;
 }
 .gallery header, div#galleryLinks{
-    margin:0 auto;
     text-align: center;
+}
+
+.gallery header hr{
+    border:1px #36548c solid;
+    width:60%;
 }
 
 #galleryLinks {
@@ -416,35 +457,205 @@ body.gallery main {
     gap:100px;
     height:50%;
     width:100%;
+    margin-bottom:50px;
 }
 
 #galleryLinks a{
     color:black;
     width:25%;
-    height:50%;
     font-size:25px;
     font-weight:900;
-    line-height:25px;
+    line-height:20px;
+    text-decoration: underline;
+
     background-color:#9fb9ea;
     padding:50px;
+    border:3px solid #36548c;
+    box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 25%);
 
     transform:scale(1,1);
     transition: 0.3s;
 }
 
+#galleryLinks a img{
+    margin-top:50px;
+    box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 25%);
+    transform:scale(1.20,1.20);
+}
+
 #galleryLinks a:hover{
     transform:scale(1.07,1.07);
     transition:0.3s;
+
+    box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 50%);
 }
 
 #galleryLinks a:active{
     transform:scale(0.9,0.9);
     transition:0.3s;
+
+    filter:brightness(75%);
 }
 
 
 div#topRow, div#bottomRow{
     display:flex;
-    gap:10%;
+    gap:100px;
     justify-content: center;
+}
+
+/*Website Development*/
+
+body.webDev, body.dataSys, body.softDes, body.busiCom{
+    display:grid;
+    grid-template-rows: 80px auto auto;
+    grid-template-areas: 
+        "nav"
+        "main"
+        "foot";
+}
+
+.webDev header, .softDes header, .busiCom header, .dataSys header{
+    text-align: center;
+    font-size:27px;
+}
+
+.webDev main, .softDes main, .busiCom main, .dataSys main{
+    margin-bottom: 50px;
+}
+
+section.project{
+    border:#9fb9ea 5px solid;
+    padding:50px;
+    padding-top:0;
+    margin:0 auto;
+    width:75%;
+    display:flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 25%);
+}
+
+div#projectList{
+    display:flex;
+    flex-direction: column;
+    gap:100px;
+}
+
+section.project h2{
+    background-color: #9fb9ea;
+    padding:10px;
+}
+
+div.projectContent{display:flex;}
+div.projectContent aside{
+    display:flex; 
+    gap:20px;
+    flex-direction: column;
+}
+@media (max-width: 800px) {
+    .projectContent {
+      flex-direction: column;
+    }
+    iframe{
+        max-width:50%;
+    }
+  }
+
+.project p{
+    line-height: 30px;
+    margin:30px 15px;
+}
+
+.projectContent aside a{
+    text-decoration: underline;
+    color:#36548c;
+    padding:5px;
+    padding-left:0;
+    max-width:200px;
+}
+.projectContent aside a:hover{
+    background-color:#adb9c9;
+}
+.projectContent aside a:active{
+    color:#2f497a;
+}
+
+section#siteOne aside{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+section#siteOne aside hr{
+    width:100%;
+    border:2px dashed #9fb9ea;
+}
+
+section.project iframe{
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 25%);
+}
+
+iframe#wireFrame{
+    width:600px;
+    height:250px;
+}
+
+iframe#figmaUI{
+    height:500px;
+}
+
+a#fanSite{
+    font-size:18px;
+    font-weight:800;
+    margin:0 auto;
+    text-align: center;
+    padding:10px;
+    text-decoration: underline;
+    color:black;
+}
+
+a#fanSite:hover{
+    background-color: #9fb9ea;
+}
+
+.webDev div.line{
+    width:25px;}
+.webDev section#siteTwo div.line{
+    width:5px;}
+.softDes div.line, .dataSys div.line{
+    width:5px;} 
+.busiCom div.line{
+    width:15px;}
+
+
+.projectContent div.line{
+    margin:20px;
+}
+
+#siteTwo aside a{
+    position:relative;
+    top:150px;
+    padding:20px;
+    text-align: center;
+    width:500px;
+}
+
+/* Software Design*/
+.softDes iframe{
+    width:400px;
+    height:520px;
+}
+
+
+/* Database Systems */
+
+
+/* Business Communications */
+.busiCom .project{
+    width:65%;
+}
+
+.busiCom iframe, .dataSys iframe{
+    width:400px;
+    height:520px;
 }

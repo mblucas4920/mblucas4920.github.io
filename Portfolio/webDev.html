@@ -8,7 +8,7 @@
 
     <link href="portfolioStyle.css" rel="stylesheet">
 </head>
-<body>
+<body class="webDev">
     <nav>
         <div class="logo">
             Madeline Lucas
@@ -32,26 +32,76 @@
         <header>
             <h2>Website Development</h2>
         </header>
-    </main>
-    <section>
-        <aside>
-            <a href="https://mblucas4920.github.io/" target="_blank">USCSwifties.com</a>
-        </aside>
-        <div>
-            <p>Attached is a link to a website I created for a 
-                project in ITEC362 (Introduction to Web Systems)</p>
-            <p>This project is a "fan-site" utilizing HTML, CSS, and JavaScript to create a stylish
-                and JavaScript to create a stylish and informative website that functions on most 
-                standard web browsers. The website is comprised of 15 different webpages, with 4 of them
-                acting as main features and the other 11 being utilize within an iFrame.
-            </p>
-            <p>Working on this project helped me enhance non-technical abilities as it required a great deal 
-                of time management, creative thinking, and a willingness to learn, alongside previous HTML
-                knowledge. This valuable experience will help in achieving my post-graduate goal of working
-                with a company that allows me to pursue my interest in website design and development.
-            </p>
+        <div id="projectList">
+            <section class="project" id="siteOne">
+                <h2>Website Building Project
+                    <br>ITEC362: Introduction to Web Systems
+                </h2>
+                <div class="projectContent">
+                    <aside>
+                        <a id="fanSite" href="https://mblucas4920.github.io/uscswifties" target="_blank">USCSwifties.com</a>
+                        <hr>
+                        <a href="PDFs/lucas_wireframes.pdf" target="_blank">wireframe.pdf</a>
+                        <iframe name="wireFrame" id="wireFrame" src="PDFs/lucas_wireframes.pdf"></iframe>
+                        <hr>
+                        <a href="PDFs/lucas_figmaUI.pdf" target="_blank">figmaUI.pdf</a>
+                        <iframe name="figmaUI" id="figmaUI" src="PDFs/lucas_figmaUI.pdf"></iframe>
+                    </aside>
+                    <div class="line"></div>
+                    <div id="siteOneText">
+                        <p>Attached is a link to a website I created for a 
+                            project in ITEC362 (Introduction to Web Systems) as well as two PDFs containing my 
+                            initial wire frames sketch for the site, and a mock-UI I designed to base my website off of.</p>
+                        <p>This project is a "fan-site" utilizing HTML, CSS, and JavaScript to create a stylish
+                            and informative website that functions on most 
+                            standard web browsers. The website is comprised of 15 different webpages, with 4 of them
+                            acting as main features and the other 11 being used within an iFrame.
+                        </p>
+                        <p>
+                            Before creating this website, I had never utilized wireframes or mock-UIs and they both
+                            proved to be useful tools. Creating wireframes for my website made me consider the layout
+                            of each webpage, as well as the navigation between each page. I designed the mock-UI using 
+                            Figma and based it off my wireframes. This design became my main reference while coding the 
+                            CSS for the website. This project taught me the importance of planning.
+                        </p>
+                        <p>Working on this project helped me enhance non-technical abilities as it required a great deal 
+                            of time management, creative thinking, and a willingness to learn, alongside previous HTML
+                            knowledge. This valuable experience will help in achieving my post-graduate goal of working
+                            with a company that allows me to pursue my interest in website design and development.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="project" id="siteTwo">
+                <h2>Personal Portfolio</h2>
+                <div class="projectContent">
+                    <aside>
+                        <a href="https://mblucas4920.github.io/Portfolio/aboutMe.html">Portfolio Link</a>
+                    </aside>
+                    <div class="line">
+
+                    </div>
+                    <div>
+                        <p>
+                            This website is another one of my projects! Originally, I partially created a 
+                            portfolio using <a href="https://www.wix.com/">Wix.com</a>, but I wanted to
+                            instead use this as an opportunity to practice what I've learned by coding
+                            a portfolio website myself.  
+                        </p>
+                        <p>
+                            This website utilized HTML and CSS to create a visually pleasing and organized
+                            website that functions on most standard web browswers. This website is comprised
+                            of 7 different webpages. 
+                        </p>
+                        <p>
+                            I did not build WireFrames before coding this website, but I did use a mock UI
+                            created using Wix to help determine the layout and design of the website.
+                        </p>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
+    </main>
     <footer>
         <div id="backToTop">
             <a href="#top">Back-To-Top</a>
