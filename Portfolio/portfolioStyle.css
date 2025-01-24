@@ -268,7 +268,7 @@ section#purpose h2{
 
 body.careerProfile {
     display:grid;
-    grid-template-rows: 80px 100px  1300px auto auto;
+    grid-template-rows: 80px 100px 1400px auto auto;
     grid-template-areas:
         "nav"
         "careerHead"
@@ -305,7 +305,7 @@ section#resume{
     line-height:35px;
 }
 
-.careerProfile main div:not(#resume) h2{
+.careerProfile main div h2{
     margin:50px;
     margin-left:12%;
     margin-bottom:25px;
@@ -648,6 +648,7 @@ a#fanSite:hover{
     /*nav on mobile*/
     nav{
         font-size:small;
+        overflow:hidden;
     }
     #links, #backToTop{
         background-color: #9fb9ea;
@@ -666,7 +667,7 @@ a#fanSite:hover{
         padding-left:10px;
     }
     div#dropLink.mainLink>a{
-        width:100%
+        width:100%;
     }
     div#dropLink:hover .dropDown{
         display:none;
@@ -682,6 +683,10 @@ a#fanSite:hover{
     main#summary div.line{
         display:none;
     }
+    #photo img{
+        transform:scale(0.8,0.8);
+    }
+
     /*careerProfile*/
     .careerProfile main{
         width:75%;
@@ -691,8 +696,30 @@ a#fanSite:hover{
         display:grid;
         grid-template-rows: 80px 100px auto 400px auto;
     }
-    #webExp{
-        padding:5px;
+    .careerProfile div#experience h2{
+        text-decoration: underline;
+        text-align: center;
+    }
+    .careerProfile div#experience h2, .careerProfile div#goals h2, section#resume h2{
+        text-decoration: underline;
+        text-align: center;
+        width:100%;
+        background-color: #9fb9ea;
+        margin:20px;
+        margin-left:0px;
+    }
+    div#PCs, div#webExp, div#goals p{
+        border:none;
+        box-shadow: none;
+        padding:2px;
+        margin:2px;
+        width:100%;
+    }
+    div#PCs p, div#webExp p{
+        width:100%;
+    }
+    div#PCs h3{
+        width:100%;
     }
     section#resume{
         margin-top:100px;
@@ -717,22 +744,35 @@ a#fanSite:hover{
     }
     /*Academic Gallery CONTENT*/
     section.project{
-        padding:20px;
+        padding:0;
+        box-shadow: none;
+        border:none;
+
+    }
+    section#siteOne.project, section#siteTwo.project, section#softProjOne.project, 
+    section#dataProjOne.project, section#buisComProj.project{
+        width:100%;
+        padding:0;
     }
     .projectContent {
       flex-direction: column;
     }
     .projectContent p{
-        padding:5px;
+        padding:0px;
     }
+    .projectContent aside a{
+        padding-left:20px;
+    }
+    /*removes Iframes*/
     iframe{
         display:none;
     }
     .projectContent div.line{
         display:none;
     }
-    #photo img{
-        transform:scale(0.8,0.8);
+    /*web dev*/
+    section#siteOne aside hr{
+        width:90%;
     }
   }
 
