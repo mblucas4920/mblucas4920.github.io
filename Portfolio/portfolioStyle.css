@@ -4,6 +4,7 @@ html{
     background-color: white;
     font-family: Trebuchet MS, sans-serif;
 }
+
 /*centers the body of every page and sets height to 100% to match HTML*/
 body{
     margin:0 auto;
@@ -34,6 +35,7 @@ nav{
     border-bottom:2px solid #36548c;}
 
 nav a{
+    flex-grow:2;
     color:white;
     text-decoration: none;
 }
@@ -42,6 +44,7 @@ nav div.logo{
     padding:20px 50px;
     font-size: 30px;
     font-weight: 600;
+    flex-shrink:2;
 }
 
 .mainList{
@@ -126,7 +129,6 @@ div#dropLink:active >a{
 /* CSS For footer */
 footer{
     grid-area:foot;
-    display:flex;
     justify-content: space-between;
     font-size: 20px;
     border-top:2px solid #36548c;
@@ -189,23 +191,6 @@ div#links a{
 div.line{
     grid-area:divider;
     background-color: #9fb9ea;
-}
-
-@media screen and (min-width: 480px){
-    main#summary {width:75%}
-}
-
-
-main#summary{
-    margin:0 auto;
-    padding:20px 0;
-    background-color: white;
-    border:solid #9fb9ea 10px;
-    display:grid;
-    grid-template-columns: 50% auto auto;
-    grid-template-areas: 
-    "photo divider summary";
-    box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 25%);
 }
 
 .home div.line{
@@ -478,6 +463,8 @@ body.gallery main {
     margin-top:50px;
     box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 25%);
     transform:scale(1.20,1.20);
+    height:200px; 
+    width:300px;
 }
 
 #galleryLinks a:hover{
@@ -551,17 +538,6 @@ div.projectContent aside{
     gap:20px;
     flex-direction: column;
 }
-@media (max-width: 800px) {
-    .projectContent {
-      flex-direction: column;
-    }
-    iframe{
-        max-width:50%;
-    }
-    .projectContent div.line{
-        display:none;
-    }
-  }
 
 .project p{
     line-height: 30px;
@@ -665,3 +641,113 @@ a#fanSite:hover{
     width:400px;
     height:520px;
 }
+
+
+/* Media Queries (KEEP AT BOTTOM!)*/
+@media (max-width: 800px) {
+    /*nav on mobile*/
+    nav{
+        font-size:small;
+    }
+    #links, #backToTop{
+        background-color: #9fb9ea;
+    }
+    nav div.logo{
+        width:25%;
+        padding:10px;
+        font-size:24px;
+    }
+    div.mainList{
+        width:80%;
+    }
+    div.mainList a{
+        width:25%;
+        line-height:25px;
+        padding-left:10px;
+    }
+    div#dropLink.mainLink>a{
+        width:100%
+    }
+    div#dropLink:hover .dropDown{
+        display:none;
+    }
+    /*aboutMe*/
+    main#summary{
+        grid-template-rows:auto auto;
+        grid-template-areas: 
+        "photo"
+        "summary";
+    }
+
+    main#summary div.line{
+        display:none;
+    }
+    /*careerProfile*/
+    .careerProfile main{
+        width:75%;
+        height:100%;
+    }
+    body.careerProfile {
+        display:grid;
+        grid-template-rows: 80px 100px auto 400px auto;
+    }
+    #webExp{
+        padding:5px;
+    }
+    section#resume{
+        margin-top:100px;
+        height:50%;
+    }
+    /*Academic Gallery*/
+    .gallery{
+        div#topRow, div#bottomRow{
+            flex-direction: column;
+            margin:0 auto;
+        }
+    #galleryLinks a{
+        font-size:18px;
+        margin:0 auto;
+        width:30%;
+    }
+    #galleryLinks img{
+        margin:20px auto;
+        height: 50%;
+        width: 100%;
+    }
+    }
+    /*Academic Gallery CONTENT*/
+    section.project{
+        padding:20px;
+    }
+    .projectContent {
+      flex-direction: column;
+    }
+    .projectContent p{
+        padding:5px;
+    }
+    iframe{
+        display:none;
+    }
+    .projectContent div.line{
+        display:none;
+    }
+    #photo img{
+        transform:scale(0.8,0.8);
+    }
+  }
+
+@media screen and (min-width: 480px){
+    main#summary {
+        width:75%;
+        margin:0 auto;
+        padding:20px 0;
+        background-color: white;
+        border:solid #9fb9ea 10px;
+        display:grid;
+        grid-template-columns: 50% auto auto;
+        grid-template-areas: 
+        "photo divider summary";
+        box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 25%);
+    }
+}
+
