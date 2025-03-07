@@ -629,6 +629,9 @@ a#fanSite:hover{
     height:520px;
 }
 
+.softDes iframe#appLFP{
+    width:500px;
+}
 
 /* Database Systems */
 
@@ -751,7 +754,7 @@ a#fanSite:hover{
 
     }
     section#siteOne.project, section#siteTwo.project, section#softProjOne.project, 
-    section#dataProjOne.project, section#buisComProj.project{
+    section#softProjTwo.project, section#dataProjOne.project, section#buisComProj.project{
         width:100%;
         padding:0;
     }
