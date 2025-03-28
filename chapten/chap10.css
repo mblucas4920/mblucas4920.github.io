@@ -1,0 +1,353 @@
+html{
+    height:100%;
+    background-color: #fae0d2;
+}
+body{height:100%;}
+
+p,li{font-size:22px;}
+
+body{
+    display:grid;
+    grid-template-columns: 25% auto;
+    grid-template-areas: 
+    'nav main'
+    'foot foot'
+    ;
+    margin:0px;
+}
+
+
+
+/* Navigation */
+nav{
+    grid-area: nav;
+    height:100%;
+    border-right: 3px solid var(--hoverColor);
+
+    background-color: #b84b23;
+}
+nav, div#mainLinks{
+    grid-area:nav;
+    display:flex;
+    flex-direction: column;
+}
+nav a{
+    text-decoration: none;
+    color:black;
+}
+div#logo{
+    padding:25px;
+    text-decoration: underline;
+    background-color: var(--mainColor);
+}
+div#logo a:hover{
+    color:var(--hoverColor);
+}
+div#logo a:active{
+    color:var(--mainColor);
+}
+div#mainLinks a{
+    padding:25px;
+
+    height:50px;
+    
+    color:white;
+    font-size:20px;
+    background-color: #b84b23;
+
+    border-bottom: 3px solid var(--hoverColor);
+}
+div#mainLinks a:first-child{
+    border-top:3px solid var(--hoverColor);
+}
+
+div#mainLinks a:hover{
+    background-color: var(--hoverColor);
+}
+div#mainLinks a:active{
+    background-color: var(--mainColor);
+}
+/*Main section */
+main{
+    grid-area:main;
+    margin:50px auto;
+}
+
+/*formats h2 for all pages*/
+main section:first-child h2{
+    padding:40px 20px;
+    border: 5px dashed var(--hoverColor);
+    margin:15px auto;
+    border-radius: 20px;
+    text-align: center;
+}
+
+section{
+    display:flex;
+    flex-direction: column;
+    padding:0 50px;
+}
+section h2{
+    font-size: 27px;
+}
+
+section div#list li{
+    padding:10px;
+}
+
+/*Main section for Index*/
+.index main h2{
+    padding-left:50px;
+    font-size:29px;
+}
+
+.index main>section{
+    gap:25px;
+}
+
+.index section a{
+    background-color: var(--mainColor);
+    color:black;
+
+    font-size: 20px;
+    padding:25px;
+}
+.index section a:hover{
+    background-color: var(--hoverColor);
+    color:white;
+}
+.index section a:active{
+    background-color: var(--mainColor);
+}
+/*Main section for LO1*/
+.loOne div#headers h2, .loOne div#headers h3{text-align: center;}
+
+.loOne div#list{
+    display:flex;
+    flex-direction: column;
+
+    background-color: var(--mainColor);
+    border:4px solid var(--hoverColor);
+    padding:50px;
+    border-radius: 20px;
+}
+.loOne div#list img{
+    width:600px;
+    height:350px;
+    margin:0 auto;
+
+    border:2px solid var(--hoverColor);
+    border-radius: 20px;
+}
+.loOne div#list ol{
+    background-color: #fae0d2;
+    border:2px solid var(--hoverColor);
+    border-radius: 20px;
+}
+.loOne div#list li{
+    border-bottom:2px solid var(--hoverColor);
+    width:75%;
+    margin:20px auto;
+
+    font-size:20px;
+}
+
+/*Main section for LO2*/
+.loTwo section{
+    gap:35px;
+}
+.loTwo section div{
+    background-color: var(--mainColor);
+    padding:25px;
+    height:130px;
+
+    border:solid 3px var(--hoverColor);
+    box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 25%);
+}
+
+.loTwo h2{width:95%;}
+.loTwo h3{
+    font-size:22px;
+}
+
+/*Main section for LO3*/
+.loThree section div#strategies{
+    background-color: var(--mainColor);
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+    padding:50px;
+}
+.loThree section div#strategies div{
+    background-color: #fae0d2;
+
+    font-size: 18px;
+    padding:25px;
+}
+
+.loThree section div#strategies h4{
+    font-size: 25px;
+}
+
+.loThree div#strategies, .loThree div#strategies div{
+    border-radius: 20px;
+    border:solid 4px var(--hoverColor);
+}
+
+/*Main section for LO4*/
+.loFour section{
+    gap:40px;
+}
+.loFour section h2{
+    text-align: center;
+    width:100%;
+}
+.loFour div#rowOne, .loFour div#rowTwo{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap:40px;
+}
+
+.loFour div.method{
+    background-color: var(--mainColor);
+    padding:10px;
+
+    border:3px solid var(--hoverColor);
+    box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 25%);
+}
+.loFour div.method h3{
+    padding-left: 25px;
+}
+
+.loFour div#rowOne div.method{
+    width:50%;
+}
+.loFour div#rowTwo div.method{
+    width:30%;
+}
+
+/*Main section for LO5*/
+.loFive h2{
+    width:70%;
+}
+
+.loFive table{
+    border:2px dashed var(--hoverColor);
+    width:75%;
+
+    font-size:22px;
+    margin: 0 auto;
+}
+
+.loFive table th{
+    border-right: 2px dashed var(--hoverColor);
+    text-align: left;
+    
+    padding:20px;
+    padding-left:10px;
+}
+
+.loFive table tr{
+    height:100px;
+}
+
+.loFive table tr td{
+    padding:10px;
+}
+
+.loFive table tr td:not(.bot), .loFive table tr th:not(.bot){
+    border-bottom: 2px dashed var(--hoverColor);
+}
+
+
+/*Main section for LO6*/
+
+
+.loSix main section{
+    display:grid;
+    gap:20px;
+
+    border: 3px dashed var(--hoverColor);
+    padding:10px;
+    padding-bottom:20px;
+}
+
+.loSix main section h2{
+    
+    border:none;
+    text-decoration: underline;
+}
+
+.loSix div#riskRowTop, .loSix div#riskRowMid, .loSix div#riskRowBot{
+    display:flex;
+    flex-direction: row;
+    gap:25px;
+    width:80%;
+    margin:0 auto;
+}
+
+.loSix div#riskRowBot{
+    justify-content: center;
+}
+
+.loSix div.risk{
+    background-color: var(--mainColor);
+    padding:30px;
+    width:350px;
+    min-height:250px;
+
+    border-radius: 75%;
+    border: 3px solid var(--hoverColor);
+    box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 25%);
+}
+.loSix div.risk h3{
+    text-align: center;
+}
+
+.loSix div#dist{
+    width:420px;
+    height:300px;
+}
+
+/*footer*/
+footer{
+    display:flex;
+    justify-content: space-between;
+
+    grid-area:foot;
+    background-color: var(--mainColor);
+    border-top:3px solid var(--hoverColor);
+    
+}
+
+footer div{
+    display:flex;
+    flex-direction: column;
+    
+    width:30%;
+    padding:25px;
+    background-color: #de805e;
+
+    
+}
+
+:root{
+    --mainColor: #e69375;
+    --hoverColor: #863518;
+}
+
+
+@media (max-width: 800px) {
+    body{
+        display:grid;
+        grid-template-columns: 2% auto;
+        grid-template-areas: 
+        'nav main'
+        'foot foot'
+        ;
+        margin:0px;
+
+        font-size: 18px;
+    }
+}
