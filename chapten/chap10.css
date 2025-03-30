@@ -9,6 +9,7 @@ p,li{font-size:22px;}
 body{
     display:grid;
     grid-template-columns: 25% auto;
+    grid-template-rows:auto auto;
     grid-template-areas: 
     'nav main'
     'foot foot'
@@ -307,7 +308,7 @@ section div#list li{
 
 .loSix div#dist{
     width:420px;
-    height:300px;
+    height:350px;
 }
 
 /*footer*/
@@ -342,6 +343,7 @@ footer div{
     body{
         display:grid;
         grid-template-columns: 2% auto;
+        grid-template-rows: auto auto;
         grid-template-areas: 
         'nav main'
         'foot foot'
