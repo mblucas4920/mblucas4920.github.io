@@ -567,7 +567,7 @@ section#siteOne aside{
     gap:10px;
 }
 
-section#siteOne aside hr{
+section#siteOne aside hr, section#softProjTwo aside hr{
     width:100%;
     border:2px dashed #9fb9ea;
 }
@@ -629,7 +629,7 @@ a#fanSite:hover{
     height:520px;
 }
 
-.softDes iframe#appLFP{
+.softDes #softProjTwo iframe{
     width:500px;
 }
 
