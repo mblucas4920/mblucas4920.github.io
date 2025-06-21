@@ -1183,7 +1183,7 @@ body#colasClassic_page div.beverageLinks{
 
 /* MOBILE VIEW */
 @media (max-width: 900px){
-    html, body, main, nav{
+    html, body, main, nav, nav div#openNav{
         width:100%;
     }
 
@@ -1228,7 +1228,6 @@ body#colasClassic_page div.beverageLinks{
         }
         nav div#openNav {
             display:flex;
-            width:25%;
         }
             nav div#openNav, nav div#openNav button{
                 background-color: var(--colasNF);
@@ -1243,8 +1242,11 @@ body#colasClassic_page div.beverageLinks{
                 margin:10px;
             }
 
-    .contentDiv{
+    .contentDiv, body.menuPage main{
         border:none;
+        border-radius: 0;
+    }
+    body.menuPage .contentDiv header{
         border-radius: 0;
     }
 
@@ -1269,12 +1271,29 @@ body#colasClassic_page div.beverageLinks{
     }
 
     /*menus page (navigation to dinner/dessert/wine/bar pages*/
+    body#menusPage main{
+        line-height: 50px;
+        margin-bottom:50px;
+    }
+    
     body#menusPage main div{
         flex-direction: column;
         gap:50px;
+
+        margin:0;
+        align-items: center;
     }
+        body#menusPage main a{
+            padding:20px;
+            width:100%;
+        }
         body#menusPage main a figure{
-            padding:10px;
+            margin:0;
+        }
+
+        /*remove images from mobile menus page */
+        body#menusPage main img{
+            display:none;
         }
 
     /*menu pages (dinner, dessert, wine, bar)*/
@@ -1317,6 +1336,7 @@ body#colasClassic_page div.beverageLinks{
         }
             div.menuItem div.price{
                 width:95%;
+                margin-right:0;
             }
                 div.price p.menuItem-price{
                     font-weight: bolder;
@@ -1356,6 +1376,7 @@ body#colasClassic_page div.beverageLinks{
     }
         body.menuPage div.navButtons{
             margin:50px 0;
+            margin-bottom: 0;
             padding:30px 0;
             
             gap:25px;
@@ -1368,6 +1389,7 @@ body#colasClassic_page div.beverageLinks{
         text-align: center;
 
         width:200px;
+        border:2px solid black;
     }
 
     footer, div#footerContent{
@@ -1376,7 +1398,11 @@ body#colasClassic_page div.beverageLinks{
         align-items: center;
     }
         footer div#footerContent div{
-            width:100%;
+            width:90%;
+        }
+        footer div#topDiv{
+            width:80%;
+            margin:0;
         }
 
 
