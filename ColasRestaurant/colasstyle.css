@@ -1672,6 +1672,13 @@ body#colasClassic_page div.beverageLinks{
             border:3px solid black;
             border-radius: 15px;
         }
+    
+    /*colas classic mobile page*/
+    /*beverages*/
+    body#colasClassic_page div.beverageLinks{
+        border-top:0;
+        box-shadow: none;
+    }
 
     /* contacts page */
     body#contactsPage main{
