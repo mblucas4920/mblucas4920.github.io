@@ -366,6 +366,9 @@ body#privateRoom-info_page{
                 }
 
     /*Homepage PR Dining INFO */
+    div#index_PR, div#index_menus{
+        display:flex;
+    }
     div#index_PR div#index_PR-content{
         background-color: var(--colasBG);
         width:75%;
@@ -386,6 +389,8 @@ body#privateRoom-info_page{
         padding:0 15px;
         width:50%;
         border-radius: 5px;
+
+        margin-bottom:15px;
     }
     div#index_PR div#index_PR-content div a.headerLink:hover{
         background-color:white;
@@ -1392,6 +1397,10 @@ body#colasClassic_page div.beverageLinks{
             margin:0;
             padding:50px 20px;
         }
+        body#homePage div#index_PR img{
+            max-width: 300px;
+            max-height: 200px;
+        }
     /*menus page (navigation to dinner/dessert/wine/bar pages*/
     body#menusPage main{
         line-height: 50px;
@@ -1597,6 +1606,15 @@ body#colasClassic_page div.beverageLinks{
     /*PRinfo page (private dining rooms)*/
     body#privateRoom-info_page main{
         width:100%;
+    }
+
+    /* gift card */
+    body#giftCard_page main{
+        text-align: center;
+    }
+    body#giftCard_page main img{
+        max-width:300px;
+        margin-top:0;
     }
 
 }
