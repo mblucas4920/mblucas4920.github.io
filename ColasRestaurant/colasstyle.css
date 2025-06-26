@@ -41,8 +41,8 @@ nav {
         align-items: center;
     }
         nav div#logo img{
-            margin-left:25%;
-            transform:scale(1.5,1.5);
+            margin-left:15%;
+            transform:scale(1.3,1.3);
         }
     nav div#openNav{
         display:none;
@@ -1341,7 +1341,16 @@ body#colasClassic_page div.beverageLinks{
             width:90%;
             margin:0;
         }
-    
+        div#index_aboutUs-text div#aboutUs_buttons{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            gap:25px;
+        }
+        div#index_aboutUs-text div#aboutUs_buttons button{
+            width:50%;
+
+        }
     /*remove carousel*/
     div#carouselExample{
         display:none;
@@ -1359,8 +1368,12 @@ body#colasClassic_page div.beverageLinks{
             position:initial;
             width:100%;
         }
+            body#homePage header div#colasInfo h1{
+                font-size: 40px;
+            }
         body#homePage div#colasInfo h1, body#homePage div#colasInfo h2, body#homePage div#colasInfo h3{
             margin:25px 0;
+
         }
 
 
@@ -1370,7 +1383,14 @@ body#colasClassic_page div.beverageLinks{
         box-shadow: none;
         width:100%;
     }
-
+    div#index_aboutUs-content div#index_map{
+        margin-top:25px;
+        margin-right: 0;
+        text-align: center;
+    }
+    div#index_aboutUs-content div#index_map iframe{
+        max-width:300px;
+    }
     /*Hompage menus section */
     body#homePage div#index_menus{
         padding:0;
@@ -1611,6 +1631,9 @@ body#colasClassic_page div.beverageLinks{
     /* gift card */
     body#giftCard_page main{
         text-align: center;
+    }
+    body#giftCard_page main div#giftCard_info{
+        font-size: 16px;
     }
     body#giftCard_page main img{
         max-width:300px;
