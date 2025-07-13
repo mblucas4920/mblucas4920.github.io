@@ -51,7 +51,7 @@ nav {
         display:flex; 
         flex-basis: 80%;
     }
-        nav a.navTab{
+        nav .navTab{
             flex-basis:25%;
 
             background-color:var(--colasFG);
@@ -61,13 +61,11 @@ nav {
             
             text-align: center;
             line-height: 120px;
-
-            border-left:2px solid black;
         }
-        nav a.navTab:hover{
+        nav .navTab:hover{
             background-color:var(--colasFGH);
         }
-        nav a.navTab:active{
+        nav .navTab:active{
             background-color: var(--colasFGA);
         }
 
@@ -113,7 +111,7 @@ footer{
     }
     footer div#topDiv{
         padding:25px;
-        width:90%;
+        width:95%;
         margin:0 auto;
         margin-right:0;
     }
@@ -174,6 +172,8 @@ body#privateRoom-info_page{
     /*Homepage Header*/
     #homePage header{
         grid-area:head;
+
+        display: flex;
     }
     #homePage header div#colasInfo{
         margin:50px auto;
@@ -209,7 +209,7 @@ body#privateRoom-info_page{
         border:2px solid black;
 
         position: absolute;
-        bottom:10%;
+        bottom:-11%;
         z-index:1;
 
         box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.9);
@@ -219,6 +219,10 @@ body#privateRoom-info_page{
             font-weight: 700;
         }
     
+    #homePage header div.carousel{
+        width:100%;
+    }
+
     #homePage header div.carousel-item img{
         width:800px;
         height:800px;
@@ -255,6 +259,7 @@ body#privateRoom-info_page{
         div#index_aboutUs h2{
             text-align: center;
             font-size:30px;
+            padding:20px 0;
             margin-bottom:0px;
         }
         div#index_aboutUs hr{
@@ -352,6 +357,8 @@ body#privateRoom-info_page{
             #menus_container hr{
                 width:100%;
                 margin:10px auto;
+
+                border:2px solid white;
             }
             /*CSS for Menu Container Header*/
             /*Header Link for "MENUS" and "PR INFO"*/
@@ -412,7 +419,7 @@ body#privateRoom-info_page{
         background-color:var(--colasFG);
         color:white;
         padding:0 15px;
-        width:50%;
+        width:100%;
         border-radius: 5px;
 
         margin-bottom:15px;
@@ -439,6 +446,12 @@ body#privateRoom-info_page{
     div#index_PR div#index_PR-content img{
         width:480px;
         height:330px;
+    }
+
+    /*Learn More link*/
+    div#index_PR div#index_PR-content a#learnMore{
+        padding:10px;
+        font-size: 26px;
     }
 
 
@@ -510,7 +523,7 @@ body#giftCard_page{
     body#giftCard_page header{
         background-color: var(--colasFG);
         text-align: center;
-        margin-top:30px;
+        margin-top:50px;
     }
 
     body#giftCard_page main{
@@ -537,15 +550,19 @@ body#giftCard_page{
 
 /* Private Dining PAGE */
 body#privateDining_page{
-    grid-template-rows:120px auto auto ;
+    grid-template-rows:120px auto auto auto ;
     grid-template-areas:
     'nav'
+    'head'
     'main'
     'foot';
 }
 
     body#privateDining_page h2{
         font-size:36px;
+    }
+    body#privateDining_page header{
+        margin-top:50px;
     }
     body#privateDining_page main{
         background-color: var(--colasBG);
@@ -599,6 +616,8 @@ body#privateDining_page{
 
                 width:90%;
                 margin:0 auto;
+
+                padding-bottom:15px;
             }
                 section#guarantees_prices div#guarantees h2{
                     text-align: center;
@@ -1032,6 +1051,7 @@ body.menuPage, body#colasClassic_page{
 
                 margin:0 auto;
             }
+            /*menuItems within the column-row*/
             div.column-row div.menuItem{
                 background-color: var(--colasMBG);
                 flex-basis:25%;
@@ -1055,6 +1075,7 @@ body.menuPage, body#colasClassic_page{
                     border:2px solid black;
                     border-radius: 5px;
                 }
+                /* contains pricing information for menu item*/
                 div.menuItem p.menuItem-desc, div.menuItem div.price {
                     background-color: var(--colasMFG);
 
@@ -1075,6 +1096,24 @@ body.menuPage, body#colasClassic_page{
                     display: flex;
                     align-items: center;
                 }
+
+                /*div for add-on prices*/
+                div.menuItem div.price div.addOn-price{
+                    display: flex;
+                    flex-direction: column;
+                }
+                    div.addOn-price p.menuItem-price{
+                        margin:0;
+                    }
+                    div.addOn-price p.menuItem-price.addOn-price{
+                        position:relative;
+                        bottom:-3px;
+                        text-align: right;
+                    }
+
+            div.price hr.addOn-price{
+                width:25%;
+            }
 
 /* Wine list and bar menu items*/
 body#wineList_page div.menuItem.wineItem .price:last-child, body#barMenu_page div.menuItem.barItem:last-child .price:last-child{
@@ -1118,6 +1157,7 @@ body#contactsPage{
         gap:50px;
 
         margin:0 auto;
+        margin-bottom:20px;
     }
         body#contactsPage main div#contactInfo{
             display:flex;
@@ -1125,13 +1165,14 @@ body#contactsPage{
             gap:10px;
             flex-basis:50%;
         }
-            div#contactInfo h2{
+            div#contactInfo h2, div#colasMap h3{
                 background-color: var(--colasFG);
                 color:white;
                 padding:10px;
                 border:2px solid black;
                 border-radius: 5px;
-
+            }
+            div#contactInfo h2{
                 margin-bottom: 0;
             }
             div#contactInfo p{
@@ -1156,12 +1197,7 @@ body#contactsPage{
     }
         
         body#contactsPage div#colasMap h3{
-            color:white;
-            background-color: var(--colasFG);
-            padding:10px;
-            border-radius: 5px;
             text-decoration: underline;
-
             width:100%;
         }
 
@@ -1248,8 +1284,8 @@ body#colasClassic_page div.beverageLinks{
     }
 /* Create variables for colors */
 :root{
-    --colasNF:#201d1d;
-    --colasBG: #313131;
+    --colasNF:#212121;
+    --colasBG: #1a1a1a;
     --colasBGA: #525252;
     --colasBGH:#121212;
     --colasFG: #9e1919;
@@ -1263,15 +1299,28 @@ body#colasClassic_page div.beverageLinks{
 }
 
 /*laptop/smaller desktop*/
-@media (max-width:1280px){
-    .column-row{
-        flex-direction: column;
-    }
+@media (min-width:768px){
+    /*home page*/
     body#homePage div#colasInfo h1{
         font-size: 40px;
     }
     body#homePage div#colasInfo h3{
         font-size:26px;
+    }
+
+    /*menus page*/
+    body#menusPage main{
+        width:100%;
+    }
+
+    /*Private Dining Page*/
+    body#privateDining_page section#aboutPR{
+        width:90%;
+    }
+
+    /*gift card page*/
+    body#giftCard_page .column-row{
+        width:90%;
     }
 }
 
@@ -1282,10 +1331,10 @@ body#colasClassic_page div.beverageLinks{
         width:50%;
     }
 
-    body#menusPage main{
-        width:75%;
-        margin:0 auto;
+    #homePage header div#colasInfo-openHrs{
+        bottom:0;
     }
+
     body#homePage div#colasInfo{
         position:absolute;
         width:33%;
@@ -1301,7 +1350,13 @@ body#colasClassic_page div.beverageLinks{
             transform: scale(0.95,0.95);
             filter:brightness(75%);
         }
-    body#privateDining_page main section#aboutPR, body#privateDining_page main section#guarantees_prices, body#privateDining_page main section#eventParams{
+
+    /*Privating Dining page aboutPR section*/
+    body#privateDining_page main section#aboutPR{
+        width:75%;
+    }
+    /*private dining page sections on desktop view* (other than aboutPR section*/
+    body#privateDining_page main section#guarantees_prices, body#privateDining_page main section#eventParams{
         width:75%;
         margin:50px auto;
     }
@@ -1377,7 +1432,7 @@ body#colasClassic_page div.beverageLinks{
         border:none;
         border-radius: 0;
     }
-    body.menuPage .contentDiv header{
+    body.menuPage .contentDiv header, section#groupMenus div#colasClassic h2{
         border-radius: 0;
     }
 
@@ -1392,16 +1447,17 @@ body#colasClassic_page div.beverageLinks{
     }
         div#index_aboutUs-text{
             width:90%;
-            margin:0;
+            margin:20px;
+            text-align: center;
         }
         div#index_aboutUs-text div#aboutUs_buttons{
             display:flex;
-            flex-direction: column;
             align-items: center;
             gap:25px;
         }
         div#index_aboutUs-text div#aboutUs_buttons button{
             width:50%;
+            padding:10px;
 
         }
     /*remove carousel*/
@@ -1515,6 +1571,15 @@ body#colasClassic_page div.beverageLinks{
 
         overflow:hidden;
     }
+    /*Main section containing MENU PAGE HEADER and MENU SECTIONS*/
+    body.menuPage main{
+        padding-bottom:15px;
+    }
+    body.menuPage main, body.menuPage section.menuSection div.menuDiv{
+        display:flex;
+        flex-direction: column;
+        gap:25px;
+    }
     body.menuPage section.menuSection{
         gap:15px;
     }
@@ -1523,7 +1588,11 @@ body#colasClassic_page div.beverageLinks{
             margin-bottom:20px;
         }
 
+    /* menu items mobile view (DINNER & DESSERT)*/
     body.menuPage div.menuDiv .menuItem{
+        background-color: var(--colasMOBILE);
+        color:lightgrey;
+
         width:100%;
         max-width:900px;
         padding:10px 0;
@@ -1533,14 +1602,14 @@ body#colasClassic_page div.beverageLinks{
 
         box-shadow:0px 3px 5px rgba(0,0,0,0.50);
     }
+    /*DIV .PRICE*/
         body.menuPage div.menuDiv .menuItem div.price hr{
             margin:0 15px;
             width:75%;
             margin-top:2%;
         }
-
         div.menuItem h3.menuItem-head, div.menuItem p.menuItem-desc, div.menuItem div.price{
-            background-color: var(--colasMBG);
+            background-color: var(--colasMOBILE);
             border:none;
             padding:0;
             width:80%;
@@ -1555,19 +1624,9 @@ body#colasClassic_page div.beverageLinks{
                 }
 
 
-    /*menu items for bar and wine menus */
-    body#wineList_page div.menuItem.wineItem, body#barMenu_page div.menuItem.barItem,
-    div.menuItem.wineItem h3, div.menuItem.wineItem p, div.menuItem.barItem h3, div.menuItem.barItem p,
-    div.menuItem.wineItem div.price, div.menuItem.barItem div.price{
-        background-color: var(--colasMOBILE);
-        color:lightgrey;
-    }
-
-    
     body#wineList_page div.menuItem.wineItem, body#barMenu_page div.menuItem.barItem{
         box-shadow:0px 3px 5px rgba(0,0,0,0.50);
     }
-    
     body#wineList_page section.menuSection h2, body#barMenu_page section.menuSecion h2{
         background-color: var(--colasBG);
         color:white;
@@ -1625,6 +1684,7 @@ body#colasClassic_page div.beverageLinks{
     }
         body#privateDining_page section#aboutPR{
             text-align: center;
+            gap:20px;
         }
 
         /*max-width and height of all imgs on private dining page*/
@@ -1653,10 +1713,14 @@ body#colasClassic_page div.beverageLinks{
             body#privateDining_page main section#rooms p{
                 background: var(--colasFG);
             }
+
+        /*Event Parameters*/
+        body#privateDining_page main section#eventParams{
+            width:100%; margin:0; padding:0;
+        }
         /*Cola's Group Menus */
         body#privateDining_page div.groupMenu-div{
-            border:3px solid black;
-            border-radius: 15px;
+            width:100%;
         }
             /* colas classic menus*/
 
@@ -1674,6 +1738,11 @@ body#colasClassic_page div.beverageLinks{
         }
     
     /*colas classic mobile page*/
+    /*section header font size*/
+    body.menuPage#colasClassic_page main h2.menuSection-head{
+        font-size:26px;
+    }
+    
     /*beverages*/
     body#colasClassic_page div.beverageLinks{
         border-top:0;
