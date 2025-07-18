@@ -180,16 +180,19 @@ body#privateRoom-info_page{
         grid-area:head;
 
         display: flex;
+
+        background-color: var(--colasBG);
     }
     #homePage header div#colasInfo{
         margin:50px auto;
-        padding:20px; 
+        padding:30px 20px; 
         background: var(--colasBG);
 
         color:white;
 
         position:absolute;
         width:33%;
+
         left:25%;
         right:25%;
         top:25%;
@@ -373,12 +376,16 @@ body#privateRoom-info_page{
                 width:75%;
                 margin:0 auto;
 
+                padding:5px;
+
                 color:white;
                 text-align: center;
             }
 
             div#index_menus div#menus_container a.headerLink:hover{
                 background-color: var(--colasBG);
+
+                border-radius: 10px;
             }
             
             
@@ -458,6 +465,8 @@ body#privateRoom-info_page{
     div#index_PR div#index_PR-content a#learnMore{
         padding:10px;
         font-size: 26px;
+
+        border-radius: 5px;
     }
 
 
@@ -1307,6 +1316,23 @@ body#colasClassic_page div.beverageLinks{
 }
 
 /*laptop/smaller desktop*/
+@media (max-width:1030px){
+    nav .navTab{
+        font-size: 20px;
+    }
+    
+    nav div#logo img{
+        max-width:100px;
+    }
+    
+    #homePage header div.carousel-item img{
+        height:700px;
+    }
+    #homePage header div#colasInfo{
+        width:50%;
+    }
+    
+}
 @media (min-width:768px){
     /*home page*/
     body#homePage div#colasInfo h1{
@@ -1345,10 +1371,18 @@ body#colasClassic_page div.beverageLinks{
 }
 
 /* DESKTOP */
-@media (min-width:1024px){
+@media (min-width:1400px){
     
     .menuPage main{
         width:50%;
+    }
+    /*image carousel*/
+    #homePage header div.carousel{
+        width:75%;
+        margin:0 auto;
+
+        box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.6),
+        -10px 0px 20px rgba(0, 0, 0, 0.6);
     }
 
     #homePage header div#colasInfo-openHrs{
