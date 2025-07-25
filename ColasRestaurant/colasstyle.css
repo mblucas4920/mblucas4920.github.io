@@ -40,7 +40,7 @@ nav {
         display:flex;
         align-items: center;
 
-        box-shadow:inset 5px 0px 20px 10px rgba(0, 0, 0, 0.5);
+        box-shadow:inset 5px 0px 35px 10px rgba(0, 0, 0, 0.5);
     }
         nav div#logo img{
             margin-left:15%;
@@ -62,6 +62,9 @@ nav {
 
             background-color:var(--colasFG);
             color:white;
+            
+            box-shadow: inset 0px 1px 30px 5px rgba(0, 0, 0, 0.1);
+
             font-weight: bold;
             font-size:25px;
             
@@ -116,10 +119,9 @@ footer{
         margin:25px;
     }
     footer div#topDiv{
-        padding:25px;
-        width:95%;
+        padding:25px 0;
+        width:100%;
         margin:0 auto;
-        margin-right:0;
     }
    
     footer p, footer h3{
@@ -129,10 +131,11 @@ footer{
         margin:0;
     }
     footer a{
-        color:white;
+        color:red;
         padding:15px;
     }
     footer a:hover{
+        color:white;
         background-color: var(--colasFG);
     }
     footer a#toTop{
@@ -531,6 +534,14 @@ body#menusPage{
 
 /*GIFT CARDS PAGE*/
 body#giftCard_page{
+    grid-template-rows:120px auto auto auto ;
+    grid-template-areas:
+    'nav'
+    'head'
+    'main'
+    'foot';
+}
+body#giftCard_page{
     background-color: var(--colasBG);
     color:white;
 }
@@ -541,12 +552,44 @@ body#giftCard_page{
         margin-top:50px;
     }
 
+    body#giftCard_page div#giftCard_link{
+            width:100%;
+            margin:30px 0;
+
+            display:flex;
+            justify-content: center;
+            gap:50px;
+    }
+        div#giftCard_link h3{
+            color:lightgrey;
+            margin-top:40px;
+            
+        }
+        div#giftCard_link img#giftCard{
+            width:200px;
+            max-height:120px;
+
+            box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+            transition:transform 200ms, box-shadow 200ms;
+        }
+        div#giftCard_link img#giftCard:hover{
+            cursor:pointer;
+
+            transform: scale(1.1,1.1);
+
+            box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.6);
+        }
+        div#giftCard_link img#giftCard:active{
+            transform:scale(0.8, 0.8);
+            box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+        }
+
     body#giftCard_page main{
         display:flex;
         gap:75px;
         align-items: center;
         width:70%;
-        margin:45px auto;
+        margin:20px auto;
     }
 
         body#giftCard_page main div#giftCard_info{
@@ -561,22 +604,9 @@ body#giftCard_page{
             top:20px;
         }
 
-        body#giftCard_page main div#giftCard_info div#giftCard_link{
-            display:flex;
-
-            justify-content: center;
-            gap:20px;
-        }
-        div#giftCard_link img#giftCard{
-            width:200px;
-            max-height:120px;
-
-            box-shadow: 5px rgba(0, 0, 0, 0.3);
-        }
-
         body#giftCard_page main #colasAbout_img img{
             border:2px solid black;
-            margin-top:50px;
+            
         }
 
 /* Private Dining PAGE */
@@ -747,7 +777,7 @@ body#privateDining_page{
             box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.6);
         }
         body#privateRoom-info_page main{
-            width:75%;
+            width:90%;
             margin:0 auto;
             color:white;
             text-align: center;
@@ -1331,7 +1361,6 @@ body#colasClassic_page div.beverageLinks{
     #homePage header div#colasInfo{
         width:50%;
     }
-    
 }
 @media (min-width:768px){
     /*home page*/
@@ -1341,24 +1370,20 @@ body#colasClassic_page div.beverageLinks{
     body#homePage div#colasInfo h3{
         font-size:26px;
     }
-
     /*menus page*/
     body#menusPage main{
         width:100%;
     }
-
     /*Private Dining Page*/
     body#privateDining_page section#aboutPR{
         width:90%;
     }
-
         /*colas classic menus LAPTOP*/
         body#colasClassic_page #colasClassic_six_menuOptions .column-row,
         body#colasClassic_page #colasClassic_four_menuOptions .column-row{
             margin-right:10px;
             margin-left:10px;
         }
-
         body#colasClassic_page #colasClassic_six_menuOptions .column-row .menuItem,
         body#colasClassic_page #colasClassic_four_menuOptions .column-row .menuItem{
             padding:10px;
@@ -1367,6 +1392,11 @@ body#colasClassic_page div.beverageLinks{
     /*gift card page*/
     body#giftCard_page .column-row{
         width:90%;
+    }
+
+    footer a#toTop{
+        position:relative;
+        right:-100px;
     }
 }
 
@@ -1413,6 +1443,19 @@ body#colasClassic_page div.beverageLinks{
     body#privateDining_page main section#guarantees_prices, body#privateDining_page main section#eventParams{
         width:75%;
         margin:50px auto;
+    }
+
+    /*large desktop gift card page*/
+    body#giftCard_page main{
+        justify-content: space-evenly;
+    }
+    body#giftCard_page main div#giftCard_info {
+        width:50%;
+    }
+
+    footer a#toTop{
+        position:relative;
+        right:-200px;
     }
 }
 
@@ -1728,8 +1771,14 @@ body#colasClassic_page div.beverageLinks{
         footer div#topDiv{
             width:80%;
             margin:0;
+
         }
 
+    /* gift cards page */
+    body#giftCard_page div#giftCard_link{
+        width:90%;
+        margin:0 auto;
+    }
 
     /* private dining page */
     body#privateDining_page div#roomChoices, body#privateDining_page section#aboutPR, body#giftCard_page main{
