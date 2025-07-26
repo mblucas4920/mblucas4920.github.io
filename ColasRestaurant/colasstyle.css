@@ -1,7 +1,6 @@
 html{
   font-family: "instrument-sans-variable",sans-serif;
   font-size:18px;
-
   font-variation-settings: 'wdth' 100, 'wght' 400;
 
   height:100%;
@@ -34,7 +33,7 @@ nav {
     box-shadow: 0 5px 15px 2px rgba(0,0,0,0.50);
     z-index:5;
 }
-
+    /*Cola's Logo */
     nav div#logo{
         flex-basis:20%;
         display:flex;
@@ -53,6 +52,7 @@ nav {
     nav div#openNav{
         display:none;
     }
+    /*div that contains the Links */
     #navTabs{
         display:flex; 
         flex-basis: 80%;
@@ -194,7 +194,6 @@ body#privateRoom-info_page{
         color:white;
 
         position:absolute;
-        width:33%;
 
         left:25%;
         right:25%;
@@ -216,12 +215,12 @@ body#privateRoom-info_page{
         text-align: center;
         margin:0;
         width:100%;
-        padding:10px 0;
+        padding:15px 0;
 
         border:2px solid black;
 
         position: absolute;
-        bottom:-11%;
+        bottom:0;
         z-index:1;
 
         box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.9);
@@ -499,6 +498,12 @@ body#menusPage{
             color:white;
             text-align: center;
         }
+            body#menusPage main a:hover{
+                box-shadow: 0 0 20px 5px rgba(0,0,0,0.90);
+            }
+            body#menusPage main a:active{
+                filter:brightness(75%);
+            }
 
         body#menusPage main img{
             max-width: 400px;
@@ -517,14 +522,6 @@ body#menusPage{
 
             transition:box-shadow 300ms, transform 300ms;
         }
-            body#menusPage main a:hover{
-                transform: scale(1.1,1.1);
-                box-shadow: 0 0 20px 5px rgba(0,0,0,0.90);
-            }
-            body#menusPage main a:active{
-                transform:scale(0.8,0.8);
-                filter:brightness(75%);
-            }
 
         body#menusPage main a h2{
             margin:0;
@@ -809,9 +806,6 @@ body#privateDining_page{
             div.privateRoom div.imageGallery .column-row{
                 gap:50px;
             }
-
-        /*Colas Classic Page */
-        
         
         /* Private Dining Event Parameters */
         body#privateDining_page main section#eventParams{
@@ -898,32 +892,38 @@ body#privateDining_page{
             div#colasClassic-menus, div#receptionMenu{
                 display: flex;
                 flex-direction: column;
+                flex-wrap:wrap;
                 gap:50px;
-
                 margin:50px 0;
 
-                flex-wrap:wrap;
             }
-
+            
+            /*Colas-Classic option*/
                 div#colasClassic div.colasClassic-option, div.reception-menuItem{
                     background-color:var(--colasMBG);
                     padding:15px;
 
-                    display:flex;
-                    flex-direction: column;
-
                     border:2px solid black;
                     border-radius: 5px;
 
+                    display:flex;
+                    flex-direction: column;
                     flex-wrap:wrap;
 
                     box-shadow:0px 10px 15px rgba(0,0,0,0.50);
-
-                    transition: margin-top 1s, box-shadow 300ms;
+                    transition: margin-top 1s, box-shadow 300ms, transform 300ms;
                 }
                     div#colasClassic div.colasClassic-option{
                         width:300px;
                     }
+
+                    section#groupMenus div.groupMenu-div div.colasClassic-option:hover{
+                        box-shadow:0px 10px 20px rgba(0,0,0,0.80);
+                    }
+                    div.groupMenu-div div.colasClassic-option:active{
+                        filter:brightness(80%);
+                    }
+
 
                 div#colasClassic div.colasClassic-option h3, div.reception-menuItem h3{
                     background-color: lightgrey;
@@ -1269,17 +1269,15 @@ body#contactsPage{
 
 /*Colas Classic Menus Page*/
 body#colasClassic_page .column-row{
-    margin:50px 50px;
+    margin:50px 0;
     justify-content: space-evenly;
 }
 
-#colasClassic_six_menuOptions div.firstCourse, #colasClassic_six_menuOptions div.secondCourse{
-    max-height: 350px;
-}
-
+#colasClassic_six_menuOptions div.firstCourse, #colasClassic_six_menuOptions div.secondCourse,
 div.dessertCourse{
     max-height: 375px;
 }
+
     body#colasClassic_page .column-row div.menuItem.colasClassic-menuOptions{
         display:flex;
         gap:15px;
@@ -1344,24 +1342,7 @@ body#colasClassic_page div.beverageLinks{
 
     --colasMOBILE: #59211d;
 }
-
-/*laptop/smaller desktop*/
-@media (max-width:1030px){
-    nav .navTab{
-        font-size: 20px;
-    }
-    
-    nav div#logo img{
-        max-width:100px;
-    }
-    
-    #homePage header div.carousel-item img{
-        height:700px;
-    }
-    #homePage header div#colasInfo{
-        width:50%;
-    }
-}
+/* MOBILE VIEW */
 @media (min-width:768px){
     /*home page*/
     body#homePage div#colasInfo h1{
@@ -1374,6 +1355,13 @@ body#colasClassic_page div.beverageLinks{
     body#menusPage main{
         width:100%;
     }
+            body#menusPage main a:hover{
+                transform: scale(1.1,1.1);
+
+            }
+            body#menusPage main a:active{
+                transform:scale(0.8,0.8);
+            }
     /*Private Dining Page*/
     body#privateDining_page section#aboutPR{
         width:90%;
@@ -1384,10 +1372,21 @@ body#colasClassic_page div.beverageLinks{
             margin-right:10px;
             margin-left:10px;
         }
+        
+        /*animates the Colas Classic Group Menu Options*/
+            section#groupMenus div.groupMenu-div div.colasClassic-option:hover{
+                margin-top: -10px;
+            }
+
+            div.groupMenu-div div.colasClassic-option:active{
+                transform: scale(0.9, 0.9);
+            }
+
         body#colasClassic_page #colasClassic_six_menuOptions .column-row .menuItem,
         body#colasClassic_page #colasClassic_four_menuOptions .column-row .menuItem{
             padding:10px;
         }
+    
 
     /*gift card page*/
     body#giftCard_page .column-row{
@@ -1399,67 +1398,7 @@ body#colasClassic_page div.beverageLinks{
         right:-100px;
     }
 }
-
-/* DESKTOP */
-@media (min-width:1400px){
-    
-    .menuPage main{
-        width:50%;
-    }
-    /*image carousel*/
-    #homePage header div.carousel{
-        width:75%;
-        margin:0 auto;
-
-        box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.6),
-        -10px 0px 20px rgba(0, 0, 0, 0.6);
-    }
-
-    #homePage header div#colasInfo-openHrs{
-        bottom:0;
-    }
-
-    body#homePage div#colasInfo{
-        position:absolute;
-        width:33%;
-    }
-    /*hover/active animations for desktop Colas Classic section (Private Dining Page)*/
-    section#groupMenus div.groupMenu-div div.colasClassic-option:hover{
-        position:relative;
-        margin-top:-20px;
-
-        box-shadow:0px 10px 15px 5px rgba(0,0,0,0.75);
-    }
-        div.colasClassic-option:active{
-            transform: scale(0.95,0.95);
-            filter:brightness(75%);
-        }
-
-    /*Privating Dining page aboutPR section*/
-    body#privateDining_page main section#aboutPR{
-        width:75%;
-    }
-    /*private dining page sections on desktop view* (other than aboutPR section*/
-    body#privateDining_page main section#guarantees_prices, body#privateDining_page main section#eventParams{
-        width:75%;
-        margin:50px auto;
-    }
-
-    /*large desktop gift card page*/
-    body#giftCard_page main{
-        justify-content: space-evenly;
-    }
-    body#giftCard_page main div#giftCard_info {
-        width:50%;
-    }
-
-    footer a#toTop{
-        position:relative;
-        right:-200px;
-    }
-}
-
-/* MOBILE VIEW */
+/*mobile/ipads/laptops*/
 @media (max-width: 900px){
     html, body, main, nav, nav div#openNav{
         width:100%;
@@ -1589,7 +1528,6 @@ body#colasClassic_page div.beverageLinks{
             box-shadow: none;
         }
 
-
     /*homepage about us section*/
     body#homePage main div#index_aboutUs{
         margin:0;
@@ -1675,7 +1613,6 @@ body#colasClassic_page div.beverageLinks{
     body.menuPage main, body.menuPage section.menuSection div.menuDiv{
         display:flex;
         flex-direction: column;
-        gap:25px;
     }
     body.menuPage section.menuSection{
         gap:15px;
@@ -1683,6 +1620,15 @@ body#colasClassic_page div.beverageLinks{
         body.menuPage section.menuSection h2.menuSection-head{
             margin:0;
             margin-bottom:20px;
+        }
+
+        body.menuPage section.menuSection div.menuDiv{
+            gap:25px;
+        }
+
+        /* adds gap between menu sections*/
+        body.menuPage section.menuSection .column-row:last-child .menuItem:last-child{
+            margin-bottom:25px;
         }
 
     /* menu items mobile view (DINNER & DESSERT)*/
@@ -1780,7 +1726,7 @@ body#colasClassic_page div.beverageLinks{
         margin:0 auto;
     }
 
-    /* private dining page */
+    /* PRIVATE DINING PAGE (MOBILE) */
     body#privateDining_page div#roomChoices, body#privateDining_page section#aboutPR, body#giftCard_page main{
         flex-direction: column;
         align-items: center;
@@ -1827,6 +1773,9 @@ body#colasClassic_page div.beverageLinks{
         }
             /* colas classic menus*/
 
+            div#colasClassic-menus, div#receptionMenu{
+                gap:25px;
+            }
             /*reception menu*/
             div#receptions div.column-row{
                 align-items: center;
@@ -1840,10 +1789,14 @@ body#colasClassic_page div.beverageLinks{
             border-radius: 15px;
         }
     
-    /*colas classic mobile page*/
+    /*---- colas classic mobile page ----*/
     /*section header font size*/
     body.menuPage#colasClassic_page main h2.menuSection-head{
         font-size:26px;
+    }
+    body#colasClassic_page .column-row div.menuItem.colasClassic-menuOptions{
+        margin:0 auto;
+        min-width:300px;
     }
     
     /*beverages*/
@@ -1852,7 +1805,7 @@ body#colasClassic_page div.beverageLinks{
         box-shadow: none;
     }
 
-    /* contacts page */
+    /*---- contacts page -----*/
     body#contactsPage main{
         flex-direction: column;
     }
@@ -1885,9 +1838,77 @@ body#colasClassic_page div.beverageLinks{
     body#giftCard_page main div#giftCard_info{
         font-size: 16px;
     }
+    /*main image on gift card*/
     body#giftCard_page main img{
         max-width:300px;
         margin-top:0;
     }
 
 }
+/*laptops and smaller desktops*/
+@media (max-width:1030px){
+    nav .navTab{
+        font-size: 20px;
+    }
+    
+    nav div#logo img{
+        max-width:100px;
+    }
+    
+    #homePage header div.carousel-item img{
+        height:700px;
+    }
+    #homePage header div#colasInfo{
+        width:50%;
+    }
+
+    /*Colas Private Dining*/
+}
+/* DESKTOP */
+@media (min-width:1400px){
+    
+    .menuPage main{
+        width:50%;
+    }
+    /*image carousel*/
+    #homePage header div.carousel{
+        width:75%;
+        margin:0 auto;
+
+        box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.6),
+        -10px 0px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    #homePage header div#colasInfo-openHrs{
+        bottom:-0.5px;
+    }
+
+    body#homePage div#colasInfo{
+        position:absolute;
+        width:33%;
+    }
+
+    /*Privating Dining page aboutPR section*/
+    body#privateDining_page main section#aboutPR{
+        width:75%;
+    }
+    /*private dining page sections on desktop view* (other than aboutPR section*/
+    body#privateDining_page main section#guarantees_prices, body#privateDining_page main section#eventParams{
+        width:75%;
+        margin:50px auto;
+    }
+
+    /*large desktop gift card page*/
+    body#giftCard_page main{
+        justify-content: space-evenly;
+    }
+    body#giftCard_page main div#giftCard_info {
+        width:50%;
+    }
+
+    footer a#toTop{
+        position:relative;
+        right:-200px;
+    }
+}
+
