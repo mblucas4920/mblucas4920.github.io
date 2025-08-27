@@ -540,7 +540,7 @@ div.projectContent aside{
     flex-direction: column;
 }
 
-.project p{
+.project p, .project h3, .project strong{
     line-height: 30px;
     margin:30px 15px;
 }
@@ -567,7 +567,7 @@ section#siteOne aside{
     gap:10px;
 }
 
-section#siteOne aside hr, section#softProjTwo aside hr{
+section#siteOne aside hr, section#softProjTwo aside hr, section#siteThree aside hr{
     width:100%;
     border:2px dashed #9fb9ea;
 }
@@ -585,7 +585,7 @@ iframe#figmaUI{
     height:500px;
 }
 
-a#fanSite{
+a#fanSite, a#colasLink{
     font-size:18px;
     font-weight:800;
     margin:0 auto;
@@ -596,6 +596,29 @@ a#fanSite{
 
 a#fanSite:hover{
     background-color: #9fb9ea;
+}
+
+/* ---------------------- Cola's Website ------------------------ */
+/*change site of text-area*/
+section#siteThree div.projectContent{
+    justify-content: space-evenly;
+}
+section#siteThree div#siteThree-text{
+    flex-basis:60%;
+}
+section#siteThree div.line{
+    width:5px;
+}
+section#siteThree aside{
+    flex-basis:40%;
+}
+
+section#siteThree aside img{
+    max-width:500px;
+}
+
+section#siteThree aside p{
+    margin:5px;
 }
 
 .webDev div.line{
@@ -753,7 +776,7 @@ a#fanSite:hover{
         border:none;
 
     }
-    section#siteOne.project, section#siteTwo.project, section#softProjOne.project, 
+    section#siteOne.project, section#siteTwo.project, section#siteThree.project, section#softProjOne.project, 
     section#softProjTwo.project, section#dataProjOne.project, section#buisComProj.project{
         width:100%;
         padding:0;
@@ -778,7 +801,26 @@ a#fanSite:hover{
     section#siteOne aside hr{
         width:90%;
     }
+    section#siteThree aside img{
+        max-width:300px;
+    }
+    div#projectPlan img{
+        margin:0 auto;
+    }
+    div#projectPlan{
+        display: grid;
+        justify-content: center;
+    }
+    section#siteThree aside div{
+        margin:0 auto;
+    }
   }
+
+@media (max-width: 400px){
+    section#siteThree aside img{
+        max-width:200px;
+    }
+}
 
 @media screen and (min-width: 480px){
     main#summary {
