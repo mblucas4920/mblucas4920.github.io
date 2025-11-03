@@ -1,0 +1,181 @@
+html{
+    height:100%;
+    background-color: #202020;
+    color:white;
+
+    font-size:18px;
+}
+
+/* paragraph styles*/
+p, .reference a{
+    line-height:250%;
+}
+
+p.textIndent, h3.textIndent{
+    text-indent:20px;
+    margin:0px;
+}
+    p.textIndent.subIndent{
+        text-indent: 50px;
+    }
+
+/*h2 styles*/
+h2, p#licenses{
+    background-color: #491515;
+    padding:10px 15px;
+    border:2px solid black;
+    border-radius: 10px;
+}
+
+    p#licenses{
+        margin-top:30px;
+        padding:50px;
+
+        box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.219);
+    }
+
+/* link styles */
+p a{
+    padding-left:5px;
+}
+
+a{
+    color:#FF4B4B;
+    padding:5px;
+    padding-left:0px;
+
+    width:100%;
+}
+a:hover{
+    background-color: white;
+}
+a:active{
+    background-color: #FF4B4B;
+    color:white;
+}
+
+.summary a{
+    color:white;
+}
+.summary a:hover{
+    color: #491515;
+}
+
+/*borders */
+header, nav, footer{
+    border: 2px solid black;
+}
+header, footer{
+    border-left:none;
+}
+
+body{
+    height:100%;
+    margin:0;
+    display:grid;
+    grid-template-columns: 20% auto;
+    grid-template-rows:auto auto auto;
+    grid-template-areas: 
+    'nav head'
+    'nav main'
+    'nav foot';
+}
+
+/* Navigation Style */
+nav{
+    grid-area: nav;
+
+    overflow:hidden;
+    
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+
+    background-color: #1A1A1A;
+}
+nav a.navTab{
+    color:white;
+    padding:30px 20px;
+    padding-left:10%;
+
+    border-bottom: 2px solid black;
+
+    text-decoration: none;
+}
+nav a.navTab:hover{
+    background-color: #491515;
+}
+nav a.navTab:active{
+    background-color: white;
+    color:#491515;
+}
+
+/*header style*/
+header{
+    grid-area: head;
+    text-align: center;
+
+    background-color: #491515;
+}
+
+main{
+    grid-area:main;
+    width:75%;
+    margin:25px auto ;
+}
+
+
+footer{
+    grid-area:foot;
+
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #491515;
+    text-align: center;
+}
+    footer div{
+        display: flex;
+        flex-direction: column;
+
+        text-align: left;
+
+        margin:10px 50px;
+    }
+
+    footer p{
+        margin:5px 0px;
+        padding:10px;
+    }
+    
+    footer a{
+        color:white;
+        padding:10px;
+    }
+    footer a:hover{
+        color:#491515;
+    }
+
+
+/*references page */
+div#referencesList{
+    background-color: #1A1A1A;
+    border:2px solid black;
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.199);
+
+    margin:25px auto;
+    width:75%;
+    padding:20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap:50px;
+}
+
+.reference a{
+    padding:15px;
+}
