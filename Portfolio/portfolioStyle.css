@@ -17,6 +17,13 @@ h3 {font-size: 20px;}
 /*names grid-area off ALL <main> to "main" */
 main {grid-area:main;}
 
+a{
+    transition:background-color 300ms;
+}
+a:hover{
+    cursor: pointer;
+}
+
 /*Navigation */
 nav, footer{
     display:flex;
@@ -290,11 +297,9 @@ section#resume{
 
 .careerProfile main {
     width:65%;
-    margin:20px auto;
+    margin:30px auto;
     margin-bottom:50px;
-    padding:30px;
-    border-radius: 25px;
-    border:5px solid #9fb9ea;
+    padding:30px 0px;
     background-color: white;
     box-shadow: 0px 0px 25px 6px rgba(0, 0, 0, 15%);
     display:flex;
@@ -306,9 +311,12 @@ section#resume{
 }
 
 .careerProfile main div h2{
-    margin:50px;
-    margin-left:12%;
     margin-bottom:25px;
+
+    padding:30px 0px;
+    width:100%;
+    text-align: center;
+    background-color: #7ea0e0;
 }
 
 .careerProfile main, section#resume{
@@ -319,27 +327,20 @@ section#resume{
 div#experience section{
     display:flex;
     flex-direction: column;
-    margin-bottom:40px;
-    gap:50px;
+    margin-bottom:0px;
+    gap:15px;
 }
 
-div#PCs, section#resume, div#webExp{
+div#PCs, section#resume, div#webExp, div#goals p{
     width:75%;
 
     background-color: white;
     margin:0 auto;
     padding:30px;
-    box-shadow: 0px 0px 25px 6px rgba(0, 0, 0, 15%);
 }
 
 div#goals p{
-    width:75%;
-    border-radius: 25px;
-    border:5px solid #9fb9ea;
-    margin:0 auto;
-    padding:30px;
     padding-bottom:50px;
-    box-shadow: 0px 0px 25px 6px rgba(0, 0, 0, 15%);
 }
 
 div#PCs{
@@ -348,8 +349,6 @@ div#PCs{
 
 #PCs, #webExp{
     padding:10px 50px 50px;
-    border-radius: 25px;
-    border:5px solid #9fb9ea;
 }
 
 #webExp a{
@@ -559,6 +558,9 @@ div.projectContent aside{
     padding:5px;
     padding-left:0;
     max-width:200px;
+    font-size:18px;
+
+    text-decoration: underline;
 }
 
 section#siteOne aside{
@@ -567,7 +569,7 @@ section#siteOne aside{
     gap:10px;
 }
 
-section#siteOne aside hr, section#softProjTwo aside hr, section#siteThree aside hr{
+section#siteOne aside hr, section#softProjTwo aside hr, section#siteThree aside hr, aside hr{
     width:100%;
     border:2px dashed #9fb9ea;
 }
@@ -580,9 +582,16 @@ iframe#wireFrame{
     width:600px;
     height:250px;
 }
-
 iframe#figmaUI{
     height:500px;
+}
+/* capstone wireframes */
+#capstone aside iframe, #capstone video{
+    width:500px;
+    height:300px;
+}
+#photos img{
+    width:500px;
 }
 
 a#fanSite, a#colasLink{
